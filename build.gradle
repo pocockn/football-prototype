@@ -23,4 +23,8 @@ dependencies {
   runtime 'org.slf4j:slf4j-simple:1.7.21'
 
   testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+
+  // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+  compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+
 }
