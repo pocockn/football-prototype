@@ -1,6 +1,7 @@
 import handlers.HighChartHandler
 import models.TestDataJson
 import ratpack.groovy.template.MarkupTemplateModule
+import ratpack.handlebars.HandlebarsModule
 
 import static ratpack.groovy.Groovy.groovyMarkupTemplate
 import static ratpack.groovy.Groovy.ratpack
@@ -8,6 +9,7 @@ import static ratpack.groovy.Groovy.ratpack
 ratpack {
     bindings {
         module MarkupTemplateModule
+        module HandlebarsModule
         bind HighChartHandler
         bind TestDataJson
     }
