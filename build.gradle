@@ -1,26 +1,36 @@
 buildscript {
-  repositories {
-    jcenter()
-  }
-  dependencies {
-    classpath "io.ratpack:ratpack-gradle:1.4.4"
-    classpath "com.github.jengelman.gradle.plugins:shadow:1.2.3"
-  }
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.ratpack:ratpack-gradle:1.4.4"
+        classpath "com.github.jengelman.gradle.plugins:shadow:1.2.3"
+    }
 }
 
 apply plugin: "io.ratpack.ratpack-groovy"
 apply plugin: "com.github.johnrengelman.shadow"
 apply plugin: "idea"
-apply plugin: "eclipse"
+apply plugin: 'groovy'
 
 repositories {
-  jcenter()
+    jcenter()
 }
 
 dependencies {
-  // Default SLF4J binding.  Note that this is a blocking implementation.
-  // See here for a non blocking appender http://logging.apache.org/log4j/2.x/manual/async.html
-  runtime 'org.slf4j:slf4j-simple:1.7.21'
+    // Default SLF4J binding.  Note that this is a blocking implementation.
+    // See here for a non blocking appender http://logging.apache.org/log4j/2.x/manual/async.html
+    runtime 'org.slf4j:slf4j-simple:1.7.21'
 
-  testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+
+    compile ratpack.dependency('handlebars')
+
+    // https://mvnrepository.com/artifact/com.google.inject/guice
+    compile group: 'com.google.inject', name: 'guice', version: '3.0'
+
+
 }

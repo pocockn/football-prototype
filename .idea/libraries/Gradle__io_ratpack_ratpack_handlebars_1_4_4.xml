@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.ratpack:ratpack-handlebars:1.4.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-handlebars/1.4.4/29a4b85e058a9fe7d30121381355bf6a63f2e06a/ratpack-handlebars-1.4.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-handlebars/1.4.4/d404c3746f48b041d3926b8ab7d757ccb3ded53e/ratpack-handlebars-1.4.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
