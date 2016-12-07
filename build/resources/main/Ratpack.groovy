@@ -4,8 +4,9 @@ import models.Team
 import ratpack.groovy.template.MarkupTemplateModule
 import ratpack.handlebars.HandlebarsModule
 
-import static ratpack.groovy.Groovy.groovyMarkupTemplate
 import static ratpack.groovy.Groovy.ratpack
+import static ratpack.groovy.Groovy.groovyMarkupTemplate
+
 
 ratpack {
     bindings {
