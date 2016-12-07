@@ -32,6 +32,8 @@ dependencies {
     // https://mvnrepository.com/artifact/com.google.inject/guice
     compile group: 'com.google.inject', name: 'guice', version: '3.0'
 
+    compile 'org.liquibase:liquibase-core:3.4.2'
+    compile 'org.postgresql:postgresql:9.4.1208'
 
 }
 
