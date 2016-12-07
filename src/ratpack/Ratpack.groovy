@@ -1,5 +1,6 @@
 import handlers.HighChartHandler
-import models.TestDataJson
+import models.Player
+import models.Team
 import ratpack.groovy.template.MarkupTemplateModule
 import ratpack.handlebars.HandlebarsModule
 
@@ -11,7 +12,8 @@ ratpack {
         module MarkupTemplateModule
         module HandlebarsModule
         bind HighChartHandler
-        bind TestDataJson
+        bind Player
+        bind Team
     }
 
     handlers {
@@ -20,7 +22,7 @@ ratpack {
         }
 
         prefix('api') {
-            path'highchart', new HighChartHandler()
+            path 'highchart', new HighChartHandler()
         }
 
         files { dir "public" }

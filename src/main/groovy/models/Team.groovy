@@ -1,7 +1,8 @@
 package models
 
-/**
- * Created by pocockn on 07/12/16.
- */
+import com.fasterxml.jackson.annotation.JsonProperty
+
 class Team {
+    @JsonProperty("series")
+    ArrayList<Player> players = []
 }

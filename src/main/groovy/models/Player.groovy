@@ -1,7 +1,9 @@
 package models
 
-/**
- * Created by pocockn on 07/12/16.
- */
+import com.fasterxml.jackson.annotation.JsonProperty
+
 class Player {
+    String name
+    @JsonProperty("data")
+    ArrayList<Integer> goals
 }
