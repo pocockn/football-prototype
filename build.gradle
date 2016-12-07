@@ -34,3 +34,7 @@ dependencies {
 
 
 }
+
+task stage {
+    dependsOn installDist
+}

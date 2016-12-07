@@ -1,0 +1,1 @@
+web: build/install/Football-Prototype/bin/Football-Prototype
