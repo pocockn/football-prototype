@@ -3,6 +3,7 @@ package service
 import groovy.sql.Sql
 import models.Player
 import models.Team
+import org.junit.Ignore
 import spock.lang.Specification
 
 class TeamStoreServiceImplSpec extends Specification {
@@ -16,7 +17,7 @@ class TeamStoreServiceImplSpec extends Specification {
 
     String jdbcUrl = "jdbc:postgresql://${getDbHost()}:${getPort()}/${getDb()}"
 
-
+@Ignore
     void "Should save and return a team list"() {
         given:
         def sql = Sql.newInstance(jdbcUrl, dbUser, dbPassword)
