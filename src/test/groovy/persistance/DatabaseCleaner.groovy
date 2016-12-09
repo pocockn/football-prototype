@@ -1,14 +1,16 @@
 package persistance
 
 import groovy.sql.Sql
+import groovy.util.logging.Slf4j
 
+@Slf4j
 class DatabaseCleaner extends BaseDatabaseTestConnection{
 
-    void cleanDatabase() {
+    void cleanDatabase(Sql sql) {
         try {
-            sql.executeUpdate("truncate site_content")
-        } finally {
-            sql.close()
+            sql.execute("truncate site_content")
+        } catch(Exception e) {
+            log.error("error is ${e}")
         }
     }
 
