@@ -13,7 +13,8 @@ class PersistanceSpec extends BaseDatabaseTestConnection {
         def result = sql.rows("SELECT * FROM site_content where id = '2'")
 
         then:
-        result.contains("""{"series":[{"name":"Nick","data":[0,2,3,5,6]},{"name":"Pasty","data":[0,5,7,9,10]}]}""")
+        String jsonResult = result.toString()
+        jsonResult.contains(json)
 
         cleanup:
         databaseCleaner.cleanDatabase(sql)
