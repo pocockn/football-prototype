@@ -7,4 +7,5 @@ class Player {
     @JsonProperty("data")
     ArrayList<Integer> goals
     ArrayList<Integer> ratings
+    Integer manOfTheMatches
 }
