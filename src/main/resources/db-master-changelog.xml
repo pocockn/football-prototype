@@ -17,4 +17,15 @@
         <addPrimaryKey columnNames="id" tableName="site_content"/>
     </changeSet>
 
+    <changeSet id="test-table-created" author="pocockn">
+        <validCheckSum>7:76e082649b2e6c7fedb2a0ffa9b98b77</validCheckSum>
+        <createTable tableName="test">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="content" type="json"/>
+        </createTable>
+        <addPrimaryKey columnNames="id" tableName="test"/>
+    </changeSet>
+
 </databaseChangeLog>

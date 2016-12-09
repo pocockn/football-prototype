@@ -9,8 +9,8 @@ class PersistanceSpec extends BaseDatabaseTestConnection {
         String id = 2
 
         when:
-        sql.execute("INSERT INTO site_content (id, content) VALUES (?, cast(? as json))", id, json)
-        def result = sql.rows("SELECT * FROM site_content where id = '2'")
+        sql.execute("INSERT INTO test (id, content) VALUES (?, cast(? as json))", id, json)
+        def result = sql.rows("SELECT * FROM test where id = '2'")
 
         then:
         String jsonResult = result.toString()

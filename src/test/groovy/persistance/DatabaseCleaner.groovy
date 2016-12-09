@@ -8,7 +8,7 @@ class DatabaseCleaner extends BaseDatabaseTestConnection{
 
     void cleanDatabase(Sql sql) {
         try {
-            sql.execute("truncate site_content")
+            sql.execute("truncate test")
         } catch(Exception e) {
             log.error("error is ${e}")
         }
