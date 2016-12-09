@@ -32,7 +32,28 @@ dependencies {
     // https://mvnrepository.com/artifact/com.google.inject/guice
     compile group: 'com.google.inject', name: 'guice', version: '3.0'
 
+    compile 'org.liquibase:liquibase-core:3.4.2'
+    compile 'org.postgresql:postgresql:9.4.1208'
+    testCompile ratpack.dependency('test')
+    compile ratpack.dependency("remote")
+    testCompile ratpack.dependency("remote-test")
+    compile ratpack.dependency("hikari")
 
+    // Dependencies for mock object types and mock concrete types in spock.
+    testCompile 'cglib:cglib:2.2.2'
+    testCompile 'org.objenesis:objenesis:2.1'
+
+    compile ratpack.dependency("guice"), {
+        force = true
+    }
+
+}
+
+idea {
+    project {
+        wildcards.add "ratpack.groovy"
+        wildcards.add "GebConfig.groovy"
+    }
 }
 
 task stage {
