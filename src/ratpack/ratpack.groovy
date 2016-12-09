@@ -10,6 +10,8 @@ import ratpack.hikari.HikariModule
 import ratpack.service.Service
 import ratpack.service.StartEvent
 import ratpack.groovy.sql.SqlModule
+import service.TeamPersistanceService.TeamStoreService
+import service.TeamPersistanceService.TeamStoreServiceImpl
 
 import java.util.logging.Logger
 
@@ -28,6 +30,7 @@ ratpack {
         bind HighChartHandler
         bind Player
         bind Team
+        bindInstance TeamStoreService, new TeamStoreServiceImpl()
         bindInstance new Service() {
             void onStart(StartEvent e) throws Exception {
                 Logger logger = Logger.getLogger("")
