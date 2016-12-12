@@ -11,6 +11,8 @@ import ratpack.service.StartEvent
 import ratpack.groovy.sql.SqlModule
 import service.TeamPersistanceService.TeamStoreService
 import service.TeamPersistanceService.TeamStoreServiceImpl
+import service.playerServices.PlayerManOfTheMatchService
+import service.playerServices.PlayerManOfTheMatchServiceImpl
 import service.playerServices.PlayerRatingsService
 import service.playerServices.PlayerRatingsServiceImpl
 
@@ -32,6 +34,7 @@ ratpack {
         bind Player
         bind Team
         bindInstance PlayerRatingsService, new PlayerRatingsServiceImpl()
+        bindInstance PlayerManOfTheMatchService, new PlayerManOfTheMatchServiceImpl()
         bindInstance TeamStoreService, new TeamStoreServiceImpl()
         bindInstance new Service() {
             void onStart(StartEvent e) throws Exception {

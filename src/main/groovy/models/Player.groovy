@@ -8,4 +8,5 @@ class Player {
     ArrayList<Integer> goals
     ArrayList<Integer> ratings
     Integer manOfTheMatches
+    Integer cleanSheets
 }
