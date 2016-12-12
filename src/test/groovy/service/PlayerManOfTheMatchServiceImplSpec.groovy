@@ -2,10 +2,8 @@ package service
 
 import models.Player
 import ratpack.test.exec.ExecHarness
-import service.playerServices.PlayerManOfTheMatchService
-import service.playerServices.PlayerManOfTheMatchServiceImpl
-import service.playerServices.PlayerRatingsService
-import service.playerServices.PlayerRatingsServiceImpl
+import service.playerServices.TeamContent
+import service.playerServices.TeamContentImpl
 import spock.lang.AutoCleanup
 import spock.lang.Shared
 import spock.lang.Specification
@@ -18,7 +16,7 @@ class PlayerManOfTheMatchServiceImplSpec extends Specification {
 
     @Subject
     @Shared
-    PlayerManOfTheMatchService playerManOfTheMatchService = new PlayerManOfTheMatchServiceImpl()
+    TeamContent playerManOfTheMatchService = new TeamContentImpl()
 
     void "find player with the most man of the matches"() {
         given:

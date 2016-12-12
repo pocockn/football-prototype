@@ -3,18 +3,16 @@ import handlers.HighChartHandler
 import models.Player
 import models.Team
 import persistance.DataMigrationRatpackModule
+import ratpack.groovy.sql.SqlModule
 import ratpack.groovy.template.MarkupTemplateModule
 import ratpack.handlebars.HandlebarsModule
 import ratpack.hikari.HikariModule
 import ratpack.service.Service
 import ratpack.service.StartEvent
-import ratpack.groovy.sql.SqlModule
 import service.TeamPersistanceService.TeamStoreService
 import service.TeamPersistanceService.TeamStoreServiceImpl
-import service.playerServices.PlayerManOfTheMatchService
-import service.playerServices.PlayerManOfTheMatchServiceImpl
-import service.playerServices.PlayerRatingsService
-import service.playerServices.PlayerRatingsServiceImpl
+import service.playerServices.TeamContent
+import service.playerServices.TeamContentImpl
 
 import java.util.logging.Logger
 
@@ -33,8 +31,8 @@ ratpack {
         bind HighChartHandler
         bind Player
         bind Team
-        bindInstance PlayerRatingsService, new PlayerRatingsServiceImpl()
-        bindInstance PlayerManOfTheMatchService, new PlayerManOfTheMatchServiceImpl()
+        bind Fixtures
+        bindInstance TeamContent, new TeamContentImpl()
         bindInstance TeamStoreService, new TeamStoreServiceImpl()
         bindInstance new Service() {
             void onStart(StartEvent e) throws Exception {
@@ -49,10 +47,12 @@ ratpack {
             render groovyMarkupTemplate("index.gtpl", title: "My ratpack App")
         }
 
-        prefix('api') {
-            path 'highchart', new HighChartHandler()
-        }
+        path 'dashboard', new HighChartHandler()
+
+        path "fixtures", new FixturesHandler()
+
 
         files { dir "public" }
     }
 }
+

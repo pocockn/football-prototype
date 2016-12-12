@@ -6,4 +6,5 @@ class Team {
     String id
     @JsonProperty("series")
     ArrayList<Player> players = []
+    Fixtures fixtures = new Fixtures()
 }

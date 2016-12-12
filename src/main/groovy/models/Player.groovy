@@ -9,4 +9,9 @@ class Player {
     ArrayList<Integer> ratings
     Integer manOfTheMatches
     Integer cleanSheets
+
+    public Integer getCleanSheets() {
+        return cleanSheets
+    }
+
 }

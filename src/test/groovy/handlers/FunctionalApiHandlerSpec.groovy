@@ -11,9 +11,9 @@ class FunctionalApiHandlerSpec extends Specification {
 
     void "should properly render with get request to api handler"() {
         when:
-        def response = aut.httpClient.get('api/highchart').body.text
+        def response = aut.httpClient.get('dashboard').body.text
 
         then:
-        response.contains("This is a WIP highchart test")
+        response.contains("dashboard")
     }
 }
