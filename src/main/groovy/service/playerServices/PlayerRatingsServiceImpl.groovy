@@ -1,6 +1,5 @@
 package service.playerServices
 
-import com.sun.org.apache.xml.internal.utils.IntVector
 import models.Player
 import ratpack.exec.Promise
 
@@ -14,7 +13,8 @@ class PlayerRatingsServiceImpl implements PlayerRatingsService {
         return Promise.value(playerWithHighestAverageRating)
     }
 
-    private static List<Player> returnPlayerWithHighestAverageRating(List<Player> players, int highestRated, playerWithHighestAverageRating) {
+    private
+    static List<Player> returnPlayerWithHighestAverageRating(List<Player> players, int highestRated, playerWithHighestAverageRating) {
         players.each { player ->
             Integer rating = player.ratings.sum() as Integer
             if (rating > highestRated) {

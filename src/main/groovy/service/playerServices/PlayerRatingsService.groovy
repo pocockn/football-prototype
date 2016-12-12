@@ -7,5 +7,4 @@ interface PlayerRatingsService {
 
     Promise<Map<String, Double>> findHighestAverageRating(List<Player> players)
 
-
 }
