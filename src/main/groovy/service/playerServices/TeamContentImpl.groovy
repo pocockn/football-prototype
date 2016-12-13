@@ -30,14 +30,14 @@ class TeamContentImpl implements TeamContent {
     Promise<Map<String, Double>> findPlayerWithMostMotms(List<Player> players) {
         Map<String, Integer> mostManOfTheMatches = [:]
         Integer currentlyMostManOfTheMatches = 0
-        returnPlayerWithHighestAverageRating(players, mostManOfTheMatches, currentlyMostManOfTheMatches)
+        returnPlayerWithHighestAverageRating(players, mostManOfTheMatches, currentlyMostManOfTheMatches, "manOfTheMatches")
         return Promise.value(mostManOfTheMatches)
     }
 
     private
-    static List<Player> returnPlayerWithHighestAverageRating(List<Player> players, Map<String, Integer> mostManOfTheMatches, Integer currentlyMostManOfTheMatches) {
+    static List<Player> returnPlayerWithHighestAverageRating(List<Player> players, Map<String, Integer> mostManOfTheMatches, Integer currentlyMostManOfTheMatches, String propertyName) {
         players.each {
-            if (it.manOfTheMatches > currentlyMostManOfTheMatches) {
+            if (it."${propertyName}" > currentlyMostManOfTheMatches) {
                 mostManOfTheMatches.clear()
                 mostManOfTheMatches.put(it.name, it.manOfTheMatches)
             }
