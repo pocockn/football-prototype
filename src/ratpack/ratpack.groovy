@@ -1,4 +1,5 @@
 import config.HikariConfigModule
+import handlers.FixturesHandler
 import handlers.HighChartHandler
 import models.Player
 import models.Team
@@ -29,9 +30,10 @@ ratpack {
         module DataMigrationRatpackModule
         module HandlebarsModule
         bind HighChartHandler
+        bind FixturesHandler
         bind Player
         bind Team
-        bind Fixtures
+        // bind Fixtures
         bindInstance TeamContent, new TeamContentImpl()
         bindInstance TeamStoreService, new TeamStoreServiceImpl()
         bindInstance new Service() {
