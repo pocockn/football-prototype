@@ -28,7 +28,7 @@ class PlayerManOfTheMatchServiceImplSpec extends Specification {
 
         when:
         def expectedValue = execHarness.yield {
-            playerManOfTheMatchService.findPlayerWithMostMotms(players)
+            playerManOfTheMatchService.findObjectwithLargestSpecificProperty(players, "name", "manOfTheMatches")
         }
 
         then:

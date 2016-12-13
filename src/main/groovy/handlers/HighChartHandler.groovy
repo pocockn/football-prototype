@@ -21,8 +21,8 @@ class HighChartHandler extends InjectionHandler {
         def json = writeObjectToJson(objectMapper, team)
         String formattedJson = formatJsonForHighChartsConsumption(json)
         teamContent.findHighestAverageRating(team.players).then { highestRatedPlayer ->
-            teamContent.findPlayerWithMostMotms(team.players).then { mostMotm ->
-                teamContent.findMostCleanSheets(team.players).then { mostCleanSheets ->
+            teamContent.findObjectwithLargestSpecificProperty(team.players,"name", "manOfTheMatches").then { mostMotm ->
+                teamContent.findObjectwithLargestSpecificProperty(team.players,"name", "cleanSheets").then { mostCleanSheets ->
                     ctx.render(handlebarsTemplate('highchartTest.html',
                             model: formattedJson,
                             highestRating: highestRatedPlayer,

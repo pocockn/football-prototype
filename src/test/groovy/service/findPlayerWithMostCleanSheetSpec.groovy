@@ -28,7 +28,7 @@ class findPlayerWithMostCleanSheetSpec extends Specification {
 
         when:
         def expectedValue = execHarness.yield {
-            playerManOfTheMatchService.findMostCleanSheets(players)
+            playerManOfTheMatchService.findObjectwithLargestSpecificProperty(players, "name", "cleanSheets")
         }
 
         then:
