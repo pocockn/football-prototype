@@ -27,38 +27,20 @@ class TeamContentImpl implements TeamContent {
     }
 
     @Override
-    Promise<Map<String, Double>> findPlayerWithMostMotms(List<Player> players) {
-        Map<String, Integer> mostManOfTheMatches = [:]
-        Integer currentlyMostManOfTheMatches = 0
-        returnPlayerWithHighestAverageRating(players, mostManOfTheMatches, currentlyMostManOfTheMatches)
-        return Promise.value(mostManOfTheMatches)
+    Promise<Map<String, ?>> findObjectwithLargestSpecificProperty(List<?> objects, String key, String propertyName) {
+        Map<String, ?> highestKeyValuePair = [:]
+        Integer currentHighestValue = 0
+        returnObjectWithLargestSpecificPropertyValue(objects, highestKeyValuePair, currentHighestValue, key, propertyName)
+        return Promise.value(highestKeyValuePair)
     }
+
 
     private
-    static List<Player> returnPlayerWithHighestAverageRating(List<Player> players, Map<String, Integer> mostManOfTheMatches, Integer currentlyMostManOfTheMatches) {
-        players.each {
-            if (it.manOfTheMatches > currentlyMostManOfTheMatches) {
-                mostManOfTheMatches.clear()
-                mostManOfTheMatches.put(it.name, it.manOfTheMatches)
-            }
-        }
-
-    }
-
-    @Override
-    Promise<Map<String, Integer>> findMostCleanSheets(List<Player> players) {
-        Map<String, Integer> mostCleanSheets = [:]
-        Integer CurrentHighestValue = 0
-        returnPlayerWithMostCleanSheets(players, mostCleanSheets, CurrentHighestValue)
-        return Promise.value(mostCleanSheets)
-    }
-
-    private
-    static List<Player> returnPlayerWithMostCleanSheets(List<Player> players, Map<String, Integer> mostCleanSheets, Integer CurrentHighestValue) {
-        players.each {
-            if (it.cleanSheets > CurrentHighestValue) {
-                mostCleanSheets.clear()
-                mostCleanSheets.put(it.name, it.cleanSheets)
+    static List<?> returnObjectWithLargestSpecificPropertyValue(List<?> objects, Map<String, ?> highestKeyValuePair, Integer currentHighestValue, String key, String propertyName) {
+        objects.each {
+            if (it."${propertyName}" > currentHighestValue) {
+                highestKeyValuePair.clear()
+                highestKeyValuePair.put(it."${key}", it."${propertyName}")
             }
         }
 

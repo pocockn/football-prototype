@@ -1,0 +1,26 @@
+Index: src/main/groovy/service/playerServices/TeamContentImpl.groovy
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/groovy/service/playerServices/TeamContentImpl.groovy	(revision 5c518e27b7e8c7ba52a3ee809a2c20b41a85a08b)
++++ src/main/groovy/service/playerServices/TeamContentImpl.groovy	(revision )
+@@ -30,14 +30,14 @@
+     Promise<Map<String, Double>> findPlayerWithMostMotms(List<Player> players) {
+         Map<String, Integer> mostManOfTheMatches = [:]
+         Integer currentlyMostManOfTheMatches = 0
+-        returnPlayerWithHighestAverageRating(players, mostManOfTheMatches, currentlyMostManOfTheMatches)
++        returnPlayerWithHighestAverageRating(players, mostManOfTheMatches, currentlyMostManOfTheMatches, "manOfTheMatches")
+         return Promise.value(mostManOfTheMatches)
+     }
+ 
+     private
+-    static List<Player> returnPlayerWithHighestAverageRating(List<Player> players, Map<String, Integer> mostManOfTheMatches, Integer currentlyMostManOfTheMatches) {
++    static List<Player> returnPlayerWithHighestAverageRating(List<Player> players, Map<String, Integer> mostManOfTheMatches, Integer currentlyMostManOfTheMatches, String propertyName) {
+         players.each {
+-            if (it.manOfTheMatches > currentlyMostManOfTheMatches) {
++            if (it."${propertyName}" > currentlyMostManOfTheMatches) {
+                 mostManOfTheMatches.clear()
+                 mostManOfTheMatches.put(it.name, it.manOfTheMatches)
+             }
+\ No newline at end of file

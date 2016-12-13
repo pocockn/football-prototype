@@ -7,8 +7,6 @@ interface TeamContent {
 
     Promise<Map<String, Double>> findHighestAverageRating(List<Player> players)
 
-    Promise<Map<String, Double>> findPlayerWithMostMotms(List<Player> players)
-
-    Promise<Map<String, Double>> findMostCleanSheets(List<Player> players)
+    Promise<Map<String, ?>> findObjectwithLargestSpecificProperty(List<?> objects, String key, String propertyName)
 
 }
