@@ -2,6 +2,7 @@ import config.HikariConfigModule
 import handlers.FixturesHandler
 import handlers.HighChartHandler
 import models.Player
+import models.PlayerStatistics
 import models.Team
 import persistance.DataMigrationRatpackModule
 import ratpack.groovy.sql.SqlModule
@@ -10,6 +11,7 @@ import ratpack.handlebars.HandlebarsModule
 import ratpack.hikari.HikariModule
 import ratpack.service.Service
 import ratpack.service.StartEvent
+import service.FindLargestPropertyValues
 import service.TeamPersistanceService.TeamStoreService
 import service.TeamPersistanceService.TeamStoreServiceImpl
 import service.playerServices.TeamContent
@@ -31,6 +33,7 @@ ratpack {
         module HandlebarsModule
         bind HighChartHandler
         bind FixturesHandler
+        bind PlayerStatistics
         bind Player
         bind Team
         // bind Fixtures

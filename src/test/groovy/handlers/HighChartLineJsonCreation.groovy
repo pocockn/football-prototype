@@ -20,7 +20,7 @@ class HighChartLineJsonCreation extends Specification {
         json.substring(1, json.length() - 1)
 
         then:
-        json == """{"id":null,"series":[{"name":"Nick","ratings":null,"manOfTheMatches":null,"cleanSheets":null,"data":[0,2,3,5,6]},{"name":"Pasty","ratings":null,"manOfTheMatches":null,"cleanSheets":null,"data":[0,5,7,9,10]}]}"""
+        json == """{"id":null,"fixtures":{"matches":null},"series":[{"name":"Nick","ratings":null,"manOfTheMatches":null,"cleanSheets":null,"data":[0,2,3,5,6]},{"name":"Pasty","ratings":null,"manOfTheMatches":null,"cleanSheets":null,"data":[0,5,7,9,10]}]}"""
 
     }
 }

@@ -1,6 +1,6 @@
 package persistance
 
-import com.google.inject.Inject
+
 import config.DatabaseConfig
 import groovy.util.logging.Slf4j
 import liquibase.LabelExpression
@@ -12,6 +12,7 @@ import liquibase.resource.ClassLoaderResourceAccessor
 import ratpack.service.Service
 import ratpack.service.StartEvent
 
+import javax.inject.Inject
 import javax.sql.DataSource
 import java.sql.Connection
 

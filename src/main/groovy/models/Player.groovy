@@ -10,8 +10,4 @@ class Player {
     Integer manOfTheMatches
     Integer cleanSheets
 
-    public Integer getCleanSheets() {
-        return cleanSheets
-    }
-
 }

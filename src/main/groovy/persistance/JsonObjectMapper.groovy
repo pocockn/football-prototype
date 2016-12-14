@@ -1,8 +1,9 @@
 package persistance
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.google.inject.Inject
 import groovy.util.logging.Slf4j
+
+import javax.inject.Inject
 
 /**
  * Created by pocockn on 29/07/16.
