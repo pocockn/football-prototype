@@ -8,6 +8,7 @@
     <!-- begin: .tray-center -->
     <div class="tray tray-center">
         <body>
+        <p>{{mostMotm}}</p>
         <div class="col-sm-4 col-xl-3">
             <div class="panel panel-tile text-center br-a br-grey">
             <div class="panel-body">
@@ -24,38 +25,27 @@
                 {{/each}}
             </div>
         </div>
-        <div class="col-sm-4 col-xl-3">
-            <div class="panel panel-tile text-center br-a br-grey">
-            <div class="panel-body">
-                {{#each mostMotm}}
-                    <h1 class="fs30 mt5 mbn">{{this}}</h1>
-                    <h6 class="text-success">Most Motms</h6>
-                </div>
+        {{#each mostMotm}}
+            <div class="col-sm-4 col-xl-3">
+                <div class="panel panel-tile text-center br-a br-grey">
+                    <div class="panel-body">
+                        {{#each this}}
+                            <h1 class="fs30 mt5 mbn">{{this}}</h1>
+                        {{/each}}
+                        <h6 class="text-success">Most {{@key}}</h6>
+                    </div>
                     <div class="panel-footer br-t p12">
                   <span class="fs11">
                     <i class="fa fa-arrow-up pr5"></i>
-                    <b>{{@key}}</b>
+                      {{#each this}}
+                          <b>{{@key}}</b>
+                      {{/each}}
                   </span>
                     </div>
-                {{/each}}
-            </div>
-        </div>
-        <div class="col-sm-4 col-xl-3">
-            <div class="panel panel-tile text-center br-a br-grey">
-            <div class="panel-body">
-                {{#each mostCleanSheets}}
-                    <h1 class="fs30 mt5 mbn">{{this}}</h1>
-                    <h6 class="text-success">Most Clean Sheets</h6>
+
                 </div>
-                    <div class="panel-footer br-t p12">
-                  <span class="fs11">
-                    <i class="fa fa-arrow-up pr5"></i>
-                    <b>{{@key}}</b>
-                  </span>
-                    </div>
-                {{/each}}
             </div>
-        </div>
+        {{/each}}
         <div id="container" style="width:100%; height:400px;"></div>
         </body>
     </div>
@@ -91,8 +81,6 @@ jQuery(document).ready(function() {
     });
 
 });
-
-
 
 </script>
 </html>

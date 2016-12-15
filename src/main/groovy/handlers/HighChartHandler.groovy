@@ -25,6 +25,7 @@ class HighChartHandler extends InjectionHandler {
         String formattedJson = formatJsonForHighChartsConsumption(json)
         teamContent.findHighestAverageRating(team.players).then { highestRatedPlayer ->
             findLargestPropertyValues.findLargestPropertyValues(team.players, "name").then { mostMotm ->
+                log.info("${mostMotm}")
                 ctx.render(handlebarsTemplate('highchartTest.html',
                         model: formattedJson,
                         highestRating: highestRatedPlayer,

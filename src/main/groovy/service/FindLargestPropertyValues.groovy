@@ -5,14 +5,11 @@ import ratpack.exec.Promise
 class FindLargestPropertyValues {
 
     List<String> propertyNames
-
     Map<String, Map<String, ?>> largestPropertiesAndValues
-    Map<String, String> innerMap
 
     FindLargestPropertyValues(List<String> propertyValues) {
         propertyNames = propertyValues
         largestPropertiesAndValues = [:]
-        innerMap = [:]
     }
 
     Promise<Map<String, Map<String, ?>>> findLargestPropertyValues(List<?> objects, String key) {
@@ -23,10 +20,12 @@ class FindLargestPropertyValues {
     }
 
     private List<String> createPlayerStatisticsMap(objects, currentHighestValue, key) {
-        propertyNames.each { singlePropertyName ->
+        for (singlePropertyName in propertyNames) {
             returnLargestPropertyValues(objects, currentHighestValue, key, singlePropertyName).each { keySet, value ->
+                def innerMap = [:]
                 innerMap.put(keySet.toString(), value.toString())
                 largestPropertiesAndValues.put(singlePropertyName, innerMap)
+                currentHighestValue = 0
             }
         }
     }
@@ -38,6 +37,7 @@ class FindLargestPropertyValues {
             if (it."${singlePropertyName}" > currentHighestValue) {
                 currentKeyValue.clear()
                 currentKeyValue.put(it."${key}", it."${singlePropertyName}")
+                currentHighestValue = it."${singlePropertyName}"
             }
         }
         currentKeyValue
