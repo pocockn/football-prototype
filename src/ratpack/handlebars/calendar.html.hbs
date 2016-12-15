@@ -2,61 +2,31 @@
 {{> partials/navigation.html}}
 {{> partials/sidebar.html}}
 {{> partials/topbar.html}}
-<!-- Calendar Widget -->
-<div class="panel panel-widget calendar-widget calendar-alt" id="p02">
-    <div class="panel-heading">
+<section id="content" class="table-layout animated fadeIn">
+    <!-- begin: .tray-center -->
+    <div class="tray tray-center">
+            <!-- Calendar Widget -->
+            <div class="panel panel-widget calendar-widget calendar-alt" id="p02">
+                <div class="panel-heading">
                     <span class="panel-icon">
                       <i class="fa fa-calendar-o"></i>
                     </span>
-        <span class="panel-title"> Calendar Widget</span>
+                    <span class="panel-title"> Calendar Widget</span>
+                </div>
+                <div class="panel-body bg-white p15">
+                    <div id="calendar-widget"></div>
+                </div>
+            </div>
     </div>
-    <div class="panel-body bg-white p15">
-        <div id="calendar-widget"></div>
-    </div>
-</div>
+</section>
 {{> partials/footer.html}}
 <script>
     // Init plugins for ".calendar-widget"
     // plugins: FullCalendar
-    //
+
     jQuery(document).ready(function() {
         $('#calendar-widget').fullCalendar({
-            // contentHeight: 397,
-            editable: true,
-            events: [{
-                title: 'Sony Meeting',
-                start: '2015-08-1',
-                end: '2015-08-3',
-                className: 'fc-event-success',
-            }, {
-                title: 'Conference',
-                start: '2015-08-11',
-                end: '2015-08-13',
-                className: 'fc-event-warning'
-            }, {
-                title: 'Lunch Testing',
-                start: '2015-08-21',
-                end: '2015-08-23',
-                className: 'fc-event-primary'
-            },
-            ],
-            eventRender: function (event, element) {
-                // create event tooltip using bootstrap tooltips
-                $(element).attr("data-original-title", event.title);
-                $(element).tooltip({
-                    container: 'body',
-                    delay: {
-                        "show": 100,
-                        "hide": 200
-                    }
-                });
-                // create a tooltip auto close timer
-                $(element).on('show.bs.tooltip', function () {
-                    var autoClose = setTimeout(function () {
-                        $('.tooltip').fadeOut();
-                    }, 3500);
-                });
-            }
+
         });
     });
 </script>
