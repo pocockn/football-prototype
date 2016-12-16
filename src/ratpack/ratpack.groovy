@@ -1,6 +1,6 @@
 import config.HikariConfigModule
+import handlers.DashboardHandler
 import handlers.FixturesHandler
-import handlers.HighChartHandler
 import models.Player
 import models.PlayerStatistics
 import models.Team
@@ -11,7 +11,6 @@ import ratpack.handlebars.HandlebarsModule
 import ratpack.hikari.HikariModule
 import ratpack.service.Service
 import ratpack.service.StartEvent
-import service.FindLargestPropertyValues
 import service.TeamPersistanceService.TeamStoreService
 import service.TeamPersistanceService.TeamStoreServiceImpl
 import service.playerServices.TeamContent
@@ -31,7 +30,7 @@ ratpack {
         module HikariConfigModule
         module DataMigrationRatpackModule
         module HandlebarsModule
-        bind HighChartHandler
+        bind DashboardHandler
         bind FixturesHandler
         bind PlayerStatistics
         bind Player
@@ -52,7 +51,7 @@ ratpack {
             render groovyMarkupTemplate("index.gtpl", title: "My ratpack App")
         }
 
-        path 'dashboard', new HighChartHandler()
+        path 'dashboard', new DashboardHandler()
 
         path "fixtures", new FixturesHandler()
 

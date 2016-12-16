@@ -5,7 +5,7 @@ import ratpack.test.exec.ExecHarness
 import spock.lang.AutoCleanup
 import spock.lang.Specification
 
-class PlayerManOfTheMatchServiceImplGenericSpec extends Specification {
+class FindLargestPropertyValuesSpec extends Specification {
 
     @AutoCleanup
     ExecHarness execHarness = ExecHarness.harness()

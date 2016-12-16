@@ -13,7 +13,7 @@ import service.playerServices.TeamContent
 import static ratpack.handlebars.Template.handlebarsTemplate
 
 @Slf4j
-class HighChartHandler extends InjectionHandler {
+class DashboardHandler extends InjectionHandler {
 
     void handle(Context ctx, Team team, ObjectMapper objectMapper, TeamContent teamContent, PlayerStatistics playerStatistics) {
         Player player1 = new Player(name: 'Nick', goals: [0, 2, 3, 5, 6], ratings: [1, 2, 4, 8, 7, 5], manOfTheMatches: 10, cleanSheets: 20)
@@ -24,12 +24,11 @@ class HighChartHandler extends InjectionHandler {
         def json = writeObjectToJson(objectMapper, team)
         String formattedJson = formatJsonForHighChartsConsumption(json)
         teamContent.findHighestAverageRating(team.players).then { highestRatedPlayer ->
-            findLargestPropertyValues.findLargestPropertyValues(team.players, "name").then { mostMotm ->
-                log.info("${mostMotm}")
-                ctx.render(handlebarsTemplate('highchartTest.html',
+            findLargestPropertyValues.findLargestPropertyValues(team.players, "name").then { playerStatsMap ->
+                ctx.render(handlebarsTemplate('dashboard.html',
                         model: formattedJson,
                         highestRating: highestRatedPlayer,
-                        mostMotm: mostMotm))
+                        mostMotm: playerStatsMap))
             }
 
         }

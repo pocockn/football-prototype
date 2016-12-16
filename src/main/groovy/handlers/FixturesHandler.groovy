@@ -20,13 +20,13 @@ class FixturesHandler implements Handler {
 
         List<Match> matches = []
         Match match = new Match(id: "123", title: "match one", start: ZonedDateTime.now(ZoneOffset.UTC).plusDays(5), end: ZonedDateTime.now(ZoneOffset.UTC).plusDays(5))
-        Match match1 = new Match(id: "1234", title: "match two", start: ZonedDateTime.now(ZoneOffset.UTC).plusDays(5), end: ZonedDateTime.now(ZoneOffset.UTC).plusDays(5))
+        Match match1 = new Match(id: "1234", title: "match two", start: ZonedDateTime.now(ZoneOffset.UTC).plusDays(7), end: ZonedDateTime.now(ZoneOffset.UTC).plusDays(5))
         matches.add(match1)
         matches.add(match)
         Fixtures fixtures = new Fixtures(matches)
         String json = objectMapper.writeValueAsString(fixtures.matches)
         log.info(json)
-        ctx.render handlebarsTemplate("calendar.html",
+        ctx.render handlebarsTemplate("fixtures.html",
                 calendar: json)
     }
 }

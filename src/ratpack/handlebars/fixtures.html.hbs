@@ -5,18 +5,22 @@
 <section id="content" class="table-layout animated fadeIn">
     <!-- begin: .tray-center -->
     <div class="tray tray-center">
-            <!-- Calendar Widget -->
-            <div class="panel panel-widget calendar-widget calendar-alt" id="p02">
-                <div class="panel-heading">
+        <div class="row">
+            <div class="col-md-12 admin-grid" id="grid-1">
+                <!-- Calendar Widget -->
+                <div class="panel panel-widget calendar-widget calendar-alt" id="p02">
+                    <div class="panel-heading">
                     <span class="panel-icon">
                       <i class="fa fa-calendar-o"></i>
                     </span>
-                    <span class="panel-title"> Calendar Widget</span>
-                </div>
-                <div class="panel-body bg-white p15">
-                    <div id="calendar-widget"></div>
+                        <span class="panel-title"> Calendar Widget</span>
+                    </div>
+                    <div class="panel-body bg-white p15">
+                        <div id="calendar-widget"></div>
+                    </div>
                 </div>
             </div>
+        </div>
     </div>
 </section>
 {{> partials/footer.html}}
@@ -48,5 +52,6 @@
             }
         });
     });
+
 </script>
 </html>
