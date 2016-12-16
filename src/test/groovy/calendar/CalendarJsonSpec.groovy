@@ -1,21 +1,18 @@
-package handlers
+package calendar
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import groovy.util.logging.Slf4j
 import models.Fixtures
 import models.Match
-import ratpack.handling.Context
-import ratpack.handling.Handler
+import spock.lang.Specification
 
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
 
-import static ratpack.handlebars.Template.handlebarsTemplate
-@Slf4j
-class FixturesHandler implements Handler {
+class CalendarJsonSpec extends Specification {
 
-    @Override
-    void handle(Context ctx) throws Exception {
+    void "calendar creates valid JSON confirming to all calendar JS rules"() {
+
+        given:
         ObjectMapper objectMapper = new ObjectMapper()
 
         List<Match> matches = []
@@ -24,9 +21,13 @@ class FixturesHandler implements Handler {
         matches.add(match1)
         matches.add(match)
         Fixtures fixtures = new Fixtures(matches)
+
+        when:
         String json = objectMapper.writeValueAsString(fixtures.matches)
-        log.info(json)
-        ctx.render handlebarsTemplate("calendar.html",
-                calendar: json)
+
+        then:
+        json == '[{"id":"1234","title":"match two","start":"2016-12-21T13:07:34.225Z","end":"2016-12-21T13:07:34.225Z"},{"id":"123","title":"match one","start":"2016-12-21T13:07:34.175Z","end":"2016-12-21T13:07:34.221Z"}]'
+
+
     }
 }

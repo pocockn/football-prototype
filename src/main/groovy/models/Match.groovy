@@ -1,8 +1,15 @@
 package models
 
-import java.sql.Time
+import com.fasterxml.jackson.annotation.JsonFormat
+
+import java.time.LocalDateTime
+import java.time.ZonedDateTime
 
 class Match {
-    Date matchDate
-    Time time
+    String id
+    String title
+    String start
+    String end
+    String className = 'fc-event-primary'
+    String textColor = 'black'
 }
