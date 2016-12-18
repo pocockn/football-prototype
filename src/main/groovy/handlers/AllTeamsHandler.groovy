@@ -15,7 +15,8 @@ class AllTeamsHandler extends InjectionHandler {
             log.info("exception finding sessions ${e}")
             ctx.render handlebarsTemplate("error.html")
         }.then { teams ->
-            ctx.render handlebarsTemplate("allTeams.html", model: [teams: teams])
+            log.info("${teams*.id}")
+            ctx.render handlebarsTemplate("allTeams.html", model: teams)
         }
     }
 }

@@ -28,4 +28,8 @@
         <addPrimaryKey columnNames="id" tableName="test"/>
     </changeSet>
 
+    <changeSet id="bootstrap shire soldiers" author="pocockn">
+        <customChange class="changesets.BootstrapShireSoldiersChange"/>
+    </changeSet>
+
 </databaseChangeLog>

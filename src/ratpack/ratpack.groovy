@@ -1,4 +1,5 @@
 import config.HikariConfigModule
+import handlers.AllTeamsHandler
 import handlers.DashboardHandler
 import handlers.FixturesHandler
 import models.Player
@@ -55,6 +56,7 @@ ratpack {
 
         path "fixtures", new FixturesHandler()
 
+        path "teams", new AllTeamsHandler()
 
         files { dir "public" }
     }
