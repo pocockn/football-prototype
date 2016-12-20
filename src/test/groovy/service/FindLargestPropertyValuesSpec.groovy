@@ -12,11 +12,11 @@ class FindLargestPropertyValuesSpec extends Specification {
 
     void "find player statistics from a list of players and properties"() {
         given:
-        List<String> propertyNames = ['manOfTheMatches', 'cleanSheets']
+        List<String> propertyNames = ['manOfTheMatches', 'cleanSheets', 'assists']
         FindLargestPropertyValues playerManOfTheMatchService = new FindLargestPropertyValues(propertyNames)
         ArrayList<Player> players = new ArrayList<>()
-        Player player = new Player(name: "Nick", ratings: [1, 2, 4, 5, 6], goals: [1, 4, 6, 2, 4], manOfTheMatches: 26, cleanSheets: 12)
-        Player player1 = new Player(name: "Pasty", ratings: [1, 5, 8, 9, 6], goals: [1, 4, 6, 2, 4], manOfTheMatches: 24, cleanSheets: 25)
+        Player player = new Player(name: "Nick", ratings: [1, 2, 4, 5, 6], goals: [1, 4, 6, 2, 4], manOfTheMatches: 26, cleanSheets: 12, assists: 25)
+        Player player1 = new Player(name: "Pasty", ratings: [1, 5, 8, 9, 6], goals: [1, 4, 6, 2, 4], manOfTheMatches: 24, cleanSheets: 25, assists: 30)
         players.add(player)
         players.add(player1)
 
@@ -26,7 +26,7 @@ class FindLargestPropertyValuesSpec extends Specification {
         }
 
         then:
-        expectedValue.getValue().toString() == "[manOfTheMatches:[Nick:26], cleanSheets:[Pasty:25]]"
+        expectedValue.getValue().toString() == "[manOfTheMatches:[Nick:26], cleanSheets:[Pasty:25], assists:[Pasty:30]]"
 
     }
 

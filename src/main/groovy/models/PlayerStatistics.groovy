@@ -2,5 +2,5 @@ package models
 
 class PlayerStatistics {
 
-    List<String> propertiesToAnalyse = ['manOfTheMatches', 'cleanSheets']
+    List<String> propertiesToAnalyse = ['manOfTheMatches', 'cleanSheets', 'assists']
 }
