@@ -55,6 +55,10 @@ ratpack {
             render groovyMarkupTemplate("index.gtpl", title: "My ratpack App")
         }
 
+        prefix("api") {
+            get "teams", new TeamGetHandlerApi()
+        }
+
         path 'dashboard', new DashboardHandler()
 
         path "fixtures", new FixturesHandler()
