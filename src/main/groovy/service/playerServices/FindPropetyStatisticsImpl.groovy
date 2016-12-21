@@ -1,17 +1,19 @@
-package service
+package service.playerServices
 
 import ratpack.exec.Promise
 
-class FindLargestPropertyValues {
+class FindPropetyStatisticsImpl implements FindPropertyStatistics {
 
     List<String> propertyNames
-    Map<String, Map<String, ?>> largestPropertiesAndValues
+    Map<String, Map<String, ?>> largestPropertiesAndValues;
+    private static List<String> propertiesToAnalyse = ['manOfTheMatches', 'cleanSheets', 'assists']
 
-    FindLargestPropertyValues(List<String> propertyValues) {
-        propertyNames = propertyValues
+    FindPropetyStatisticsImpl() {
+        propertyNames = propertiesToAnalyse
         largestPropertiesAndValues = [:]
     }
 
+    @Override
     Promise<Map<String, Map<String, ?>>> findLargestPropertyValues(List<?> objects, String key) {
         Integer currentLargestValue = 0
         createPlayerStatisticsMap(objects, currentLargestValue, key)

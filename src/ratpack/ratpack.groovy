@@ -3,7 +3,7 @@ import handlers.AllTeamsHandler
 import handlers.DashboardHandler
 import handlers.FixturesHandler
 import models.Player
-import models.PlayerStatistics
+
 import models.Team
 import persistance.DataMigrationRatpackModule
 import ratpack.groovy.sql.SqlModule
@@ -14,6 +14,8 @@ import ratpack.service.Service
 import ratpack.service.StartEvent
 import service.TeamPersistanceService.TeamStoreService
 import service.TeamPersistanceService.TeamStoreServiceImpl
+import service.playerServices.FindPropertyStatistics
+import service.playerServices.FindPropetyStatisticsImpl
 import service.playerServices.TeamContent
 import service.playerServices.TeamContentImpl
 
@@ -37,6 +39,7 @@ ratpack {
         bind Player
         bind Team
         // bind Fixtures
+        bindInstance FindPropertyStatistics, new FindPropetyStatisticsImpl()
         bindInstance TeamContent, new TeamContentImpl()
         bindInstance TeamStoreService, new TeamStoreServiceImpl()
         bindInstance new Service() {
