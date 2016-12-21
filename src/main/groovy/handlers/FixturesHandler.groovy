@@ -11,6 +11,7 @@ import java.time.ZoneOffset
 import java.time.ZonedDateTime
 
 import static ratpack.handlebars.Template.handlebarsTemplate
+
 @Slf4j
 class FixturesHandler implements Handler {
 
