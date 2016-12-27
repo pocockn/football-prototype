@@ -2,10 +2,11 @@ package handlers
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import groovy.util.logging.Slf4j
-import models.Player
-import models.Team
+import models.PlayersContainer
+import models.TeamContainer
 import ratpack.handling.Context
 import ratpack.handling.InjectionHandler
+import service.PersistanceService.StoreService
 import service.playerServices.FindPropertyStatistics
 import service.playerServices.TeamContent
 
@@ -14,25 +15,26 @@ import static ratpack.handlebars.Template.handlebarsTemplate
 @Slf4j
 class DashboardHandler extends InjectionHandler {
 
-    void handle(Context ctx, Team team, ObjectMapper objectMapper, TeamContent teamContent, FindPropertyStatistics findPropertyStatistics) {
-        Player player1 = new Player(name: 'Nick', goals: [0, 2, 3, 5, 6], ratings: [1, 2, 4, 8, 7, 5], manOfTheMatches: 10, cleanSheets: 20, assists: 24)
-        Player player2 = new Player(name: 'Pasty', goals: [0, 5, 7, 9, 10], ratings: [1, 3, 4, 3, 9, 5], manOfTheMatches: 20, cleanSheets: 30, assists: 12)
-        team.players.add(player1)
-        team.players.add(player2)
-        def json = writeObjectToJson(objectMapper, team)
-        String formattedJson = formatJsonForHighChartsConsumption(json)
-        teamContent.findHighestAverageRating(team.players).then { highestRatedPlayer ->
-            findPropertyStatistics.findLargestPropertyValues(team.players, "name").then { playerStatsMap ->
-                ctx.render(handlebarsTemplate('dashboard.html',
-                        model: formattedJson,
-                        highestRating: highestRatedPlayer,
-                        mostMotm: playerStatsMap))
-            }
+    void handle(Context ctx, ObjectMapper objectMapper, TeamContent teamContent, FindPropertyStatistics findPropertyStatistics, StoreService teamStoreService) {
+        teamStoreService.fetchById('0000-0000-0000-0001').then { TeamContainer soldiersContent ->
+            log.info("Fetching dashboard data for : ${soldiersContent.team.name}")
+            TeamContainer goalsView = new TeamContainer(playersContainer: soldiersContent.playersContainer)
+            String json = writeObjectToJson(objectMapper, goalsView.playersContainer)
+            String jsonOb = formatJsonForHighChartsConsumption(json)
+            log.info("${json}")
+            teamContent.findHighestAverageRating(soldiersContent.playersContainer.players).then { highestRatedPlayer ->
+                findPropertyStatistics.findLargestPropertyValues(soldiersContent.playersContainer.players, "name").then { playerStatsMap ->
+                    ctx.render(handlebarsTemplate('dashboard.html',
+                            model: jsonOb,
+                            highestRating: highestRatedPlayer,
+                            mostMotm: playerStatsMap))
+                }
 
+            }
         }
     }
 
-    private static String writeObjectToJson(ObjectMapper objectMapper, Team team) {
+    private static String writeObjectToJson(ObjectMapper objectMapper, PlayersContainer team) {
         objectMapper.writeValueAsString(team)
     }
 

@@ -2,8 +2,8 @@ import config.HikariConfigModule
 import handlers.AllTeamsHandler
 import handlers.DashboardHandler
 import handlers.FixturesHandler
+import handlers.TeamDetectionHandler
 import models.Player
-
 import models.Team
 import persistance.DataMigrationRatpackModule
 import ratpack.groovy.sql.SqlModule
@@ -12,8 +12,8 @@ import ratpack.handlebars.HandlebarsModule
 import ratpack.hikari.HikariModule
 import ratpack.service.Service
 import ratpack.service.StartEvent
-import service.TeamPersistanceService.TeamStoreService
-import service.TeamPersistanceService.TeamStoreServiceImpl
+import service.PersistanceService.StoreService
+import service.PersistanceService.TeamStoreServiceImpl
 import service.playerServices.FindPropertyStatistics
 import service.playerServices.FindPropetyStatisticsImpl
 import service.playerServices.TeamContent
@@ -35,13 +35,13 @@ ratpack {
         module HandlebarsModule
         bind DashboardHandler
         bind FixturesHandler
-        bind PlayerStatistics
         bind Player
         bind Team
+        bindInstance StoreService, new TeamStoreServiceImpl()
         // bind Fixtures
         bindInstance FindPropertyStatistics, new FindPropetyStatisticsImpl()
+        // bind teamContent
         bindInstance TeamContent, new TeamContentImpl()
-        bindInstance TeamStoreService, new TeamStoreServiceImpl()
         bindInstance new Service() {
             void onStart(StartEvent e) throws Exception {
                 Logger logger = Logger.getLogger("")
@@ -51,6 +51,9 @@ ratpack {
     }
 
     handlers {
+
+        all new TeamDetectionHandler()
+
         get {
             render groovyMarkupTemplate("index.gtpl", title: "My ratpack App")
         }

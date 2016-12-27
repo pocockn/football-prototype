@@ -24,70 +24,58 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td class="text-center">
-                                <label class="option block mn">
-                                    <input type="checkbox" name="mobileos" value="FR">
-                                    <span class="checkbox mn"></span>
-                                </label>
-                            </td>
-                            <td class="w100">
-                                <img class="img-responsive mw40 ib mr10" title="user"
-                                     src="assets/img/stock/products/thumb_1.jpg">
-                            </td>
-                            <td class="">Shire Soldiers</td>
-                            <td class="">33</td>
-                            <td class="">20</td>
-                            <td class="">Connor Pasty</td>
-                            <td class="text-right">
-                                <div class="btn-group text-right">
-                                    <button type="button" class="btn btn-success br2 btn-xs fs12 dropdown-toggle"
-                                            data-toggle="dropdown" aria-expanded="false"> Active
-                                        <span class="caret ml5"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <a href="#">Edit</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Delete</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Archive</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li>
-                                            <a href="#">Complete</a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="#">Pending</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Canceled</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
+                        {{#each model}}
+                            <tr>
+                                <td class="text-center">
+                                    <label class="option block mn">
+                                        <input type="checkbox" name="mobileos" value="FR">
+                                        <span class="checkbox mn"></span>
+                                    </label>
+                                </td>
+                                <td class="w100">
+                                    <img class="img-responsive mw40 ib mr10" title="user"
+                                         src="assets/img/stock/products/thumb_1.jpg">
+                                </td>
+                                <td class="">{{name}}</td>
+                                <td class="">33</td>
+                                <td class="">20</td>
+                                <td class="">Connor Pasty</td>
+                                <td class="text-right">
+                                    <div class="btn-group text-right">
+                                        <button type="button" class="btn btn-success br2 btn-xs fs12 dropdown-toggle"
+                                                data-toggle="dropdown" aria-expanded="false"> Active
+                                            <span class="caret ml5"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li>
+                                                <a href="#">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Delete</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Archive</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li>
+                                                <a href="#">Complete</a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="#">Pending</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Canceled</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        {{/each}}
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                {{model}}
-                {{#each model}}
-                    <a href="/session/{{id}}">
-                        <div class="col-md-3 col-md-offset-2 centered">
-                            {{id}}
-                            {{players}}
-                            {{fixtures}}
-                        </div>
-                    </a>
-                {{/each}}
-            </div><!--/row-->
-        </div><!--/container-->
         </body>
     </div>
 </section>

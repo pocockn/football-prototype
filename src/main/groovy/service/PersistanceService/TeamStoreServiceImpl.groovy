@@ -1,9 +1,11 @@
-package service.TeamPersistanceService
+package service.PersistanceService
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import groovy.sql.GroovyRowResult
 import groovy.sql.Sql
+import groovy.util.logging.Slf4j
 import models.Team
+import models.TeamContainer
 import persistance.JsonObjectMapper
 import ratpack.exec.Blocking
 import ratpack.exec.Operation
@@ -11,7 +13,8 @@ import ratpack.exec.Promise
 
 import javax.inject.Inject
 
-class TeamStoreServiceImpl implements TeamStoreService {
+@Slf4j
+class TeamStoreServiceImpl implements StoreService<TeamContainer> {
 
     @Inject
     Sql sql
@@ -21,11 +24,21 @@ class TeamStoreServiceImpl implements TeamStoreService {
     JsonObjectMapper jsonObjectMapper
 
     @Override
-    Operation save(Team team) {
-        String json = jsonObjectMapper.mapObjectToJson(team)
-        Blocking.get {
-            sql.execute("INSERT INTO site_content (id, content) VALUES (?, cast(? as jsonb))", team.id, json)
-        }.operation()
+    Operation save(TeamContainer team) {
+        int updates = 0;
+        try {
+            String json = jsonObjectMapper.mapObjectToJson(team)
+            Blocking.get {
+                updates = sql.executeUpdate("update site_content set content = cast(? as jsonb), where id = ?", json, team.id)
+            }
+            if (updates == 0) {
+                Blocking.get {
+                    sql.execute("INSERT INTO site_content (id, content) VALUES (?, cast(? as jsonb))", team.id, json)
+                }.operation()
+            }
+        } catch (e) {
+            throw e
+        }
     }
 
     @Override
@@ -50,16 +63,16 @@ class TeamStoreServiceImpl implements TeamStoreService {
     }
 
     @Override
-    Promise<Team> fetchById(String id) {
+    Promise<TeamContainer> fetchById(String id) {
         if (id == null) {
             return null
         }
-
+        log.info("id ${id}")
         Blocking.get {
             sql.firstRow("""SELECT * from site_content where id = ${id}""")
         }.map { row ->
             if (row) {
-                objectMapper.readValue(row.getAt(0).toString(), Team)
+                objectMapper.readValue(row.getAt(1).toString(), TeamContainer)
             }
         }
     }
