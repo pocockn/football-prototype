@@ -1,4 +1,4 @@
-package service.PersistanceService
+package service.persistance_service
 
 import ratpack.exec.Operation
 import ratpack.exec.Promise
@@ -9,7 +9,7 @@ interface StoreService<T> {
 
     Operation delete(String id)
 
-    Promise<List<T>> fetchAll()
+    Promise<List> fetchAll()
 
     Promise<T> fetchById(String id)
 

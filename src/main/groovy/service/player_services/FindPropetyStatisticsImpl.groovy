@@ -1,11 +1,11 @@
-package service.playerServices
+package service.player_services
 
 import ratpack.exec.Promise
 
 class FindPropetyStatisticsImpl implements FindPropertyStatistics {
 
     List<String> propertyNames
-    Map<String, Map<String, ?>> largestPropertiesAndValues;
+    Map<String, Map<String, ?>> largestPropertiesAndValues
     private static List<String> propertiesToAnalyse = ['manOfTheMatches', 'cleanSheets', 'assists']
 
     FindPropetyStatisticsImpl() {

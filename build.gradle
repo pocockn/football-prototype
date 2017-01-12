@@ -1,6 +1,7 @@
 buildscript {
     repositories {
         jcenter()
+        maven { url "http://oss.jfrog.org/artifactory/repo" }
     }
     dependencies {
         classpath "io.ratpack:ratpack-gradle:1.4.4"
@@ -16,6 +17,7 @@ apply plugin: 'codenarc'
 
 repositories {
     jcenter()
+    maven { url "http://oss.jfrog.org/artifactory/repo" }
 }
 
 codenarcMain {
@@ -46,9 +48,15 @@ dependencies {
     testCompile ratpack.dependency("remote-test")
     compile ratpack.dependency("hikari")
 
+    compile ratpack.dependency('session')
+    compile ratpack.dependency('pac4j')
+    compile "org.pac4j:pac4j-http:1.8.6"
+    compile "org.pac4j:pac4j-oauth:1.8.6"
+
     // Dependencies for mock object types and mock concrete types in spock.
     testCompile 'cglib:cglib:2.2.2'
     testCompile 'org.objenesis:objenesis:2.1'
+
 
     compile ratpack.dependency("guice"), {
         force = true

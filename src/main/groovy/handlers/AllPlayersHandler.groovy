@@ -8,16 +8,15 @@ import service.persistance_service.StoreService
 import static ratpack.handlebars.Template.handlebarsTemplate
 
 @Slf4j
-class AllTeamsHandler extends InjectionHandler {
+class AllPlayersHandler extends InjectionHandler {
     void handle(Context ctx, StoreService teamStoreService) {
         teamStoreService.fetchAll()
                 .onError { e ->
             log.info("exception finding sessions ${e}")
             ctx.render handlebarsTemplate("error.html")
         }.then { teams ->
-            log.info("Retrieved these teams from the database : ${teams*.id}")
-            log.info("team model is ${teams}")
-            ctx.render handlebarsTemplate("allTeams.html", model: teams)
+            log.info("Retrieved these player containers from the database : ${teams*.playersContainer.players}")
+            ctx.render handlebarsTemplate("allPlayers.html", model: teams*.playersContainer.players)
         }
     }
 }

@@ -1,5 +1,6 @@
-package service.playerServices
+package service.player_services
 
+import list_helpers.ListUtil
 import models.Player
 import ratpack.exec.Promise
 
@@ -11,6 +12,16 @@ class TeamContentImpl implements TeamContent {
         Integer highestRating = 0
         returnPlayerWithHighestAverageRating(players, highestRating, playerWithHighestAverageRating)
         return Promise.value(playerWithHighestAverageRating)
+    }
+
+    @Override
+    Promise<Double> findAverageRating(List<Player> players) {
+        return null
+    }
+
+    @Override
+    Integer findGoalTotal(List<Integer> goals) {
+        return ListUtil.sum(goals)
     }
 
     private

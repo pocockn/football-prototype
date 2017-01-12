@@ -6,9 +6,9 @@ import models.PlayersContainer
 import models.TeamContainer
 import ratpack.handling.Context
 import ratpack.handling.InjectionHandler
-import service.PersistanceService.StoreService
-import service.playerServices.FindPropertyStatistics
-import service.playerServices.TeamContent
+import service.persistance_service.StoreService
+import service.player_services.FindPropertyStatistics
+import service.player_services.TeamContent
 
 import static ratpack.handlebars.Template.handlebarsTemplate
 

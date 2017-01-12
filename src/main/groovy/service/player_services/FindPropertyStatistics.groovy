@@ -1,4 +1,4 @@
-package service.playerServices
+package service.player_services
 
 import ratpack.exec.Promise
 

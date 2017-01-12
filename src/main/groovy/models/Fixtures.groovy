@@ -2,5 +2,5 @@ package models
 
 
 class Fixtures {
-    List<Match> matches
+    List<Match> matches = []
 }

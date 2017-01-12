@@ -2,8 +2,8 @@ package service
 
 import models.Player
 import ratpack.test.exec.ExecHarness
-import service.playerServices.FindPropertyStatistics
-import service.playerServices.FindPropetyStatisticsImpl
+import service.player_services.FindPropertyStatistics
+import service.player_services.FindPropetyStatisticsImpl
 import spock.lang.AutoCleanup
 import spock.lang.Specification
 

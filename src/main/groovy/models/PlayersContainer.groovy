@@ -2,9 +2,6 @@ package models
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
-/**
- * Created by pocockn on 27/12/16.
- */
 class PlayersContainer {
     ArrayList<Player> players = []
 
@@ -14,7 +11,7 @@ class PlayersContainer {
     }
 
     @JsonProperty("players")
-    public ArrayList<Player> getPlayer() {
+    public ArrayList<Player> getPlayers() {
         return this.players
     }
 

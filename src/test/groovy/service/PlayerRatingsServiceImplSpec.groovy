@@ -2,8 +2,8 @@ package service
 
 import models.Player
 import ratpack.test.exec.ExecHarness
-import service.playerServices.TeamContent
-import service.playerServices.TeamContentImpl
+import service.player_services.TeamContent
+import service.player_services.TeamContentImpl
 import spock.lang.AutoCleanup
 import spock.lang.Shared
 import spock.lang.Specification
