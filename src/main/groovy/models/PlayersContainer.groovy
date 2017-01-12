@@ -11,7 +11,7 @@ class PlayersContainer {
     }
 
     @JsonProperty("players")
-    public ArrayList<Player> getPlayers() {
+    public ArrayList<Player> getPlayer() {
         return this.players
     }
 

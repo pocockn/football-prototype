@@ -12,5 +12,6 @@ class Player {
     Integer assists
     Integer manOfTheMatches
     Integer cleanSheets
+    Integer totalGoals
 
 }
