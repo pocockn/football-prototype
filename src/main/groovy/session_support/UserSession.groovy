@@ -1,11 +1,12 @@
 package session_support
 
-import com.google.inject.Inject
 import groovy.util.logging.Slf4j
 import ratpack.exec.Operation
 import ratpack.exec.Promise
 import ratpack.session.Session
 import service.user_service.UserStorageService
+
+import javax.inject.Inject
 
 @Slf4j
 class UserSession {

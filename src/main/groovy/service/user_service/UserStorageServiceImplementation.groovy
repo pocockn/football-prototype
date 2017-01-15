@@ -1,7 +1,6 @@
 package service.user_service
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.google.inject.Inject
 import groovy.sql.GroovyRowResult
 import groovy.sql.Sql
 import groovy.util.logging.Slf4j
@@ -10,6 +9,8 @@ import ratpack.exec.Blocking
 import ratpack.exec.Operation
 import ratpack.exec.Promise
 import user.UserProfile
+
+import javax.inject.Inject
 
 @Slf4j
 class UserStorageServiceImplementation implements UserStorageService<UserProfile> {

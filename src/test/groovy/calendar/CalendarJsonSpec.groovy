@@ -20,13 +20,14 @@ class CalendarJsonSpec extends Specification {
         Match match1 = new Match(id: "1234", title: "match two", start: ZonedDateTime.now(ZoneOffset.UTC).plusDays(5), end: ZonedDateTime.now(ZoneOffset.UTC).plusDays(5))
         matches.add(match1)
         matches.add(match)
-        Fixtures fixtures = new Fixtures(matches)
+        Fixtures fixtures = new Fixtures(matches: matches)
 
         when:
         String json = objectMapper.writeValueAsString(fixtures.matches)
 
         then:
-        json == '[{"id":"1234","title":"match two","start":"2016-12-21T13:07:34.225Z","end":"2016-12-21T13:07:34.225Z"},{"id":"123","title":"match one","start":"2016-12-21T13:07:34.175Z","end":"2016-12-21T13:07:34.221Z"}]'
+        json.contains('"id":"1234","title":"match two"')
+        json.contains('"id":"123","title":"match one"')
 
 
     }

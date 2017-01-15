@@ -19,6 +19,7 @@
                             <th class="">Team Name</th>
                             <th class="">Goals</th>
                             <th class="">Assists</th>
+                            <th class="">View</th>
                             <th class="text-right">Status</th>
 
                         </tr>
@@ -41,6 +42,7 @@
                                     <td class="">{{teamName}}</td>
                                     <td class="">{{totalGoals}}</td>
                                     <td class="">{{assists}}</td>
+                                    <td class=""><a href="/players/{{id}}">View Player</a></td>
                                     <td class="text-right">
                                         <div class="btn-group text-right">
                                             <button type="button"
@@ -48,27 +50,6 @@
                                                     data-toggle="dropdown" aria-expanded="false"> Active
                                                 <span class="caret ml5"></span>
                                             </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li>
-                                                    <a href="#">Edit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Delete</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Archive</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li>
-                                                    <a href="#">Complete</a>
-                                                </li>
-                                                <li class="active">
-                                                    <a href="#">Pending</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Canceled</a>
-                                                </li>
-                                            </ul>
                                         </div>
                                     </td>
                                 </tr>
