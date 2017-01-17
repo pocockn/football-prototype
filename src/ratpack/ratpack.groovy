@@ -121,18 +121,12 @@ ratpack {
             render handlebarsTemplate("loginForm.html")
         }
 
-//            response.headers.add(HttpHeaderNames.CONTENT_TYPE, "text/html")
-//            render """<html>
-//            <body>
-//            <ul>
-//            <li><a href="/twitterLogin">Twitter Login</a></li>
-//            <li><a href="/basicLogin">Basic Login</a></li>
-//            <li><a href="/facebookLogin">Facebook Login</a></li>
-//            </ul>
-//            </body>
-//            </html>
-//            """
-//        }
+        get("logout") {
+            RatpackPac4j.logout(context).then {
+                context.response.expireCookie("name")
+                redirect("/")
+            }
+        }
 
         files { dir "public" }
     }
