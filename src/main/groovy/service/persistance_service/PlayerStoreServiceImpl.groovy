@@ -3,6 +3,7 @@ package service.persistance_service
 import com.fasterxml.jackson.databind.ObjectMapper
 import groovy.sql.GroovyRowResult
 import groovy.sql.Sql
+import groovy.util.logging.Slf4j
 import models.Player
 import persistance.JsonObjectMapper
 import ratpack.exec.Blocking
@@ -11,7 +12,8 @@ import ratpack.exec.Promise
 
 import javax.inject.Inject
 
-class PlayerStoreServiceImpl implements StoreService<Player> {
+@Slf4j
+class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
 
     @Inject
     Sql sql
@@ -54,13 +56,18 @@ class PlayerStoreServiceImpl implements StoreService<Player> {
         if (id == null) {
             return null
         }
-
         Blocking.get {
-            sql.firstRow("""SELECT * from site_content where id = ${id}""")
+            sql.firstRow(""" select elem
+                                from site_content,
+                                lateral jsonb_array_elements(content->'playersContainer'->'series') elem
+                                where elem @> '{"id":"${id}"}'
+                             """)
         }.map { row ->
+            log.info("row is: ${row.getAt(0)}")
             if (row) {
-                objectMapper.readValue(row.getAt(0).toString(), Player)
+                String instanceJson = row.getAt(0)
+                objectMapper.readValue(instanceJson, Player)
+            }
             }
         }
     }
-}

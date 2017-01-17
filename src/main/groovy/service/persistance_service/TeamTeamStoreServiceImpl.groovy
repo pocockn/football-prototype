@@ -13,7 +13,7 @@ import ratpack.exec.Promise
 import javax.inject.Inject
 
 @Slf4j
-class TeamStoreServiceImpl implements StoreService<TeamContainer> {
+class TeamTeamStoreServiceImpl implements TeamStoreService<TeamContainer> {
 
     @Inject
     Sql sql

@@ -3,7 +3,7 @@ package service.persistance_service
 import ratpack.exec.Operation
 import ratpack.exec.Promise
 
-interface StoreService<T> {
+interface PlayerStoreService<T> {
 
     Operation save(T object)
 

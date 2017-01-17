@@ -6,7 +6,7 @@ import models.PlayersContainer
 import models.TeamContainer
 import ratpack.handling.Context
 import ratpack.handling.InjectionHandler
-import service.persistance_service.StoreService
+import service.persistance_service.TeamStoreService
 import service.player_services.FindPropertyStatistics
 import service.player_services.TeamContent
 
@@ -15,7 +15,7 @@ import static ratpack.handlebars.Template.handlebarsTemplate
 @Slf4j
 class DashboardHandler extends InjectionHandler {
 
-    void handle(Context ctx, ObjectMapper objectMapper, TeamContent teamContent, FindPropertyStatistics findPropertyStatistics, StoreService teamStoreService) {
+    void handle(Context ctx, ObjectMapper objectMapper, TeamContent teamContent, FindPropertyStatistics findPropertyStatistics, TeamStoreService teamStoreService) {
         teamStoreService.fetchById('0000-0000-0000-0001').then { TeamContainer soldiersContent ->
             log.info("Fetching dashboard data for : ${soldiersContent.team.name}")
             TeamContainer goalsView = new TeamContainer(playersContainer: soldiersContent.playersContainer)

@@ -7,12 +7,12 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
     <changeSet id="football-team-table-created" author="pocockn">
-        <validCheckSum>7:76e082649b2e6c7fedb2a0ffa9b98b78</validCheckSum>
+        <validCheckSum>7:76e082649b2e6c7fedb2al0ffa9b98b78</validCheckSum>
         <createTable tableName="site_content">
             <column name="id" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="content" type="json"/>
+            <column name="content" type="jsonb"/>
         </createTable>
         <addPrimaryKey columnNames="id" tableName="site_content"/>
     </changeSet>

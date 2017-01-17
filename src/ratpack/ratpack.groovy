@@ -16,8 +16,10 @@ import ratpack.pac4j.RatpackPac4j
 import ratpack.service.Service
 import ratpack.service.StartEvent
 import ratpack.session.SessionModule
-import service.persistance_service.StoreService
-import service.persistance_service.TeamStoreServiceImpl
+import service.persistance_service.PlayerStoreService
+import service.persistance_service.PlayerStoreServiceImpl
+import service.persistance_service.TeamStoreService
+import service.persistance_service.TeamTeamStoreServiceImpl
 import service.player_services.FindPropertyStatistics
 import service.player_services.FindPropetyStatisticsImpl
 import service.player_services.TeamContent
@@ -54,9 +56,10 @@ ratpack {
         bind Fixtures
         bind UserAccountService
         bind UserStorageService, UserStorageServiceImplementation
-        bindInstance StoreService, new TeamStoreServiceImpl()
+        bindInstance TeamStoreService, new TeamTeamStoreServiceImpl()
         bindInstance FindPropertyStatistics, new FindPropetyStatisticsImpl()
         bindInstance TeamContent, new TeamContentImpl()
+        bindInstance PlayerStoreService, new PlayerStoreServiceImpl()
         bindInstance new Service() {
             void onStart(StartEvent e) throws Exception {
                 Logger logger = Logger.getLogger("")
@@ -78,6 +81,9 @@ ratpack {
         path "teams", new AllTeamsHandler()
 
         path "players", new AllPlayersHandler()
+
+        path "players/:id", new SinglePlayerHandler()
+
 
         FacebookClient fbClient = new FacebookClient('259923037755292', '10cb6067fb2060ad1c5b8e4ba723a15d')
 
