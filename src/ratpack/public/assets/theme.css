@@ -19782,14 +19782,7 @@ body.sb-l-m #content_wrapper {
 body.sb-l-c.sb-l-m #content_wrapper {
   margin-left: 0;
 }
-/* Adjust Navbar Logo/Branding - Sidebar Minified */
-body.sb-l-m .navbar-branding {
-  width: 60px;
-}
-/* Adjust Navbar Logo/Branding - Sidebar Hidden */
-body.sb-l-m .navbar-brand {
-  display: none;
-}
+
 /*=======================================================
   F. Sidebar Default Color Settings
 ========================================================= */
@@ -20134,15 +20127,11 @@ body.sb-l-m.mobile-view .nano > .nano-pane {
   body.sb-l-c.sb-l-m #content_wrapper {
     margin-left: 0;
   }
-  /* Adjust Navbar Logo/Branding - Hide Logo */
-  body.sb-l-o .navbar-brand,
-  body.sb-l-m .navbar-brand {
-    display: none;
-  }
+
   /* Adjust Navbar Logo/Branding - Adjust Width */
   body.sb-l-o .navbar-branding,
   body.sb-l-m .navbar-branding {
-    max-width: 45px;
+
     margin-right: 5px;
   }
   /* Adjust Navbar Toggle - Sidebar Open */
@@ -20260,13 +20249,7 @@ body.sb-l-m.mobile-view .nano > .nano-pane {
 .sb-l-c #content_wrapper {
   margin-left: 0;
 }
-/* Adjust navbar branding when closed */
-.sb-l-c .navbar-branding {
-  width: 60px;
-}
-.sb-l-c .navbar-brand {
-  display: none;
-}
+
 /*====================================================
   B. Sidebar Right Toggle
 ====================================================== */

@@ -26,12 +26,27 @@ class DashboardHandler extends InjectionHandler {
                     ctx.render(handlebarsTemplate('dashboard.html',
                             model: jsonOb,
                             highestRating: highestRatedPlayer,
-                            mostMotm: playerStatsMap))
+                            mostMotm: renameMapKeys(playerStatsMap)))
                 }
 
             }
         }
     }
+
+
+    static Map<String, Map<String, ?>> renameMapKeys(Map<String, Map<String, ?>> originalMap) {
+        String[] stats = ["manOfTheMatches", "cleanSheets", "assists"]
+        String[] renamedStats = ["Man Of The Matches", "Clean Sheets", "Assists"]
+        int i = 0
+        stats.each { stat ->
+            def motm = originalMap.get(stat)
+            originalMap.put(renamedStats[i], motm)
+            originalMap.remove(stat)
+            i++
+        }
+        originalMap
+    }
+
 
     private static String writeObjectToJson(ObjectMapper objectMapper, PlayersContainer team) {
         objectMapper.writeValueAsString(team)
