@@ -57,10 +57,10 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
             return null
         }
         Blocking.get {
-            sql.firstRow(""" select elem
+            sql.firstRow("""select elem
                                 from site_content,
                                 lateral jsonb_array_elements(content->'playersContainer'->'series') elem
-                                where elem @> '{"id":"${id}"}'
+                                where elem @> '{"id": "${id}"}'
                              """)
         }.map { row ->
             log.info("row is: ${row.getAt(0)}")
