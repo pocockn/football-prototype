@@ -6,6 +6,7 @@ buildscript {
     dependencies {
         classpath "io.ratpack:ratpack-gradle:1.4.4"
         classpath "com.github.jengelman.gradle.plugins:shadow:1.2.3"
+        classpath 'com.moowork.gradle:gradle-node-plugin:0.9'
     }
 }
 
@@ -14,6 +15,7 @@ apply plugin: "com.github.johnrengelman.shadow"
 apply plugin: "idea"
 apply plugin: 'groovy'
 apply plugin: 'codenarc'
+apply plugin: "com.moowork.node"
 
 repositories {
     jcenter()
@@ -70,6 +72,56 @@ idea {
         wildcards.add "GebConfig.groovy"
     }
 }
+
+// NPM / NODE SETUP
+
+node {
+    version = '4.4.5'
+    npmVersion = '2.15.5'
+    download = true
+}
+
+task npmCacheConfig(type: NpmTask) {
+    description = "Configure the NPM cache"
+    def npmCacheDir = "${gradle.getGradleUserHomeDir()}/caches/npm"
+    outputs.files file(npmCacheDir)
+    args = ['config', 'set', 'cache', npmCacheDir]
+}
+
+task npmPackages(type: NpmTask, dependsOn: npmCacheConfig) {
+    description = "Install Node.js packages"
+    args = ['install']
+    inputs.files file('package.json')
+    outputs.files file('node_modules')
+}
+
+task bowerInstall(type: NodeTask) {
+    script = file('node_modules/.bin/bower')
+    args = ["--config.storage.cache=${gradle.getGradleUserHomeDir()}}/caches/bower/cache",
+            "--config.storage.packages=${gradle.getGradleUserHomeDir()}/caches/bower/packages",
+            "--config.storage.registry=${gradle.getGradleUserHomeDir()}/caches/bower/registry",
+            'install']
+    inputs.files file('bower.json')
+    outputs.files file('bower_components')
+    dependsOn npmPackages
+}
+
+task bowerSync(type: Sync) {
+    from 'bower_components'
+    into "src/ratpack/public/assets/"
+    exclude '**/*.min.js'
+    dependsOn bowerInstall
+}
+
+task bowerPackages() {
+    dependsOn bowerSync
+}
+
+processResources.dependsOn bowerPackages
+
+clean.delete << file('src/ratpack/public/assets/')
+clean.delete << file('node_modules')
+clean.delete << file('bower_components')
 
 task stage {
     dependsOn installDist

@@ -10,5 +10,9 @@ out
 *.iml
 *.ipr
 *.iws
+*.log
+.shelf
 .DS_Store
+/node_modules
+bower_components
 .idea/workspace.xml
