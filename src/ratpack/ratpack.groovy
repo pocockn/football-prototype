@@ -1,3 +1,4 @@
+import api.TeamGetHandlerApi
 import config.HikariConfigModule
 import handlers.*
 import models.Fixtures
@@ -69,6 +70,10 @@ ratpack {
     }
 
     handlers {
+
+        prefix("api") {
+            path "teams", new TeamGetHandlerApi()
+        }
 
         get {
             redirect(302, 'dashboard')
