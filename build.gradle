@@ -3,3 +3,18 @@ apply plugin: "idea"
 task wrapper(type: Wrapper) {
     gradleVersion = '3.1'
 }
+
+idea {
+    project {
+        wildcards.add "ratpack.groovy"
+        wildcards.add "GebConfig.groovy"
+    }
+}
+
+allprojects {
+    task displayProjects {
+        doLast { task ->
+            println "Project : $task.project.name"
+        }
+    }
+}

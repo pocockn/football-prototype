@@ -67,12 +67,7 @@ dependencies {
 
 }
 
-idea {
-    project {
-        wildcards.add "ratpack.groovy"
-        wildcards.add "GebConfig.groovy"
-    }
-}
+
 
 
 task stage {
