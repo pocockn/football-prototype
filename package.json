@@ -8,8 +8,9 @@
   "description": "",
   "repository": "https://github.com/pocockn/football-prototype",
   "license": "MIT",
-  "main": "",
+  "main": "index.js",
   "dependencies": {
+    "axios": "^0.15.3",
     "bower": "^1.4.0"
   }
 }
