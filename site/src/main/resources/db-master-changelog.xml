@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="football-team-table-created" author="pocockn">
+        <validCheckSum>7:76e082649b2e6c7fedb2al0ffa9b98b78</validCheckSum>
+        <createTable tableName="site_content">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="content" type="jsonb"/>
+        </createTable>
+        <addPrimaryKey columnNames="id" tableName="site_content"/>
+    </changeSet>
+
+    <changeSet id="users-table-created" author="pocockn">
+        <validCheckSum>7:4ABC83CA708E28B765B55D34CAC21FC9</validCheckSum>
+        <createTable tableName="users">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="content" type="json"/>
+        </createTable>
+        <addPrimaryKey columnNames="id" tableName="users"/>
+    </changeSet>
+
+    <changeSet id="test-table-created" author="pocockn">
+        <validCheckSum>7:76e082649b2e6c7fedb2a0ffa9b98b77</validCheckSum>
+        <createTable tableName="test">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="content" type="json"/>
+        </createTable>
+        <addPrimaryKey columnNames="id" tableName="test"/>
+    </changeSet>
+
+    <changeSet id="bootstrap shire soldiers" author="pocockn">
+        <customChange class="changesets.BootstrapShireSoldiersChange"/>
+    </changeSet>
+
+</databaseChangeLog>
