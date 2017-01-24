@@ -59,7 +59,9 @@
                 <li class="crumb-link">
                     <a href="index.html">Home</a>
                 </li>
-                <li class="crumb-trail">Dashboard</li>
+                <li class="crumb-trail">
+                    <script>document.write(window.location.href.split("/").pop());</script>
+                </li>
             </ol>
         </div>
     </header>
