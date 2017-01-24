@@ -10,11 +10,18 @@ class Player {
     String teamName
     String bio
     @JsonProperty("data")
-    ArrayList<Integer> goals
+    ArrayList<Integer> seasonGoals
     ArrayList<Integer> ratings
     Integer assists
     Integer manOfTheMatches
     Integer cleanSheets
     Integer totalGoals
 
+    void finishSeason() {
+        this.seasonGoals.clear()
+        this.ratings.clear()
+        cleanSheets = 0
+        manOfTheMatches = 0
+        assists = 0
+    }
 }
