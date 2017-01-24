@@ -1,8 +1,6 @@
-import config.HikariConfigModule
 import handlers.*
 import models.Fixtures
 import models.Player
-import models.Team
 import org.pac4j.http.client.indirect.IndirectBasicAuthClient
 import org.pac4j.http.credentials.authenticator.test.SimpleTestUsernamePasswordAuthenticator
 import org.pac4j.oauth.client.FacebookClient
@@ -16,18 +14,14 @@ import ratpack.pac4j.RatpackPac4j
 import ratpack.service.Service
 import ratpack.service.StartEvent
 import ratpack.session.SessionModule
+import ratpack_modules.HikariConfigModule
+import ratpack_modules.LoginModule
+import ratpack_modules.TeamModule
+import ratpack_modules.UserAccountModule
 import service.persistance_service.PlayerStoreService
 import service.persistance_service.PlayerStoreServiceImpl
-import service.persistance_service.TeamStoreService
-import service.persistance_service.TeamTeamStoreServiceImpl
 import service.player_services.FindPropertyStatistics
 import service.player_services.FindPropetyStatisticsImpl
-import service.player_services.TeamContent
-import service.player_services.TeamContentImpl
-import service.user_service.UserAccountService
-import service.user_service.UserStorageService
-import service.user_service.UserStorageServiceImplementation
-import session_support.UserSession
 
 import java.util.logging.Logger
 
@@ -45,20 +39,15 @@ ratpack {
         module DataMigrationRatpackModule
         module HandlebarsModule
         module SessionModule
+        module(UserAccountModule)
+        module(LoginModule)
+        module(TeamModule)
         bind DashboardHandler
         bind FixturesHandler
-        bind TwitterLoginHandler
-        bind FacebookLoginHandler
         bind AllPlayersHandler
-        bind UserSession
         bind Player
-        bind Team
         bind Fixtures
-        bind UserAccountService
-        bind UserStorageService, UserStorageServiceImplementation
-        bindInstance TeamStoreService, new TeamTeamStoreServiceImpl()
         bindInstance FindPropertyStatistics, new FindPropetyStatisticsImpl()
-        bindInstance TeamContent, new TeamContentImpl()
         bindInstance PlayerStoreService, new PlayerStoreServiceImpl()
         bindInstance new Service() {
             void onStart(StartEvent e) throws Exception {

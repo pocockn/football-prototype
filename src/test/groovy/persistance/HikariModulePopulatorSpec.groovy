@@ -1,7 +1,7 @@
 package persistance
 
 import config.DatabaseConfig
-import config.HikariConfigModule
+import ratpack_modules.HikariConfigModule
 import spock.lang.Shared
 import spock.lang.Specification
 

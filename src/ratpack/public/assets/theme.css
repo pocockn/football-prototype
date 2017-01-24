@@ -22111,3 +22111,7 @@ body.timeline-page .panel-clone {
     min-width: 0 !important;
   }
 }
+
+.crumb-trail {
+    text-transform: capitalize;
+}
