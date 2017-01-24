@@ -9,6 +9,12 @@ Setup the database using
 
 You can start the basic app with
 
-    ./gradlew run
+   ./gradlew run
+
+A react backend is a WIP
+
+The app can be found here :
+
+https://damp-bastion-92191.herokuapp.com/
 
 
