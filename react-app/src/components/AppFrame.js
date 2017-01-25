@@ -3,10 +3,7 @@ import React, {Component} from "react";
 class AppFrame extends Component {
     render() {
         return (
-            <html>
-            <head>
-                <title>Football Prototype</title>
-            </head>
+
             <div>
                 <header className="navbar navbar-fixed-top navbar-shadow">
                     <div className="navbar-branding">
@@ -50,8 +47,9 @@ class AppFrame extends Component {
                     </div>
 
                 </aside>
+                <div className="site_content"></div>
             </div>
-            </html>
+
         )
     }
 }
