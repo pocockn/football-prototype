@@ -1,9 +1,9 @@
 import React, {Component} from "react";
+import Team from "./Team";
 
 class AppFrame extends Component {
     render() {
         return (
-
             <div>
                 <header className="navbar navbar-fixed-top navbar-shadow">
                     <div className="navbar-branding">
@@ -47,7 +47,13 @@ class AppFrame extends Component {
                     </div>
 
                 </aside>
-                <div className="site_content"></div>
+                <section id="content_wrapper">
+                    <section id="content" className="table-layout animated fadeIn">
+                        <div className="tray tray-center">
+                            <Team/>
+                        </div>
+                    </section>
+                </section>
             </div>
 
         )
