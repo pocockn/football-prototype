@@ -1,4 +1,5 @@
 import handlers.*
+import league.ImportClient
 import models.Fixtures
 import models.Player
 import org.pac4j.http.client.indirect.IndirectBasicAuthClient
@@ -47,6 +48,7 @@ ratpack {
         bind AllPlayersHandler
         bind Player
         bind Fixtures
+        bind ImportClient
         bindInstance FindPropertyStatistics, new FindPropetyStatisticsImpl()
         bindInstance PlayerStoreService, new PlayerStoreServiceImpl()
         bindInstance new Service() {
@@ -66,6 +68,8 @@ ratpack {
         path 'dashboard', new DashboardHandler()
 
         path "fixtures", new FixturesHandler()
+
+        path "league", new LeagueTableHandler()
 
         path "teams", new AllTeamsHandler()
 
