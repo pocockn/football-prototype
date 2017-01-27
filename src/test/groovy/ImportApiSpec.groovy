@@ -6,9 +6,9 @@ class ImportApiSpec extends Specification {
     void "Parse JSON league data, ensure it has correct info in"() {
         given:
         ClassLoader classLoader = getClass().getClassLoader()
+        File jsonFile = new File(classLoader.getResource("importJsonData.json").getFile())
         JsonSlurper jsonSlurper = new JsonSlurper()
-        File file = new File(classLoader.getResource("importJsonData.json").getFile())
-        def jsonSlurped = jsonSlurper.parseText(file.text)
+        def jsonSlurped = jsonSlurper.parseText(jsonFile.text)
         LeagueTable leagueTable = new LeagueTable()
 
         when:

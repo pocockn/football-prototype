@@ -1,6 +1,8 @@
+import groovy.json.JsonSlurper
 import handlers.*
 import league.ImportClient
 import models.Fixtures
+import models.LeagueTable
 import models.Player
 import org.pac4j.http.client.indirect.IndirectBasicAuthClient
 import org.pac4j.http.credentials.authenticator.test.SimpleTestUsernamePasswordAuthenticator
@@ -19,6 +21,7 @@ import ratpack_modules.HikariConfigModule
 import ratpack_modules.LoginModule
 import ratpack_modules.TeamModule
 import ratpack_modules.UserAccountModule
+import service.LeagueTableHelpers
 import service.persistance_service.PlayerStoreService
 import service.persistance_service.PlayerStoreServiceImpl
 import service.player_services.FindPropertyStatistics
@@ -49,6 +52,9 @@ ratpack {
         bind Player
         bind Fixtures
         bind ImportClient
+        bind JsonSlurper
+        bind LeagueTable
+        bind LeagueTableHelpers
         bindInstance FindPropertyStatistics, new FindPropetyStatisticsImpl()
         bindInstance PlayerStoreService, new PlayerStoreServiceImpl()
         bindInstance new Service() {

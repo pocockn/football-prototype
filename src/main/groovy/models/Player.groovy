@@ -24,4 +24,5 @@ class Player {
         manOfTheMatches = 0
         assists = 0
     }
+
 }
