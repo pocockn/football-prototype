@@ -11,7 +11,7 @@ class LeagueTableHandler extends InjectionHandler {
     void handle(Context context, ImportClient importClient) {
 //        def data = importClient.leagueDataExtractor()
         LeagueTableHelpers leagueTableHelpers = new LeagueTableHelpers()
-        leagueTableHelpers.storeItemsInList()
+        leagueTableHelpers.extractLeagueDataFromJson()
 
         context.render handlebarsTemplate("league.html",
                 model: leagueTableHelpers.leagueTable)

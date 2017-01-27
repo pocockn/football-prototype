@@ -2,11 +2,8 @@ import groovy.json.JsonSlurper
 import models.LeagueTable
 import spock.lang.Specification
 
-/**
- * Created by pocockn on 26/01/17.
- */
 class ImportApiSpec extends Specification {
-    void "Test to see if we can get our JSON to format well or map to object"() {
+    void "Parse JSON league data, ensure it has correct info in"() {
         given:
         JsonSlurper jsonSlurper = new JsonSlurper()
         File f = new File('/home/pocockn/dev/football/src/test/resources/importJsonData.json')
@@ -24,6 +21,8 @@ class ImportApiSpec extends Specification {
 
         then:
         leagueTable.teams.contains("Shire Soldiers")
+        leagueTable.teams.contains("Wavey Wanderers")
+        leagueTable.teams.contains("Clapham Junction Thursday")
 
     }
 }

@@ -13,10 +13,10 @@ class LeagueTableHelpers {
     LeagueTable leagueTable = new LeagueTable()
 
 
-    public List<String> storeItemsInList() {
+    public List<String> extractLeagueDataFromJson() {
         int i = 0
-        jsonSelectors.each {
-            jsonSlurped.result.extractorData.data.group[it].text.each { firstNested ->
+        jsonSelectors.each { jsonKey ->
+            jsonSlurped.result.extractorData.data.group[jsonKey].text.each { firstNested ->
                 firstNested.each { secondNested ->
                     secondNested.each { finalValue ->
                         String property = objectProperties.get(i)
