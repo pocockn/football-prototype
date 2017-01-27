@@ -1,0 +1,387 @@
+{
+  "url": "http://london5aside.spawtz.com/SpawtzSkin/Fixtures/Standings.aspx?LeagueId=28&SeasonId=61",
+  "result": {
+    "extractorData": {
+      "url": "http://london5aside.spawtz.com/SpawtzSkin/Fixtures/Standings.aspx?LeagueId=28&SeasonId=61",
+      "resourceId": "ca0470cfe094cb318f26eaddd273d3a1",
+      "data": [
+        {
+          "group": [
+            {
+              "Content": [
+                {
+                  "text": "Clapham Junction Thursday"
+                }
+              ],
+              "Value 1": [
+                {
+                  "text": "P"
+                }
+              ],
+              "Value 2": [
+                {
+                  "text": "W"
+                }
+              ],
+              "Value 3": [
+                {
+                  "text": "D"
+                }
+              ],
+              "Value 4": [
+                {
+                  "text": "L"
+                }
+              ],
+              "Value 5": [
+                {
+                  "text": "GF"
+                }
+              ],
+              "Value 6": [
+                {
+                  "text": "GA"
+                }
+              ],
+              "Value 7": [
+                {
+                  "text": "GD"
+                }
+              ],
+              "Value 8": [
+                {
+                  "text": "PTS"
+                }
+              ]
+            },
+            {
+              "Content": [
+                {
+                  "text": "Wavey Wanderers"
+                }
+              ],
+              "Link": [
+                {
+                  "text": "Wavey Wanderers",
+                  "href": "http://london5aside.spawtz.com/SpawtzSkin/Fixtures/TeamProfile.aspx?TeamId=2865&LeagueId=28&SeasonId=61&DivisionId=1098"
+                }
+              ],
+              "Value 1": [
+                {
+                  "text": "5"
+                }
+              ],
+              "Value 2": [
+                {
+                  "text": "3"
+                }
+              ],
+              "Value 3": [
+                {
+                  "text": "0"
+                }
+              ],
+              "Value 4": [
+                {
+                  "text": "2"
+                }
+              ],
+              "Value 5": [
+                {
+                  "text": "31"
+                }
+              ],
+              "Value 6": [
+                {
+                  "text": "22"
+                }
+              ],
+              "Value 7": [
+                {
+                  "text": "9"
+                }
+              ],
+              "Value 8": [
+                {
+                  "text": "9"
+                }
+              ]
+            },
+            {
+              "Content": [
+                {
+                  "text": "The Feet of Hermes"
+                }
+              ],
+              "Link": [
+                {
+                  "text": "The Feet of Hermes",
+                  "href": "http://london5aside.spawtz.com/SpawtzSkin/Fixtures/TeamProfile.aspx?TeamId=2206&LeagueId=28&SeasonId=61&DivisionId=1098"
+                }
+              ],
+              "Value 1": [
+                {
+                  "text": "5"
+                }
+              ],
+              "Value 2": [
+                {
+                  "text": "3"
+                }
+              ],
+              "Value 3": [
+                {
+                  "text": "0"
+                }
+              ],
+              "Value 4": [
+                {
+                  "text": "2"
+                }
+              ],
+              "Value 5": [
+                {
+                  "text": "21"
+                }
+              ],
+              "Value 6": [
+                {
+                  "text": "13"
+                }
+              ],
+              "Value 7": [
+                {
+                  "text": "8"
+                }
+              ],
+              "Value 8": [
+                {
+                  "text": "9"
+                }
+              ]
+            },
+            {
+              "Content": [
+                {
+                  "text": "Multiple Scoregasms"
+                }
+              ],
+              "Link": [
+                {
+                  "text": "Multiple Scoregasms",
+                  "href": "http://london5aside.spawtz.com/SpawtzSkin/Fixtures/TeamProfile.aspx?TeamId=959&LeagueId=28&SeasonId=61&DivisionId=1098"
+                }
+              ],
+              "Value 1": [
+                {
+                  "text": "5"
+                }
+              ],
+              "Value 2": [
+                {
+                  "text": "3"
+                }
+              ],
+              "Value 3": [
+                {
+                  "text": "0"
+                }
+              ],
+              "Value 4": [
+                {
+                  "text": "2"
+                }
+              ],
+              "Value 5": [
+                {
+                  "text": "25"
+                }
+              ],
+              "Value 6": [
+                {
+                  "text": "24"
+                }
+              ],
+              "Value 7": [
+                {
+                  "text": "1"
+                }
+              ],
+              "Value 8": [
+                {
+                  "text": "9"
+                }
+              ]
+            },
+            {
+              "Content": [
+                {
+                  "text": "Pugh let the Cruyffs out"
+                }
+              ],
+              "Link": [
+                {
+                  "text": "Pugh let the Cruyffs out",
+                  "href": "http://london5aside.spawtz.com/SpawtzSkin/Fixtures/TeamProfile.aspx?TeamId=2875&LeagueId=28&SeasonId=61&DivisionId=1098"
+                }
+              ],
+              "Value 1": [
+                {
+                  "text": "5"
+                }
+              ],
+              "Value 2": [
+                {
+                  "text": "3"
+                }
+              ],
+              "Value 3": [
+                {
+                  "text": "0"
+                }
+              ],
+              "Value 4": [
+                {
+                  "text": "2"
+                }
+              ],
+              "Value 5": [
+                {
+                  "text": "17"
+                }
+              ],
+              "Value 6": [
+                {
+                  "text": "20"
+                }
+              ],
+              "Value 7": [
+                {
+                  "text": "-3"
+                }
+              ],
+              "Value 8": [
+                {
+                  "text": "9"
+                }
+              ]
+            },
+            {
+              "Content": [
+                {
+                  "text": "Michu At De Gea Ba"
+                }
+              ],
+              "Link": [
+                {
+                  "text": "Michu At De Gea Ba",
+                  "href": "http://london5aside.spawtz.com/SpawtzSkin/Fixtures/TeamProfile.aspx?TeamId=2656&LeagueId=28&SeasonId=61&DivisionId=1098"
+                }
+              ],
+              "Value 1": [
+                {
+                  "text": "5"
+                }
+              ],
+              "Value 2": [
+                {
+                  "text": "2"
+                }
+              ],
+              "Value 3": [
+                {
+                  "text": "0"
+                }
+              ],
+              "Value 4": [
+                {
+                  "text": "3"
+                }
+              ],
+              "Value 5": [
+                {
+                  "text": "20"
+                }
+              ],
+              "Value 6": [
+                {
+                  "text": "20"
+                }
+              ],
+              "Value 7": [
+                {
+                  "text": "0"
+                }
+              ],
+              "Value 8": [
+                {
+                  "text": "6"
+                }
+              ]
+            },
+            {
+              "Content": [
+                {
+                  "text": "Shire Soldiers"
+                }
+              ],
+              "Link": [
+                {
+                  "text": "Shire Soldiers",
+                  "href": "http://london5aside.spawtz.com/SpawtzSkin/Fixtures/TeamProfile.aspx?TeamId=1994&LeagueId=28&SeasonId=61&DivisionId=1098"
+                }
+              ],
+              "Value 1": [
+                {
+                  "text": "5"
+                }
+              ],
+              "Value 2": [
+                {
+                  "text": "1"
+                }
+              ],
+              "Value 3": [
+                {
+                  "text": "0"
+                }
+              ],
+              "Value 4": [
+                {
+                  "text": "4"
+                }
+              ],
+              "Value 5": [
+                {
+                  "text": "17"
+                }
+              ],
+              "Value 6": [
+                {
+                  "text": "32"
+                }
+              ],
+              "Value 7": [
+                {
+                  "text": "-15"
+                }
+              ],
+              "Value 8": [
+                {
+                  "text": "3"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pageData": {
+      "resourceId": "ca0470cfe094cb318f26eaddd273d3a1",
+      "statusCode": 200,
+      "timestamp": 1485377201223
+    },
+    "timestamp": 1485377242142,
+    "sequenceNumber": 0
+  }
+}

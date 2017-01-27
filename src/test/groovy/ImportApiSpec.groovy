@@ -5,9 +5,10 @@ import spock.lang.Specification
 class ImportApiSpec extends Specification {
     void "Parse JSON league data, ensure it has correct info in"() {
         given:
+        ClassLoader classLoader = getClass().getClassLoader();
         JsonSlurper jsonSlurper = new JsonSlurper()
-        File f = new File('/home/pocockn/dev/football/src/test/resources/importJsonData.json')
-        def jsonSlurped = jsonSlurper.parseText(f.text)
+        File file = new File(classLoader.getResource("importJsonData.json").getFile());
+        def jsonSlurped = jsonSlurper.parseText(file.text)
         LeagueTable leagueTable = new LeagueTable()
 
         when:
