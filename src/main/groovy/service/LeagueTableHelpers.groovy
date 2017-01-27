@@ -6,8 +6,8 @@ import models.LeagueTable
 class LeagueTableHelpers {
 
     JsonSlurper jsonSlurper = new JsonSlurper()
-    ClassLoader classLoader = getClass().getClassLoader();
-    File file = new File(classLoader.getResource("importJsonData.json").getFile());
+    ClassLoader classLoader = getClass().getClassLoader()
+    File file = new File(classLoader.getResource("importJsonData.json").getFile())
     def jsonSlurped = jsonSlurper.parseText(file.text)
     ArrayList<String> objectProperties = ["teams", "played", "won", "draw", "lose", "goalDifference", "goalsFor", "goalsAgainst", "points"]
     List<String> jsonSelectors = ["Content", "Value 1", "Value 2", "Value 3", "Value 4", "Value 5", "Value 6", "Value 7", "Value 8"]
