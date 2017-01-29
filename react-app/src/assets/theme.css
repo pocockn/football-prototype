@@ -26386,3 +26386,7 @@ body.timeline-page .panel-clone {
         min-width: 0 !important;
     }
 }
+
+.sidebar-menu li {
+    margin-left: 10px;
+}

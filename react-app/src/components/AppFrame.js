@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Team from "./Team";
+import {Router, Route, browserHistory,IndexRoute, IndexLink, Link} from "react-router";
 
 class AppFrame extends Component {
     render() {
@@ -30,17 +31,14 @@ class AppFrame extends Component {
 
                         <ul className="nav sidebar-menu">
                             <li className="sidebar-label pt20">Menu</li>
-                            <li className="active">
-                                <a href="/dashboard">
-                                    <span className="glyphicon glyphicon-home"></span>
-                                    <span className="sidebar-title">Dashboard</span>
-                                </a>
+                            <li>
+                                <IndexLink to="/" activeClassName="active">Dashboard</IndexLink>
                             </li>
                             <li>
-                                <a href="/fixtures">
-                                    <span className="fa fa-calendar"></span>
-                                    <span className="sidebar-title">Fixtures</span>
-                                </a>
+                                <Link to="/fixtures" activeClassName="active">Fixtures</Link>
+                            </li>
+                            <li>
+                                <Link to="/players" activeClassName="active">Players</Link>
                             </li>
                         </ul>
 
@@ -50,7 +48,7 @@ class AppFrame extends Component {
                 <section id="content_wrapper">
                     <section id="content" className="table-layout animated fadeIn">
                         <div className="tray tray-center">
-                            <Team/>
+                            {this.props.children}
                         </div>
                     </section>
                 </section>
