@@ -1,18 +1,20 @@
 package persistance
 
-import ratpack.groovy.test.GroovyRatpackMainApplicationUnderTest
+import groovy.sql.Sql
 
-class PersistanceSpec extends BaseDatabaseTestConnection {
+class PersistanceSpec extends DatabaseCleaner {
 
     void "Can insert a new record into the database"() {
         given:
-        new GroovyRatpackMainApplicationUnderTest()
-        DatabaseCleaner databaseCleaner = new DatabaseCleaner()
         String json = """{"series":[{"name":"Nick","data":[0,2,3,5,6]},{"name":"Pasty","data":[0,5,7,9,10]}]}"""
         String id = 2
 
         when:
-        sql.execute("INSERT INTO test (id, content) VALUES (?, cast(? as json))", id, json)
+        remoteControl.exec {
+            get(Sql).execute("INSERT INTO test (id, content) VALUES (?, cast(? as json))", id, json)
+        }
+
+        and:
         def result = sql.rows("SELECT * FROM test where id = '2'")
 
         then:
@@ -20,7 +22,7 @@ class PersistanceSpec extends BaseDatabaseTestConnection {
         jsonResult.contains(json)
 
         cleanup:
-        databaseCleaner.cleanDatabase(sql)
+        cleanDatabase()
 
     }
 }

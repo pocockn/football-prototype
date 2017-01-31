@@ -4,12 +4,15 @@ import groovy.sql.Sql
 import groovy.util.logging.Slf4j
 
 @Slf4j
-class DatabaseCleaner extends BaseDatabaseTestConnection{
+class DatabaseCleaner extends BaseDatabaseTestConnection {
 
-    void cleanDatabase(Sql sql) {
+    void cleanDatabase() {
         try {
-            sql.execute("truncate test")
-        } catch(Exception e) {
+            remoteControl.exec {
+                get(Sql).execute("delete from test")
+                log.info("deleted data from test database")
+            }
+        } catch (Exception e) {
             log.error("error is ${e}")
         }
     }
