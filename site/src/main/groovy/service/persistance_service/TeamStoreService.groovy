@@ -11,6 +11,8 @@ interface TeamStoreService<T> {
 
     Promise<List> fetchAll()
 
+    Promise<List> fetchPlayers()
+
     Promise<T> fetchById(String id)
 
 

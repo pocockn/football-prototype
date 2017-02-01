@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import groovy.sql.GroovyRowResult
 import groovy.sql.Sql
 import groovy.util.logging.Slf4j
+import models.Player
 import models.TeamContainer
 import persistance.JsonObjectMapper
 import ratpack.exec.Blocking
@@ -75,4 +76,20 @@ class TeamTeamStoreServiceImpl implements TeamStoreService<TeamContainer> {
             }
         }
     }
+
+    Promise<List<Player>> fetchPlayers() {
+        Blocking.get {
+            sql.rows("""
+            SELECT content -> playerContainer -> players from site_content
+              """)
+        }.map { rows ->
+            log.info("${rows}")
+            rows.collect { GroovyRowResult result ->
+                String instanceJson = result.getAt(1)
+                objectMapper.readValue(instanceJson, Player)
+            }
+        }
+    }
 }
+
+

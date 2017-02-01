@@ -42,7 +42,7 @@ class BootstrapShireSoldiersChange implements CustomTaskChange {
         "name": "Shire Soldiers"
     },
     "playersContainer": {
-        "series": [
+        "players": [
             {
                 "id": "1",
                 "name": "Nick Pocock",
