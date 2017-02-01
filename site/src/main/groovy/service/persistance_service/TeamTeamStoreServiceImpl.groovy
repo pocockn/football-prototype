@@ -80,14 +80,13 @@ class TeamTeamStoreServiceImpl implements TeamStoreService<TeamContainer> {
     Promise<List<Player>> fetchPlayers() {
         Blocking.get {
             sql.rows("""
-            SELECT content -> playerContainer -> players from site_content
+            SELECT jsonb_array_elements(content->'playersContainer'->'players') as players FROM site_content
               """)
-        }.map { rows ->
-            log.info("${rows}")
-            rows.collect { GroovyRowResult result ->
-                String instanceJson = result.getAt(1)
-                objectMapper.readValue(instanceJson, Player)
+        }.map { row ->
+            row.players.collect {
+                objectMapper.readValue(it.toString(), Player)
             }
+
         }
     }
 }

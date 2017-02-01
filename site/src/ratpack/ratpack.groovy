@@ -1,3 +1,4 @@
+import api.PlayerGetHandlerApi
 import api.TeamGetHandlerApi
 import config.HikariConfigModule
 import handlers.*
@@ -30,6 +31,7 @@ import service.user_service.UserStorageService
 import service.user_service.UserStorageServiceImplementation
 import session_support.UserSession
 
+
 import java.util.logging.Logger
 
 import static ratpack.groovy.Groovy.groovyMarkupTemplate
@@ -56,6 +58,7 @@ ratpack {
         bind Team
         bind Fixtures
         bind UserAccountService
+        bind PlayerGetHandlerApi
         bind UserStorageService, UserStorageServiceImplementation
         bindInstance TeamStoreService, new TeamTeamStoreServiceImpl()
         bindInstance FindPropertyStatistics, new FindPropetyStatisticsImpl()
@@ -73,6 +76,7 @@ ratpack {
 
         prefix("api") {
             path "teams", new TeamGetHandlerApi()
+            path "players", new PlayerGetHandlerApi()
         }
 
         get {

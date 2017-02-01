@@ -15,7 +15,7 @@ class PlayerGetHandlerApi extends InjectionHandler {
 
         ctx.byMethod {
             it.get {
-                teamStoreService.fetchAll().then {
+                teamStoreService.fetchPlayers().then {
                     log.info("retrieved data via react")
                     ctx.render json(it)
                 }
