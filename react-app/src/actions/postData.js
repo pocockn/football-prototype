@@ -1,16 +1,14 @@
 import "isomorphic-fetch";
 
 export function postDataTest(id) {
+    console.log(id);
     fetch("/api/teams", {
         method: "POST",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: {
-            data: JSON.stringify(id),
-            contentType: 'application/json',
-            dataType: 'text'
-        }
+        body: JSON.stringify(id)
+
     }).then(response => console.log(response));
 }

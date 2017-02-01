@@ -23,9 +23,13 @@ class Team extends Component {
     }
 
     handlePost(event) {
+        var obj = new Object();
+        obj.id = "0000-0000-0000-0001";
+        obj.name = "Shire Soldiers";
+        console.log(obj);
         event.preventDefault();
         console.log('The link was clicked.');
-        postDataTest('1234');
+        postDataTest(obj);
     }
 
     render() {

@@ -1,6 +1,6 @@
 package models
 
-class Team implements Serializable {
+class Team {
     String id
     String name
 }

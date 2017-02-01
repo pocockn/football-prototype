@@ -24,6 +24,12 @@ class TeamGetHandlerApi extends InjectionHandler {
                 log.info("post received from react app")
                 ctx.parse(Jackson.fromJson(Team)).then { data ->
                     log.info("${data}")
+                    String teamId = data.id
+                    log.info("About to delete ${data.name} with ID ${data.id}")
+                    teamStoreService.delete(teamId).then {
+                        log.info("deleted yo")
+                    }
+                    log.info("${data} being recieved")
                     ctx.response.status(201).send()
                 }
             }

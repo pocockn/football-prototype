@@ -8,7 +8,7 @@ import spock.lang.Specification
 class ParseJsonViaApi extends Specification {
 
     @AutoCleanup
-    def aut = new FootballApplicationUnderTest()
+     aut = new FootballApplicationUnderTest()
 
     void "parse JSON via post from the /api/team end point"() {
         given:
