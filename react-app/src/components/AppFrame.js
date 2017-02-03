@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import Team from "./Team";
-import {Router, Route, browserHistory,IndexRoute, IndexLink, Link} from "react-router";
+import {IndexLink, Link} from "react-router";
 
 class AppFrame extends Component {
     render() {

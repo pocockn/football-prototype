@@ -1,10 +1,6 @@
 package api
 
 import Fixture.FootballApplicationUnderTest
-import ratpack.groovy.test.GroovyRatpackMainApplicationUnderTest
-import ratpack.groovy.test.handling.internal.DefaultGroovyRequestFixture
-import ratpack.test.handling.HandlingResult
-import ratpack.test.handling.RequestFixture
 import spock.lang.Specification
 
 class PlayerGetHandlerApiSpec extends Specification {
@@ -16,6 +12,6 @@ class PlayerGetHandlerApiSpec extends Specification {
         def response = aut.httpClient.get('api/players').body.text
 
         then:
-        response == "xxx"
+        response.contains("""[{"id":"1","name":"Nick Pocock","teamName":"Shire Soldiers""")
     }
 }

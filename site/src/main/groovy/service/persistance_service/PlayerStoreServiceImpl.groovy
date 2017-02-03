@@ -24,9 +24,13 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
 
     @Override
     Operation save(Player player) {
-        String json = jsonObjectMapper.mapObjectToJson(player)
+        String json = objectMapper.writeValueAsString(player)
         Blocking.get {
-            sql.execute("INSERT INTO site_content (id, content) VALUES (?, cast(? as jsonb))", player.id, json)
+            sql.executeUpdate("""
+                UPDATE  site_content
+                SET content = cast(:json as JSONB),
+                WHERE id = :id         
+            """, json: json, id: player.teamId)
         }.operation()
     }
 

@@ -86,7 +86,6 @@ class TeamTeamStoreServiceImpl implements TeamStoreService<TeamContainer> {
             row.players.collect {
                 objectMapper.readValue(it.toString(), Player)
             }
-
         }
     }
 }

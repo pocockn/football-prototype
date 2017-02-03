@@ -8,6 +8,7 @@ class Player {
     String id
     String name
     String teamName
+    String teamId
     String bio
     @JsonProperty("data")
     ArrayList<Integer> goals
