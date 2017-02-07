@@ -7,6 +7,10 @@ import Fixtures from "./components/Fixtures";
 import Players from "./components/Players";
 import "./index.css";
 import "./assets/theme.css";
+global.jQuery = require('jquery');
+global.Tether = require('tether');
+require('bootstrap');
+
 
 ReactDOM.render(
     <Router history={browserHistory}>

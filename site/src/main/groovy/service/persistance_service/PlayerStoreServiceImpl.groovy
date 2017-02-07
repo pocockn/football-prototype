@@ -27,10 +27,12 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
         String json = objectMapper.writeValueAsString(player)
         Blocking.get {
             sql.executeUpdate("""
-                UPDATE  site_content
-                SET content = cast(:json as JSONB),
-                WHERE id = :id         
-            """, json: json, id: player.teamId)
+                UPDATE site_content
+                SET content = jsonb_set(content, '{playersContainer,players}'::text[], content->'playersContainer'->'players' || '${
+                json
+            }'::jsonb)
+                where id = :id
+                """, id: player.teamId)
         }.operation()
     }
 
@@ -63,7 +65,7 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
         Blocking.get {
             sql.firstRow("""select elem
                                 from site_content,
-                                lateral jsonb_array_elements(content->'playersContainer'->'series') elem
+                                lateral jsonb_array_elements(content->'playersContainer'->'players') elem
                                 where elem @> '{"id": "${id}"}'
                              """)
         }.map { row ->
@@ -72,6 +74,6 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
                 String instanceJson = row.getAt(0)
                 objectMapper.readValue(instanceJson, Player)
             }
-            }
         }
     }
+}

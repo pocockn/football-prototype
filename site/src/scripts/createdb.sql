@@ -1,4 +1,4 @@
-create user pocockn;
+create user pocockn with password 'password';
 alter user pocockn superuser;
 drop database footballPrototype;
 create database footballPrototype;

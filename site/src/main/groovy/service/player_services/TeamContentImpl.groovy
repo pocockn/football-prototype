@@ -21,7 +21,7 @@ class TeamContentImpl implements TeamContent {
 
     @Override
     Integer findGoalTotal(List<Integer> goals) {
-        return ListUtil.sum(goals)
+        return ListUtil?.sum(goals)
     }
 
     private

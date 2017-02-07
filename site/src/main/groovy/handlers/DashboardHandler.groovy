@@ -21,6 +21,7 @@ class DashboardHandler extends InjectionHandler {
             TeamContainer goalsView = new TeamContainer(playersContainer: soldiersContent.playersContainer)
             String json = writeObjectToJson(objectMapper, goalsView.playersContainer)
             String jsonOb = formatJsonForHighChartsConsumption(json)
+            log.info("$soldiersContent.playersContainer.players")
             teamContent.findHighestAverageRating(soldiersContent.playersContainer.players).then { highestRatedPlayer ->
                 findPropertyStatistics.findLargestPropertyValues(soldiersContent.playersContainer.players, "name").then { playerStatsMap ->
                     ctx.render(handlebarsTemplate('dashboard.html',
