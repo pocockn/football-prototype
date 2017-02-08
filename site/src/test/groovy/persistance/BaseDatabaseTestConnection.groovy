@@ -20,7 +20,7 @@ class BaseDatabaseTestConnection extends Specification {
     String dbHost = "127.0.0.1"
     String dbUser = "pocockn"
     String db = "footballprototype"
-    String dbPassword = "only8deb"
+    String dbPassword = "password"
     Integer port = 5432
 
     String jdbcUrl = "jdbc:postgresql://${getDbHost()}:${getPort()}/${getDb()}"

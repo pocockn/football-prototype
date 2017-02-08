@@ -10,11 +10,3 @@ idea {
         wildcards.add "GebConfig.groovy"
     }
 }
-
-allprojects {
-    task displayProjects {
-        doLast { task ->
-            println "Project : $task.project.name"
-        }
-    }
-}
