@@ -1,3 +1,2 @@
-include 'react-app'
 include 'site'
 rootProject.name = "Football-Prototype"

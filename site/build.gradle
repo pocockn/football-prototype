@@ -8,7 +8,8 @@ buildscript {
     dependencies {
         classpath "io.ratpack:ratpack-gradle:1.4.4"
         classpath "com.github.jengelman.gradle.plugins:shadow:1.2.3"
-        classpath 'com.moowork.gradle:gradle-node-plugin:1.1.1'
+        classpath 'net.eikehirsch.react:gradle-react-plugin:0.4.1'
+
     }
 }
 
@@ -17,7 +18,7 @@ apply plugin: "com.github.johnrengelman.shadow"
 apply plugin: "idea"
 apply plugin: 'groovy'
 apply plugin: 'codenarc'
-
+apply plugin: 'net.eikehirsch.react'
 
 codenarcMain {
     configFile = rootProject.file("gradle/codenarc/rulesets.groovy")
@@ -72,6 +73,13 @@ dependencies {
     compile project(':react-app')
 
 }
+
+task cleanNode() {
+    delete 'build'
+    delete 'node_modules'
+}
+
+clean.dependsOn("cleanNode")
 
 task stage {
     dependsOn installDist

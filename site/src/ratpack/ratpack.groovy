@@ -11,7 +11,6 @@ import org.pac4j.oauth.client.FacebookClient
 import org.pac4j.oauth.client.TwitterClient
 import persistance.DataMigrationRatpackModule
 import ratpack.groovy.sql.SqlModule
-import ratpack.groovy.template.MarkupTemplateModule
 import ratpack.handlebars.HandlebarsModule
 import ratpack.hikari.HikariModule
 import ratpack.pac4j.RatpackPac4j
@@ -33,13 +32,13 @@ import session_support.UserSession
 
 import java.util.logging.Logger
 
-import static ratpack.groovy.Groovy.*
+import static ratpack.groovy.Groovy.groovyMarkupTemplate
+import static ratpack.groovy.Groovy.ratpack
 import static ratpack.handlebars.Template.handlebarsTemplate
 
 ratpack {
 
     bindings {
-        module MarkupTemplateModule
         module SqlModule
         module HikariModule
         module HikariConfigModule
@@ -82,7 +81,7 @@ ratpack {
         }
 
         get("admin") {
-            render groovyTemplate("index.html")
+            render handlebarsTemplate("index.html")
         }
 
         path 'dashboard', new DashboardHandler()
