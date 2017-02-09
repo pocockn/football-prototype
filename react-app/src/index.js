@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {Router, Route, browserHistory,IndexRoute} from "react-router";
+import {Router, Route, browserHistory, IndexRoute} from "react-router";
 import AppFrame from "./components/AppFrame";
-import Team from "./components/Team"
+import Team from "./components/Team";
 import Fixtures from "./components/Fixtures";
 import Players from "./components/Players";
-import "./index.css";
 import "./assets/theme.css";
 global.jQuery = require('jquery');
 global.Tether = require('tether');

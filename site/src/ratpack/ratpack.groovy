@@ -31,11 +31,9 @@ import service.user_service.UserStorageService
 import service.user_service.UserStorageServiceImplementation
 import session_support.UserSession
 
-
 import java.util.logging.Logger
 
-import static ratpack.groovy.Groovy.groovyMarkupTemplate
-import static ratpack.groovy.Groovy.ratpack
+import static ratpack.groovy.Groovy.*
 import static ratpack.handlebars.Template.handlebarsTemplate
 
 ratpack {
@@ -81,6 +79,10 @@ ratpack {
 
         get {
             redirect(302, 'dashboard')
+        }
+
+        get("admin") {
+            render groovyTemplate("index.html")
         }
 
         path 'dashboard', new DashboardHandler()

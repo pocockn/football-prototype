@@ -3,16 +3,15 @@
 ### Example user template
 
 # IntelliJ project files
-build
+dist
+node_modules
+npm-debug.log
+.DS_Store
 .gradle
 .idea
-out
 *.iml
-*.ipr
-*.iws
+build
 *.log
-.shelf
-.DS_Store
-/node_modules
-bower_components
-.idea/workspace.xml
+*.log.gz
+react/gradleBuild
+
