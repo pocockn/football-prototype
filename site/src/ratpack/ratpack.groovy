@@ -84,7 +84,7 @@ ratpack {
 //        }
 
         path("test") {
-            render handlebarsTemplate("test.html")
+            render handlebarsTemplate("index.html")
         }
 
         prefix("admin") {

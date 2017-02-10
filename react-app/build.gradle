@@ -27,7 +27,7 @@ task reactIndexMove(type: Sync) {
 }
 
 task reactMoveStatic(type: Sync) {
-    from 'build/static'
+    from 'build/assets/static'
     into rootProject.file('site/src/ratpack/public/assets/static')
 
 }
