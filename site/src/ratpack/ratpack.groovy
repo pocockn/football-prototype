@@ -10,6 +10,7 @@ import org.pac4j.http.credentials.authenticator.test.SimpleTestUsernamePasswordA
 import org.pac4j.oauth.client.FacebookClient
 import org.pac4j.oauth.client.TwitterClient
 import persistance.DataMigrationRatpackModule
+import ratpack.file.MimeTypes
 import ratpack.groovy.sql.SqlModule
 import ratpack.groovy.template.MarkupTemplateModule
 import ratpack.handlebars.HandlebarsModule
@@ -81,8 +82,21 @@ ratpack {
             redirect(302, 'dashboard')
         }
 
-        get("admin") {
-            render groovyTemplate("index.html")
+        prefix("admin") {
+            get('static/:type/:id') { context ->
+                def path = "static/${context.pathTokens['type']}/${context.pathTokens['id']}"
+                InputStream resourceStream = getClass().getResourceAsStream(path)
+                if (resourceStream) {
+                    def contentType = context.get(MimeTypes).getContentType(path)
+                    context.response.send(contentType, resourceStream.bytes)
+                } else {
+                    context.next()
+                }
+            }
+            all {
+                render handlebarsTemplate("index.html")
+            }
+
         }
 
         path 'dashboard', new DashboardHandler()
