@@ -19,6 +19,21 @@ task cleanNode() {
     delete 'node_modules'
 }
 
+task reactIndexMove(type: Sync) {
+    from 'build/index.html'
+    into rootProject.file('site/src/ratpack/handlebars/react')
+    rename('index.html', 'index.html.hbs')
+
+}
+
+task reactMoveStatic(type: Sync) {
+    from 'build/static'
+    into rootProject.file('site/src/ratpack/public/assets/static')
+
+}
+
 processResources.dependsOn = ['yarn_build']
 yarn_build.dependsOn = ['yarn_install']
 clean.dependsOn("cleanNode")
+build.finalizedBy(reactMoveStatic)
+build.finalizedBy(reactIndexMove)

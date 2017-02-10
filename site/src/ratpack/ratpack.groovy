@@ -34,7 +34,8 @@ import session_support.UserSession
 
 import java.util.logging.Logger
 
-import static ratpack.groovy.Groovy.*
+import static ratpack.groovy.Groovy.groovyMarkupTemplate
+import static ratpack.groovy.Groovy.ratpack
 import static ratpack.handlebars.Template.handlebarsTemplate
 
 ratpack {
@@ -78,13 +79,17 @@ ratpack {
             path "players", new PlayerGetHandlerApi()
         }
 
-        get {
-            redirect(302, 'dashboard')
+//        get {
+//            redirect(302, 'dashboard')
+//        }
+
+        path("test") {
+            render handlebarsTemplate("test.html")
         }
 
         prefix("admin") {
             get('static/:type/:id') { context ->
-                def path = "static/${context.pathTokens['type']}/${context.pathTokens['id']}"
+                def path = "/static/${context.pathTokens['type']}/${context.pathTokens['id']}"
                 InputStream resourceStream = getClass().getResourceAsStream(path)
                 if (resourceStream) {
                     def contentType = context.get(MimeTypes).getContentType(path)
@@ -93,10 +98,9 @@ ratpack {
                     context.next()
                 }
             }
-            all {
-                render handlebarsTemplate("index.html")
-            }
-
+                all {
+                    render handlebarsTemplate("index.html")
+                }
         }
 
         path 'dashboard', new DashboardHandler()

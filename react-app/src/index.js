@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {Router, Route, browserHistory, IndexRoute} from "react-router";
+import {Router, Route, hashHistory, IndexRoute} from "react-router";
 import AppFrame from "./components/AppFrame";
 import Team from "./components/Team";
 import Fixtures from "./components/Fixtures";
@@ -12,7 +12,7 @@ require('bootstrap');
 
 
 ReactDOM.render(
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
         <Route path="/" component={AppFrame}>
             <IndexRoute component={Team}/>
             <Route path="fixtures" component={Fixtures} />
