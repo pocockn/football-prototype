@@ -1,0 +1,17 @@
+{
+  "name": "footballprototype",
+  "version": "1.0.7",
+  "homepage": "http://blueprint-web.com",
+  "authors": [
+    "Nick Pocock"
+  ],
+  "description": "A basic football prototype",
+  "keywords": [
+    "bootstrap",
+    "theme"
+  ],
+  "license": "Apache",
+  "dependencies": {
+    "react": "^15.4.2"
+  }
+}

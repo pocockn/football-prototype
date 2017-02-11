@@ -1,0 +1,16 @@
+{
+  "engines": {
+    "node": "0.12.x"
+  },
+  "name": "footballprototype",
+  "private": false,
+  "version": "0.1.0",
+  "description": "",
+  "repository": "https://github.com/pocockn/football-prototype",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "bower": "^1.4.0"
+  }
+}

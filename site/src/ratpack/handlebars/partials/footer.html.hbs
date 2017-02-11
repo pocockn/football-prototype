@@ -1,0 +1,45 @@
+</div>
+<!-- End: Main -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js"></script>
+<<<<<<< HEAD:src/ratpack/handlebars/partials/footer.html.hbs
+<script src="/assets/main.js"></script>
+<script src="/assets/utility.js"></script>
+=======
+<script src="/assets/external/main.js"></script>
+<script src="/assets/external/utility.js"></script>
+
+>>>>>>> feature/react:site/src/ratpack/handlebars/partials/footer.html.hbs
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        "use strict";
+
+        // Init Demo JS
+        Demo.init();
+
+
+        // Init Theme Core
+        Core.init();
+
+        // Add active link to the links parent li
+        jQuery(function ($) {
+            $("ul li a").each(function () {
+                var link = $(this);
+                if (link.get(0).href === location.href) {
+                    link.parents("li").addClass("active");
+                    return false;
+                }
+            });
+        });
+
+    });
+
+</script>

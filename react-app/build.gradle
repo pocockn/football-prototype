@@ -1,0 +1,39 @@
+plugins {
+    id "com.moowork.node" version "1.1.1"
+}
+
+apply plugin: "java"
+
+buildDir = new File("gradleBuild")
+
+sourceSets {
+    main {
+        resources {
+            srcDir 'build'
+        }
+    }
+}
+
+task cleanNode() {
+    delete 'build'
+    delete 'node_modules'
+}
+
+task reactIndexMove(type: Sync) {
+    from 'build/index.html'
+    into rootProject.file('site/src/ratpack/handlebars/react')
+    rename('index.html', 'index.html.hbs')
+
+}
+
+task reactMoveStatic(type: Sync) {
+    from 'build/assets/static'
+    into rootProject.file('site/src/ratpack/public/assets/static')
+
+}
+
+processResources.dependsOn = ['yarn_build']
+yarn_build.dependsOn = ['yarn_install']
+clean.dependsOn("cleanNode")
+build.finalizedBy(reactMoveStatic)
+build.finalizedBy(reactIndexMove)
