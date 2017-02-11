@@ -3,23 +3,20 @@
 ### Example user template
 
 # IntelliJ project files
-dist
+
 node_modules
 npm-debug.log
 .DS_Store
 .gradle
 .idea
 *.iml
-<<<<<<< HEAD
 *.ipr
 *.iws
-.DS_Store
-.idea/workspace.xml
-node_modules
-=======
 build
 *.log
 *.log.gz
-react/gradleBuild
+react-app/gradleBuild
+react-app/node_modules
+
 
 >>>>>>> feature/react
