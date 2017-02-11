@@ -1,10 +1,7 @@
-<<<<<<< HEAD:src/ratpack/ratpack.groovy
-import groovy.json.JsonSlurper
-=======
 import api.PlayerGetHandlerApi
 import api.TeamGetHandlerApi
 import config.HikariConfigModule
->>>>>>> feature/react:site/src/ratpack/ratpack.groovy
+import groovy.json.JsonSlurper
 import handlers.*
 import league.ImportClient
 import models.Fixtures
@@ -24,15 +21,19 @@ import ratpack.pac4j.RatpackPac4j
 import ratpack.service.Service
 import ratpack.service.StartEvent
 import ratpack.session.SessionModule
-import ratpack_modules.HikariConfigModule
 import ratpack_modules.LoginModule
 import ratpack_modules.TeamModule
 import ratpack_modules.UserAccountModule
 import service.LeagueTableHelpers
 import service.persistance_service.PlayerStoreService
 import service.persistance_service.PlayerStoreServiceImpl
+import service.persistance_service.TeamStoreService
+import service.persistance_service.TeamStoreServiceImpl
 import service.player_services.FindPropertyStatistics
 import service.player_services.FindPropetyStatisticsImpl
+import service.user_service.UserAccountService
+import service.user_service.UserStorageService
+import service.user_service.UserStorageServiceImplementation
 
 import java.util.logging.Logger
 
@@ -58,17 +59,16 @@ ratpack {
         bind AllPlayersHandler
         bind Player
         bind Fixtures
-<<<<<<< HEAD:src/ratpack/ratpack.groovy
+
         bind ImportClient
         bind JsonSlurper
         bind LeagueTable
         bind LeagueTableHelpers
-=======
+
         bind UserAccountService
         bind PlayerGetHandlerApi
         bind UserStorageService, UserStorageServiceImplementation
-        bindInstance TeamStoreService, new TeamTeamStoreServiceImpl()
->>>>>>> feature/react:site/src/ratpack/ratpack.groovy
+        bindInstance TeamStoreService, new TeamStoreServiceImpl()
         bindInstance FindPropertyStatistics, new FindPropetyStatisticsImpl()
         bindInstance PlayerStoreService, new PlayerStoreServiceImpl()
         bindInstance new Service() {
@@ -86,9 +86,9 @@ ratpack {
             path "players", new PlayerGetHandlerApi()
         }
 
-//        get {
-//            redirect(302, 'dashboard')
-//        }
+        get {
+            redirect(302, 'dashboard')
+        }
 
         path("test") {
             render handlebarsTemplate("index.html")
@@ -105,9 +105,9 @@ ratpack {
                     context.next()
                 }
             }
-                all {
-                    render handlebarsTemplate("index.html")
-                }
+            all {
+                render handlebarsTemplate("index.html")
+            }
         }
 
         path 'dashboard', new DashboardHandler()

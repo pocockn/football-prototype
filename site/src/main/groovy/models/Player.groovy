@@ -17,7 +17,6 @@ class Player {
     Integer manOfTheMatches
     Integer cleanSheets
     Integer totalGoals
-<<<<<<< HEAD:src/main/groovy/models/Player.groovy
 
     void finishSeason() {
         this.seasonGoals.clear()
@@ -26,7 +25,4 @@ class Player {
         manOfTheMatches = 0
         assists = 0
     }
-
-=======
->>>>>>> feature/react:site/src/main/groovy/models/Player.groovy
 }
