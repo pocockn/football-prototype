@@ -14,6 +14,14 @@ sourceSets {
     }
 }
 
+node {
+    // Version of node to use.
+    version = '4.7.2'
+
+    // Enabled the automatic download.
+    download = true
+}
+
 task cleanNode() {
     delete 'build'
     delete 'node_modules'
