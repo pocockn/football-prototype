@@ -1,1 +1,1 @@
-web: build/install/Football-Prototype/bin/Football-Prototype/site
+web: site/build/install/site/bin/site
