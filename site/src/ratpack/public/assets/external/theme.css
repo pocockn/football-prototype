@@ -22110,12 +22110,12 @@ body.timeline-page .panel-clone {
     overflow: hidden !important;
     min-width: 0 !important;
   }
-<<<<<<< HEAD:src/ratpack/public/assets/theme.css
 }
 
 .crumb-trail {
     text-transform: capitalize;
 }
-=======
+
+.table-responsive {
+    border:0px;
 }
->>>>>>> feature/react:site/src/ratpack/public/assets/external/theme.css

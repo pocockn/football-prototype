@@ -4,8 +4,8 @@ import groovy.util.logging.Slf4j
 import league.ImportClient
 import ratpack.handling.Context
 import ratpack.handling.InjectionHandler
-import ratpack.http.Response
 import service.LeagueTableHelpers
+import wslite.rest.Response
 
 import static ratpack.handlebars.Template.handlebarsTemplate
 
