@@ -1,8 +1,7 @@
-var ReactDom = require('react-dom');
 const uuid = require('uuid/v1');
 import {postDataTest} from "../actions/postData";
 import TeamSelectBox from "./TeamSelectBox";
-import React, {Component, PropTypes} from "react";
+import React, {Component} from "react";
 
 class PlayerForm extends Component {
 

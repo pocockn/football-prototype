@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from "react";
+import React, {Component} from "react";
 import axios from "axios";
 import {postDataTest} from '../actions/postData';
 
@@ -23,7 +23,7 @@ class Team extends Component {
     }
 
     handlePost(event) {
-        var obj = new Object();
+        var obj = {};
         obj.id = "0000-0000-0000-0001";
         obj.name = "Shire Soldiers";
         console.log(obj);
