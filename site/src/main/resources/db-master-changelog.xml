@@ -39,7 +39,7 @@
         <addPrimaryKey columnNames="id" tableName="test"/>
     </changeSet>
 
-    <changeSet id="bootstrap shire soldier" author="pocockn">
+    <changeSet id="bootstrap shire soldiers team and players to reflect domain model changes" author="pocockn">
         <customChange class="changesets.BootstrapShireSoldiersChange"/>
     </changeSet>
 
