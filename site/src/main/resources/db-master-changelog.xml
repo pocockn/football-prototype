@@ -39,15 +39,11 @@
         <addPrimaryKey columnNames="id" tableName="test"/>
     </changeSet>
 
-    <changeSet id="bootstrap shire soldiers team and players to reflect domain model changes" author="pocockn">
-        <customChange class="changesets.BootstrapShireSoldiersChange"/>
-    </changeSet>
-
-    <changeSet id="remove old data" author="pocockn">
+    <changeSet id="remove old datas" author="pocockn">
         <customChange class="changesets.RemoveSiteContent"/>
     </changeSet>
 
-    <changeSet id="bootstrap new shire soldiers data with updated keys" author="pocockn">
+    <changeSet id="bootstrap new shires soldiers data with updated keys" author="pocockn">
         <customChange class="changesets.BootstrapNewShireSoldiersChange"/>
     </changeSet>
 
