@@ -1,7 +1,6 @@
 package changesets
 
 import groovy.sql.Sql
-import liquibase.resource.ResourceAccessor
 
 class BootstrapNewShireSoldiersChange extends CustomChangeSupport {
 
