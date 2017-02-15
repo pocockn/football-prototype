@@ -43,4 +43,12 @@
         <customChange class="changesets.BootstrapShireSoldiersChange"/>
     </changeSet>
 
+    <changeSet id="remove old data" author="pocockn">
+        <customChange class="changesets.RemoveSiteContent"/>
+    </changeSet>
+
+    <changeSet id="bootstrap new shire soldiers data with updated keys" author="pocockn">
+        <customChange class="changesets.BootstrapNewShireSoldiersChange"/>
+    </changeSet>
+
 </databaseChangeLog>

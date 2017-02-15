@@ -1,14 +1,9 @@
 package changesets
 
 import groovy.sql.Sql
-import liquibase.change.custom.CustomTaskChange
-import liquibase.database.Database
-import liquibase.database.jvm.JdbcConnection
-import liquibase.exception.SetupException
-import liquibase.exception.ValidationErrors
 import liquibase.resource.ResourceAccessor
 
-class BootstrapShireSoldiersChange extends CustomChangeSupport {
+class BootstrapNewShireSoldiersChange extends CustomChangeSupport {
 
     static final String ID = "0000-0000-0000-0001"
 
