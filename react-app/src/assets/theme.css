@@ -17311,7 +17311,13 @@ body.onload-check #topbar {
 ================================================= */
 /* If header is fixed modify primary containers padding */
 .navbar.navbar-fixed-top + #sidebar_left + #content_wrapper {
-    padding-top: 60px;
+    padding-top: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+    .navbar.navbar-fixed-top + #sidebar_left + #content_wrapper {
+        padding-top: 20px;
+    }
 }
 
 /*===============================================

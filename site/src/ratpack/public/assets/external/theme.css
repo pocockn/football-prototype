@@ -14587,7 +14587,24 @@ body.onload-check #topbar {
 ================================================= */
 /* If header is fixed modify primary containers padding */
 .navbar.navbar-fixed-top + #sidebar_left + #content_wrapper {
-  padding-top: 60px;
+  padding-top: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar.navbar-fixed-top + #sidebar_left + #content_wrapper  {
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  /* special styles */
+  table.tc-checkbox-1 tbody td:first-child,
+  table.tc-checkbox-2 tbody td:nth-child(2),
+  table.tc-checkbox-3 tbody td:nth-child(3),
+  table.tc-checkbox-last tbody td:last-child {
+    text-align: left;
+    padding: 11px;
+  }
 }
 /*===============================================
    Sidebar Settings
@@ -22119,3 +22136,4 @@ body.timeline-page .panel-clone {
 .table-responsive {
     border:0px;
 }
+

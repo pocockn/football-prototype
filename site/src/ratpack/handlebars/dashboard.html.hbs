@@ -4,12 +4,10 @@
 {{> partials/topbar.html}}
 <!-- Begin: Content -->
 <section id="content" class="table-layout animated fadeIn">
-
+    <body>
     <!-- begin: .tray-center -->
     <div class="tray tray-center">
         <div class="row">
-            <body>
-
             <div class="col-sm-12 col-xl-3">
                 <div class="panel panel-tile text-center br-a br-grey">
                 <div class="panel-body">
@@ -47,11 +45,14 @@
                     </div>
                 </div>
             {{/each}}
-            <div id="container" style="width:100%; height:400px;"></div>
-            </body>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="container"></div>
+            </div>
         </div>
     </div>
-</section>
+    </body>
 </section>
 
 {{> partials/footer.html}}

@@ -6,13 +6,18 @@
         if (parts.length == 2) return parts.pop().split(";").shift();
     }
     var userName = getCookie('name');
-    userName = userName.replace('+', ' ');
-    function toTitleCase(str)
-    {
-        return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    if (userName) {
+        userName = userName.replace('+', ' ');
+
+        function toTitleCase(str) {
+            return str.replace(/\w\S*/g, function (txt) {
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            });
+        }
+
+        userName = toTitleCase(userName);
+        console.log(userName);
     }
-    userName = toTitleCase(userName);
-    console.log(userName);
 
 </script>
 <div id="main">
@@ -40,7 +45,7 @@
                 <b>Shire</b>Soldiers
             </a>
         </div>
-        <form class="navbar-form navbar-left navbar-search alt" role="search">
+        <form class="navbar-form navbar-left navbar-search alt hidden-sm hidden-xs" role="search">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Search..." value="Search...">
             </div>
