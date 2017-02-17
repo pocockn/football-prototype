@@ -1,4 +1,5 @@
 import api.PlayerGetHandlerApi
+import api.PlayerRemoveHandlerApi
 import api.TeamGetHandlerApi
 import config.HikariConfigModule
 import groovy.json.JsonSlurper
@@ -83,7 +84,11 @@ ratpack {
 
         prefix("api") {
             path "teams", new TeamGetHandlerApi()
-            path "players", new PlayerGetHandlerApi()
+            prefix("players") {
+                path "addGetPlayers", new PlayerGetHandlerApi()
+                path "removePlayer", new PlayerRemoveHandlerApi()
+            }
+
         }
 
         get {

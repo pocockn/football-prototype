@@ -21,13 +21,17 @@ class TeamContentImpl implements TeamContent {
 
     @Override
     Integer findGoalTotal(List<Integer> goals) {
-        return ListUtil?.sum(goals)
+        if (goals) {
+            return ListUtil?.sum(goals)
+        } else {
+            return 0
+        }
     }
 
     private
     static List<Player> returnPlayerWithHighestAverageRating(List<Player> players, int highestRated, playerWithHighestAverageRating) {
         players.each { player ->
-            Integer rating = player.ratings.sum() as Integer
+            Integer rating = player?.ratings?.sum() as Integer
             if (rating > highestRated) {
                 highestRated = rating
                 Double averageRating = highestRated / player.ratings.size()

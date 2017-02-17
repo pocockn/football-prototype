@@ -5,6 +5,7 @@ import AppFrame from "./components/AppFrame";
 import Team from "./components/Team";
 import Fixtures from "./components/Fixtures";
 import Players from "./components/Players";
+import PlayersForm from "./components/PlayersForm";
 import "./assets/theme.css";
 global.jQuery = require('jquery');
 global.Tether = require('tether');
@@ -15,8 +16,9 @@ ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={AppFrame}>
             <IndexRoute component={Team}/>
-            <Route path="fixtures" component={Fixtures} />
-            <Route path="players" component={Players} />
+            <Route path="fixtures" component={Fixtures}/>
+            <Route path="players" component={Players}/>
+            <Route path="new-player" component={PlayersForm}/>
         </Route>
     </Router>,
     document.getElementById('root')

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
+import {postDataTest} from "../actions/postData";
 import axios from "axios";
-import {postDataTest} from '../actions/postData';
 
 class Team extends Component {
 

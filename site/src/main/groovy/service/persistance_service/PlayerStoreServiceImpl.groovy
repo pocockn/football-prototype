@@ -39,7 +39,12 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
     @Override
     Operation delete(String id) {
         Blocking.get {
-            sql.execute("DELETE FROM site_content where id = ${id}")
+            sql.execute("""
+                  DELETE elem
+                    from site_content,
+                    lateral jsonb_array_elements(content->'playersContainer'->'players') elem
+                    where elem @> '{"id":"${id}"}'          
+          """)
         }.operation()
     }
 

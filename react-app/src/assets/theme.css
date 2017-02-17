@@ -1178,7 +1178,6 @@ div.DTE_Inline div.DTE_Field input {
     background-color: #FFFEF0;
 }
 
-
 /*===============================================
   Dropzone
 ================================================= */
@@ -17264,7 +17263,7 @@ body {
     min-height: 900px;
     margin: 0;
     padding: 0;
-    background: #e9e9e9;
+    background: #FFFFFF;
     overflow-x: hidden;
     /* Fix for webkit rendering */
     -webkit-font-smoothing: antialiased;
@@ -26328,4 +26327,13 @@ body.timeline-page .panel-clone {
 
 .sidebar-menu li {
     margin-left: 10px;
+}
+
+.dropzone, .dropzone * {
+    box-sizing: border-box;
+}
+
+.dropzone {
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, 0.3);
 }

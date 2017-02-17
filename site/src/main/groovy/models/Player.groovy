@@ -17,6 +17,7 @@ class Player {
     Integer manOfTheMatches
     Integer cleanSheets
     Integer totalGoals
+    String profileImageUrl
 
     void finishSeason() {
         this.seasonGoals.clear()

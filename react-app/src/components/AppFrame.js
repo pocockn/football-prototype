@@ -30,13 +30,13 @@ class AppFrame extends Component {
 
                         <ul className="nav sidebar-menu">
                             <li className="sidebar-label pt20">Menu</li>
-                            <li>
+                            <li className="sidebar-label">
                                 <IndexLink to="/" activeClassName="active">Dashboard</IndexLink>
                             </li>
-                            <li>
+                            <li className="sidebar-label">
                                 <Link to="/fixtures" activeClassName="active">Fixtures</Link>
                             </li>
-                            <li>
+                            <li className="sidebar-label">
                                 <Link to="/players" activeClassName="active">Players</Link>
                             </li>
                         </ul>
@@ -46,9 +46,7 @@ class AppFrame extends Component {
                 </aside>
                 <section id="content_wrapper">
                     <section id="content" className="table-layout animated fadeIn">
-                        <div className="tray tray-center">
-                            {this.props.children}
-                        </div>
+                        {this.props.children}
                     </section>
                 </section>
             </div>
