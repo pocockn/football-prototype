@@ -41,9 +41,8 @@ class AllPlayers extends Component {
                             <div className="panel-body p20 pb10">
                                 <ul>
                                     {this.state.players.map(singlePlayer =>
-                                        <li key={singlePlayer.id}>{singlePlayer.name} <a id={singlePlayer.id}
-                                                                                         onClick={this.handleDelete.bind(this)}>delete</a>
-                                        </li>
+                                        <Link to={'edit-player/' + singlePlayer.id}><li key={singlePlayer.id}>{singlePlayer.name}</li></Link>
+//                                        <a id={singlePlayer.id} onClick={this.handleDelete.bind(this)}>delete</a>
                                     )}
                                 </ul>
                             </div>
