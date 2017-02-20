@@ -120,7 +120,7 @@ class PlayerForm extends Component {
                                                 <div>
                                                     <p>Preview</p>
                                                     <p>{this.state.uploadedFile.name}</p>
-                                                    <img className="img-responsive"
+                                                    <img className="img-responsive" alt="profile preview"
                                                          src={this.state.uploadedFileCloudinaryUrl}/>
                                                 </div>}
                                         </div>
