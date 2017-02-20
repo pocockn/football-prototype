@@ -87,7 +87,6 @@ class EditPlayerForm extends Component {
 
         postDataTest(player);
 
-        window.location.href = "/players";
     }
 
     render() {
@@ -117,9 +116,9 @@ class EditPlayerForm extends Component {
                                                    onChange={this.handleChange.bind(this, 'teamId')}/>
                                     <div className="form-group">
                                         <label className="control-label">Bio</label>
-                                        <input type="textarea" className="form-control" ref="bio"
-                                               defaultValue={this.state.bio}
-                                               onChange={this.handleChange.bind(this, 'bio')}/>
+                                        <textarea rows="10" cols="10" className="form-control" ref="bio"
+                                        defaultValue={this.state.bio}
+                                       onChange={this.handleChange.bind(this, 'bio')}/>
                                     </div>
                                     <div className="form-group">
                                         <Dropzone
