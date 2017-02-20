@@ -26525,3 +26525,8 @@ body.timeline-page .panel-clone {
   border: 0px;
 }
 
+.profile-image {
+    height:400px;
+    width:100%;
+}
+
