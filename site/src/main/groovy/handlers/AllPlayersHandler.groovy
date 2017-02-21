@@ -12,11 +12,11 @@ class AllPlayersHandler extends InjectionHandler {
     void handle(Context ctx, TeamStoreService teamStoreService) {
         teamStoreService.fetchAll()
                 .onError { e ->
-            log.info("exception finding sessions ${e}")
+            log.info("exception finding players ${e}")
             ctx.render handlebarsTemplate("error.html")
         }.then { teams ->
-            log.info("Retrieved these player containers from the database : ${teams*.playersContainer.players}")
-            ctx.render handlebarsTemplate("allPlayers.html", model: teams*.playersContainer.players)
+            log.info("Retrieved these player containers from the database : ${teams*.playersContainer?.players}")
+            ctx.render handlebarsTemplate("allPlayers.html", model: teams*.playersContainer?.players)
         }
     }
 }

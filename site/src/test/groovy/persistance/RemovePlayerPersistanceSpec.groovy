@@ -2,7 +2,7 @@ package persistance
 
 import groovy.sql.Sql
 import groovy.util.logging.Slf4j
-import org.junit.Ignore
+import spock.lang.Ignore
 
 @Slf4j
 @Ignore
@@ -79,8 +79,19 @@ class RemovePlayerPersistanceSpec extends DatabaseCleaner {
 
         and:
         def result = sql.execute("""
-            UPDATE test
-            SET content = jsonb_set(content, '{playersContainer,players}', (content->'playersContainer'->'players'->'id') #- '{2}' )
+                update test c
+                set content = 
+                    jsonb_set(
+                        content, 
+                        '{playersContainer,players}',
+                        (
+                            select jsonb_agg(elem)
+                            from site_content cc,
+                            lateral jsonb_array_elements(content->'playersContainer'->'players') elem
+                            where c.id = cc.id
+                            and not (elem @> '{"id": "1"}')
+                        )
+                    )
            """)
 
         then:
@@ -89,6 +100,9 @@ class RemovePlayerPersistanceSpec extends DatabaseCleaner {
 
         cleanup:
         cleanDatabase()
+
+        where:
+        id = 2
 
 
     }

@@ -17,7 +17,7 @@ class PlayerRemoveHandlerApi extends InjectionHandler {
                     String playerId = singlePlayer
                     log.info("About to delete ${singlePlayer}")
                     playerStoreService.delete(playerId).then {
-                        log.info("deleted yo")
+                        log.info("${it}")
                     }
                     context.response.status(201).send()
                 }

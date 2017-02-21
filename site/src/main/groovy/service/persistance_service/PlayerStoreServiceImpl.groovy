@@ -40,10 +40,19 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
     Operation delete(String id) {
         Blocking.get {
             sql.execute("""
-                UPDATE site_content
-                    SET content = jsonb_set(content, '{playersContainer,players}'::text[], content->'playersContainer'->'players' #- '${
-                id
-            }'::jsonb)
+            update site_content c
+            set content = 
+                jsonb_set(
+                    content, 
+                    '{playersContainer,players}',
+                    (
+                        select jsonb_agg(elem)
+                        from site_content cc,
+                        lateral jsonb_array_elements(content->'playersContainer'->'players') elem
+                        where c.id = cc.id
+                        and not (elem @> '{"id": "${id}"}')
+                    )
+                )
           """)
         }.operation()
     }

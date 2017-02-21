@@ -27,6 +27,7 @@ class AllPlayers extends Component {
         console.log(event.target.id);
         event.preventDefault();
         postPlayerId(event.target.id);
+        window.location.reload();
     }
 
     render() {
@@ -41,8 +42,11 @@ class AllPlayers extends Component {
                             <div className="panel-body p20 pb10">
                                 <ul>
                                     {this.state.players.map(singlePlayer =>
-                                        <Link to={'edit-player/' + singlePlayer.id}><li key={singlePlayer.id}>{singlePlayer.name}</li></Link>
-//                                        <a id={singlePlayer.id} onClick={this.handleDelete.bind(this)}>delete</a>
+                                        <div><Link to={"edit-player/" + singlePlayer.id}>
+                                            <li key={singlePlayer.id}>{singlePlayer.name}</li>
+                                        </Link>
+                                            <a id={singlePlayer.id} onClick={this.handleDelete.bind(this)}>delete</a>
+                                        </div>
                                     )}
                                 </ul>
                             </div>
