@@ -26337,3 +26337,9 @@ body.timeline-page .panel-clone {
     position: relative;
     border: 2px solid rgba(0, 0, 0, 0.3);
 }
+
+.public-DraftEditor-content {
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 6px;
+}

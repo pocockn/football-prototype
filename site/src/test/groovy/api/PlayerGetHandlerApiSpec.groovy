@@ -12,6 +12,6 @@ class PlayerGetHandlerApiSpec extends Specification {
         def response = aut.httpClient.get('api/players/addGetPlayers').body.text
 
         then:
-        response.contains("""[{"id":"1","name":"Nick Pocock","teamName":"Shire Soldiers""")
+        response.contains("""[{"id":"2","name":"Connor Pasty","teamName":"Shire Soldiers""")
     }
 }
