@@ -28,9 +28,9 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
         Blocking.get {
             sql.executeUpdate("""
                 UPDATE site_content
-                SET content = jsonb_set(content, '{playersContainer,players}'::text[], content->'playersContainer'->'players' || '$json'::jsonb)
-                where id = :id
-                """, json: json, id: player.teamId)
+                SET content = jsonb_set(content, '{playersContainer,players}'::text[], content->'playersContainer'->'players' || ?::jsonb)
+                where id = ?
+                """, json, player.id)
         }.operation()
     }
 
