@@ -23,21 +23,26 @@ class EditPlayerForm extends Component {
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
     }
 
     componentDidMount() {
-        this.setState({
-            player: this.findPlayerById(this.props.params.playerId)
-        })
+           this.findPlayerById(this.props.params.id)
+            .then(res => {
+                  const player = res.data;
+                  console.log(player.profileImageUrl);
+                  this.setState({
+                    name: player.name,
+                    teamName: player.teamName,
+                    bio: player.bio,
+                    teamId: player.teamId,
+                    uploadedFileCloudinaryUrl: player.profileImageUrl
+                  });
+           });
     }
 
     findPlayerById(playerId) {
-        axios.get("/api/player/" + playerId)
-            .then(res => {
-                const player = res.data;
-                console.log(player);
-                return player;
-            });
+        return axios.get("/api/player/" + playerId)
     }
 
     onImageDrop(files) {
@@ -91,25 +96,25 @@ class EditPlayerForm extends Component {
 
     render() {
         return (
-            <div class="tray tray-center">
+            <div className="tray tray-center">
                 <div className="row">
                     <div className="col-md-8">
                         <div className="panel mb25 mt5">
                             <div className="panel-heading">
-                                <span class="panel-title">Add New Player</span>
+                                <span className="panel-title">Add New Player</span>
                             </div>
                             <div className="panel-body p20 pb10">
                                 <div className="form-horizontal">
                                     <div className="form-group">
                                         <label className="control-label">Name</label>
                                         <input type="text" className="form-control" ref="name"
-                                               defaultValue={this.state.name}
+                                               value={this.state.name}
                                                onChange={this.handleChange.bind(this, 'name')}/>
                                     </div>
                                     <div className="form-group">
                                         <label className="control-label">Team Name</label>
                                         <input type="text" className="form-control" ref="teamName"
-                                               defaultValue={this.state.teamName}
+                                               value={this.state.teamName}
                                                onChange={this.handleChange.bind(this, 'teamName')}/>
                                     </div>
                                     <TeamSelectBox state={this.state.teamId}
@@ -117,7 +122,7 @@ class EditPlayerForm extends Component {
                                     <div className="form-group">
                                         <label className="control-label">Bio</label>
                                         <textarea rows="10" cols="10" className="form-control" ref="bio"
-                                        defaultValue={this.state.bio}
+                                        value={this.state.bio}
                                        onChange={this.handleChange.bind(this, 'bio')}/>
                                     </div>
                                     <div className="form-group">
@@ -134,7 +139,7 @@ class EditPlayerForm extends Component {
                                             {this.state.uploadedFileCloudinaryUrl === '' ? null :
                                                 <div>
                                                     <p>Preview</p>
-                                                    <p>{this.state.uploadedFile.name}</p>
+
                                                     <img className="img-responsive" alt="profile preview"
                                                          src={this.state.uploadedFileCloudinaryUrl}/>
                                                 </div>}
