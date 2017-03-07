@@ -24,34 +24,26 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
 
     @Override
     Operation save(Player player) {
-        String json = objectMapper.writeValueAsString(player)
-        Blocking.get {
-            sql.executeUpdate("""
-                UPDATE site_content
-                SET content = jsonb_set(content, '{playersContainer,players}'::text[], content->'playersContainer'->'players' || ?::jsonb)
-                where id = ?
-                """, json, player.id)
-        }.operation()
+        int updates = 0
+        try {
+            String json = jsonObjectMapper.mapObjectToJson(player)
+            Blocking.get {
+                updates = sql.executeUpdate("update players set player_content = cast(? as jsonb), where id = ?", json, player.id)
+            }
+            if (updates == 0) {
+                Blocking.get {
+                    sql.execute("INSERT INTO players (id, player_content) VALUES (?, cast(? as jsonb))", player.id, json)
+                }.operation()
+            }
+        } catch (e) {
+            throw e
+        }
     }
 
     @Override
     Operation delete(String id) {
         Blocking.get {
-            sql.execute("""
-            update site_content c
-            set content = 
-                jsonb_set(
-                    content, 
-                    '{playersContainer,players}',
-                    (
-                        select jsonb_agg(elem)
-                        from site_content cc,
-                        lateral jsonb_array_elements(content->'playersContainer'->'players') elem
-                        where c.id = cc.id
-                        and not (elem @> '{"id": "${id}"}')
-                    )
-                )
-          """)
+            sql.execute("DELETE FROM players WHERE id = ?", id)
         }.operation()
     }
 
@@ -75,15 +67,11 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
             return null
         }
         Blocking.get {
-            sql.firstRow("""select elem
-                                from site_content,
-                                lateral jsonb_array_elements(content->'playersContainer'->'players') elem
-                                where elem @> '{"id": "${id}"}'
-                             """)
+            sql.firstRow("SELECT * FROM players WHERE id = ?", id)
         }.map { row ->
-            log.info("row is: ${row.getAt(0)}")
+            log.info("row is: ${row.getAt(1)}")
             if (row) {
-                String instanceJson = row.getAt(0)
+                String instanceJson = row.getAt(1)
                 objectMapper.readValue(instanceJson, Player)
             }
         }

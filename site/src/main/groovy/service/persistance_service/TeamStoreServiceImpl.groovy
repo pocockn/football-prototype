@@ -69,7 +69,7 @@ class TeamStoreServiceImpl implements TeamStoreService<TeamContainer> {
         }
         log.info("id ${id}")
         Blocking.get {
-            sql.firstRow("""SELECT * from site_content where id = ${id}""")
+            sql.firstRow("""SELECT * from site_content where id = ?""", id)
         }.map { row ->
             if (row) {
                 objectMapper.readValue(row.getAt(1).toString(), TeamContainer)
