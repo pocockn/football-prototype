@@ -28,6 +28,17 @@
         <addPrimaryKey columnNames="id" tableName="users"/>
     </changeSet>
 
+    <changeSet id="players-table-created" author="pocockn">
+        <validCheckSum>7:4ABC83CA708E28B765B55D34CAC21FC4</validCheckSum>
+        <createTable tableName="players">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="player_content" type="jsonb"/>
+        </createTable>
+        <addPrimaryKey columnNames="id" tableName="players"/>
+    </changeSet>
+
     <changeSet id="test-table-created" author="pocockn">
         <validCheckSum>7:76e082649b2e6c7fedb2a0ffa9b98b77</validCheckSum>
         <createTable tableName="test">
@@ -45,6 +56,14 @@
 
     <changeSet id="bootstrap new shires soldiers data with updated keys" author="pocockn">
         <customChange class="changesets.BootstrapNewShireSoldiersChange"/>
+    </changeSet>
+
+    <changeSet id="bootstrap nick from players table" author="pocockn">
+        <customChange class="changesets.BootstrapPlayerNickTableData"/>
+    </changeSet>
+
+    <changeSet id="bootstrap pasty from players table" author="pocockn">
+        <customChange class="changesets.BootstrapPlayerPastyTableData"/>
     </changeSet>
 
 </databaseChangeLog>

@@ -6,16 +6,15 @@ import ratpack.handling.Context
 import ratpack.handling.InjectionHandler
 import ratpack.jackson.Jackson
 import service.persistance_service.PlayerStoreService
-import service.persistance_service.TeamStoreService
 
 import static ratpack.jackson.Jackson.json
 
 @Slf4j
 class PlayerGetHandlerApi extends InjectionHandler {
-    void handle(Context context, TeamStoreService teamStoreService, PlayerStoreService playerStoreService) {
+    void handle(Context context, PlayerStoreService playerStoreService) {
         context.byMethod {
             it.get {
-                teamStoreService.fetchPlayers().then {
+                playerStoreService.fetchAll().then {
                     log.info("retrieved data via react")
                     context.render json(it)
                 }

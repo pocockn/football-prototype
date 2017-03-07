@@ -59,7 +59,7 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
     Promise<List<Player>> fetchAll() {
         Blocking.get {
             sql.rows("""
-            SELECT * from site_content
+            SELECT * from players
               """)
         }.map { rows ->
             rows.collect { GroovyRowResult result ->

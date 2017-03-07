@@ -19,6 +19,7 @@ class EditPlayerForm extends Component {
             teamName: '',
             bio: '',
             teamId: '',
+            totalGoals: '',
             uploadedFileCloudinaryUrl: ''
         };
         this.handleChange = this.handleChange.bind(this);
@@ -30,12 +31,13 @@ class EditPlayerForm extends Component {
            this.findPlayerById(this.props.params.id)
             .then(res => {
                   const player = res.data;
-                  console.log(player.profileImageUrl);
+                  console.log(player.totalGoals);
                   this.setState({
                     name: player.name,
                     teamName: player.teamName,
                     bio: player.bio,
                     teamId: player.teamId,
+                    totalGoals: player.totalGoals,
                     uploadedFileCloudinaryUrl: player.profileImageUrl
                   });
            });
@@ -124,6 +126,13 @@ class EditPlayerForm extends Component {
                                         <textarea rows="10" cols="10" className="form-control" ref="bio"
                                         value={this.state.bio}
                                        onChange={this.handleChange.bind(this, 'bio')}/>
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="control-label">Goals</label>
+                                        <input id="intNumber" className="form-control" type="number" min="1" max="100"
+                                            value={this.state.totalGoals}
+                                            onChange={this.handleChange.bind(this, 'totalGoals')}
+                                        />
                                     </div>
                                     <div className="form-group">
                                         <Dropzone
