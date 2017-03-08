@@ -94,7 +94,7 @@ class EditPlayerForm extends Component {
     addMatchGoalsToTotalSeasonGoals(matchGoals) {
         if (matchGoals > this.state.seasonGoals) {
             if (this.state.seasonGoals == null) {
-                this.state.seasonGoals = [];
+                this.setState({seasonGoals: []});
             }
             this.state.seasonGoals.push(matchGoals);
         }
@@ -105,7 +105,7 @@ class EditPlayerForm extends Component {
     addRatingToSeason(rating) {
         if (rating) {
             if (this.state.ratings == null) {
-                this.state.ratings = []
+                this.setState({ratings: []});
             }
             this.state.ratings.push(rating);
         }
