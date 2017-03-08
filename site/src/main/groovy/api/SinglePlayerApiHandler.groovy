@@ -11,7 +11,7 @@ import static ratpack.jackson.Jackson.json
 class SinglePlayerApiHandler extends InjectionHandler {
     void handle(Context ctx, PlayerStoreService playerStoreService) {
         def id = ctx.pathTokens["id"]
-        log.info(id)
+        log.info("Player id fetched : ${id}")
         playerStoreService.fetchById(id).then { player ->
             ctx.render json(player)
         }

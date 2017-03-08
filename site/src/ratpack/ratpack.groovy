@@ -1,4 +1,4 @@
-import api.PlayerGetHandlerApi
+import api.PlayerFetchUpdateHandler
 import api.PlayerRemoveHandlerApi
 import api.SinglePlayerApiHandler
 import api.TeamGetHandlerApi
@@ -68,7 +68,7 @@ ratpack {
         bind LeagueTableHelpers
 
         bind UserAccountService
-        bind PlayerGetHandlerApi
+        bind PlayerFetchUpdateHandler
         bind UserStorageService, UserStorageServiceImplementation
         bindInstance TeamStoreService, new TeamStoreServiceImpl()
         bindInstance FindPropertyStatistics, new FindPropetyStatisticsImpl()
@@ -87,7 +87,7 @@ ratpack {
             path "teams", new TeamGetHandlerApi()
             path "player/:id", new SinglePlayerApiHandler()
             prefix("players") {
-                path "addGetPlayers", new PlayerGetHandlerApi()
+                path "addGetPlayers", new PlayerFetchUpdateHandler()
                 path "removePlayer", new PlayerRemoveHandlerApi()
             }
 

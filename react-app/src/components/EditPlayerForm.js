@@ -1,4 +1,3 @@
-const uuid = require('uuid/v1');
 import {postDataTest} from "../actions/postData";
 import TeamSelectBox from "./TeamSelectBox";
 import React, {Component} from "react";
@@ -15,11 +14,18 @@ class EditPlayerForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: '',
             name: '',
             teamName: '',
             bio: '',
             teamId: '',
+            rating: '',
+            ratings: [],
+            seasonGoals: [],
             totalGoals: '',
+            manOfTheMatches: '',
+            cleanSheets: '',
+            assists: '',
             uploadedFileCloudinaryUrl: ''
         };
         this.handleChange = this.handleChange.bind(this);
@@ -28,19 +34,24 @@ class EditPlayerForm extends Component {
     }
 
     componentDidMount() {
-           this.findPlayerById(this.props.params.id)
+        this.findPlayerById(this.props.params.id)
             .then(res => {
-                  const player = res.data;
-                  console.log(player.totalGoals);
-                  this.setState({
+                const player = res.data;
+                this.setState({
+                    id: player.id,
                     name: player.name,
                     teamName: player.teamName,
                     bio: player.bio,
                     teamId: player.teamId,
+                    seasonGoals: player.data,
                     totalGoals: player.totalGoals,
+                    ratings: player.ratings,
+                    manOfTheMatches: player.manOfTheMatches,
+                    cleanSheets: player.cleanSheets,
+                    assists: player.assists,
                     uploadedFileCloudinaryUrl: player.profileImageUrl
-                  });
-           });
+                });
+            });
     }
 
     findPlayerById(playerId) {
@@ -80,15 +91,42 @@ class EditPlayerForm extends Component {
         }.bind(this));
     }
 
+    addMatchGoalsToTotalSeasonGoals(matchGoals) {
+        if (matchGoals > this.state.seasonGoals) {
+            if (this.state.seasonGoals == null) {
+                this.state.seasonGoals = [];
+            }
+            this.state.seasonGoals.push(matchGoals);
+        }
+        return this.state.seasonGoals;
+    }
+
+
+    addRatingToSeason(rating) {
+        if (rating) {
+            if (this.state.ratings == null) {
+                this.state.ratings = []
+            }
+            this.state.ratings.push(rating);
+        }
+        return this.state.ratings;
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         // Get values via this.refs
         var player = {
-            id: uuid(),
+            id: this.state.id,
             name: this.state.name,
             teamName: this.state.teamName,
             bio: this.state.bio,
             teamId: this.state.teamId,
+            data: this.addMatchGoalsToTotalSeasonGoals(this.state.totalGoals),
+            totalGoals: this.state.totalGoals,
+            ratings: this.addRatingToSeason(this.state.rating),
+            manOfTheMatches: this.state.manOfTheMatches,
+            cleanSheets: this.state.cleanSheets,
+            assists: this.state.assists,
             profileImageUrl: this.state.uploadedFileCloudinaryUrl
         };
 
@@ -124,14 +162,42 @@ class EditPlayerForm extends Component {
                                     <div className="form-group">
                                         <label className="control-label">Bio</label>
                                         <textarea rows="10" cols="10" className="form-control" ref="bio"
-                                        value={this.state.bio}
-                                       onChange={this.handleChange.bind(this, 'bio')}/>
+                                                  value={this.state.bio}
+                                                  onChange={this.handleChange.bind(this, 'bio')}/>
                                     </div>
                                     <div className="form-group">
                                         <label className="control-label">Goals</label>
                                         <input id="intNumber" className="form-control" type="number" min="1" max="100"
-                                            value={this.state.totalGoals}
-                                            onChange={this.handleChange.bind(this, 'totalGoals')}
+                                               value={this.state.totalGoals}
+                                               onChange={this.handleChange.bind(this, 'totalGoals')}
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="control-label">Man Of The Matches</label>
+                                        <input id="intNumber" className="form-control" type="number" min="1" max="100"
+                                               value={this.state.manOfTheMatches}
+                                               onChange={this.handleChange.bind(this, 'manOfTheMatches')}
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="control-label">Clean Sheets</label>
+                                        <input id="intNumber" className="form-control" type="number" min="1" max="100"
+                                               value={this.state.cleanSheets}
+                                               onChange={this.handleChange.bind(this, 'cleanSheets')}
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="control-label">Assists</label>
+                                        <input id="intNumber" className="form-control" type="number" min="1" max="100"
+                                               value={this.state.assists}
+                                               onChange={this.handleChange.bind(this, 'assists')}
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="control-label">Match Rating</label>
+                                        <input id="intNumber" className="form-control" type="number" min="1" max="100"
+                                               value={this.state.rating}
+                                               onChange={this.handleChange.bind(this, 'rating')}
                                         />
                                     </div>
                                     <div className="form-group">

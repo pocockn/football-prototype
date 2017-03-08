@@ -24,17 +24,19 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
 
     @Override
     Operation save(Player player) {
-        int updates = 0
+        List<GroovyRowResult> updates = []
         try {
             String json = jsonObjectMapper.mapObjectToJson(player)
             Blocking.get {
-                updates = sql.executeUpdate("update players set player_content = cast(? as jsonb), where id = ?", json, player.id)
-            }
-            if (updates == 0) {
-                Blocking.get {
+                updates = sql.rows("select * from players where id = ?", player.id)
+                log.info("$updates")
+                if (updates.size() > 0) {
+                    sql.execute("update players set player_content = cast(? as jsonb) where id = ?", json, player.id)
+
+                } else {
                     sql.execute("INSERT INTO players (id, player_content) VALUES (?, cast(? as jsonb))", player.id, json)
-                }.operation()
-            }
+                }
+            }.operation()
         } catch (e) {
             throw e
         }
@@ -69,7 +71,6 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
         Blocking.get {
             sql.firstRow("SELECT * FROM players WHERE id = ?", id)
         }.map { row ->
-            log.info("row is: ${row.getAt(1)}")
             if (row) {
                 String instanceJson = row.getAt(1)
                 objectMapper.readValue(instanceJson, Player)
