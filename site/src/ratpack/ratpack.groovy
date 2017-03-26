@@ -5,6 +5,7 @@ import api.TeamGetHandlerApi
 import config.HikariConfigModule
 import groovy.json.JsonSlurper
 import handlers.*
+import handlers.team_handlers.TeamPlayersHandler
 import league.ImportClient
 import models.Fixtures
 import models.LeagueTable
@@ -14,7 +15,6 @@ import org.pac4j.http.credentials.authenticator.test.SimpleTestUsernamePasswordA
 import org.pac4j.oauth.client.FacebookClient
 import org.pac4j.oauth.client.TwitterClient
 import persistance.DataMigrationRatpackModule
-import ratpack.file.MimeTypes
 import ratpack.groovy.sql.SqlModule
 import ratpack.groovy.template.MarkupTemplateModule
 import ratpack.handlebars.HandlebarsModule
@@ -59,6 +59,7 @@ ratpack {
         bind DashboardHandler
         bind FixturesHandler
         bind AllPlayersHandler
+        bind TeamPlayersHandler
         bind Player
         bind Fixtures
 
@@ -76,7 +77,7 @@ ratpack {
         bindInstance new Service() {
             void onStart(StartEvent e) throws Exception {
                 Logger logger = Logger.getLogger("")
-                logger.info("Initialising Football Prototype")
+                logger.info("Initialising 5-a-Side Stats")
             }
         }
     }
@@ -93,35 +94,17 @@ ratpack {
 
         }
 
+        // react admin area
+        path("admin") {
+            render handlebarsTemplate("index.html")
+        }
+
+        // main overall dashboard
         get {
             redirect(302, 'dashboard')
         }
 
-        path("test") {
-            render handlebarsTemplate("index.html")
-        }
-
-        prefix("admin") {
-            get('static/:type/:id') { context ->
-                def path = "/static/${context.pathTokens['type']}/${context.pathTokens['id']}"
-                InputStream resourceStream = getClass().getResourceAsStream(path)
-                if (resourceStream) {
-                    def contentType = context.get(MimeTypes).getContentType(path)
-                    context.response.send(contentType, resourceStream.bytes)
-                } else {
-                    context.next()
-                }
-            }
-            all {
-                render handlebarsTemplate("index.html")
-            }
-        }
-
         path 'dashboard', new DashboardHandler()
-
-        path "fixtures", new FixturesHandler()
-
-        path "league", new LeagueTableHandler()
 
         path "teams", new AllTeamsHandler()
 
@@ -129,6 +112,31 @@ ratpack {
 
         path "players/:id", new SinglePlayerHandler()
 
+        // specific team dashboard
+        prefix("team") {
+            path(':teamId/dashboard') {
+                String teamId = pathTokens.teamId
+                context.render("dashboard ${teamId}")
+            }
+
+            path ":teamId/players", new TeamPlayersHandler()
+
+            path(":teamId/players/:id") {
+                String teamId = pathTokens['teamId']
+                context.render("players Single ${teamId}")
+            }
+
+            path(":teamId/fixtures") {
+                String teamId = pathTokens['teamId']
+                context.render("Fixtures ${teamId}")
+            }
+
+            path(":teamId/league") {
+                String teamId = pathTokens['teamId']
+                context.render("league ${teamId}")
+            }
+
+        }
 
         FacebookClient fbClient = new FacebookClient('259923037755292', '10cb6067fb2060ad1c5b8e4ba723a15d')
 
