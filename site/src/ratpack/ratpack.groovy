@@ -113,26 +113,26 @@ ratpack {
         path "players/:id", new SinglePlayerHandler()
 
         // specific team dashboard
-        prefix("team") {
-            path(':teamId/dashboard') {
-                String teamId = pathTokens.teamId
+        prefix("team/:teamId") {
+            path('dashboard') {
+                String teamId = allPathTokens.teamId
                 context.render("dashboard ${teamId}")
             }
 
             path ":teamId/players", new TeamPlayersHandler()
 
-            path(":teamId/players/:id") {
-                String teamId = pathTokens['teamId']
+            path("players/:id") {
+                String teamId = allPathTokens.teamId
                 context.render("players Single ${teamId}")
             }
 
-            path(":teamId/fixtures") {
-                String teamId = pathTokens['teamId']
+            path("fixtures") {
+                String teamId = allPathTokens.teamId
                 context.render("Fixtures ${teamId}")
             }
 
-            path(":teamId/league") {
-                String teamId = pathTokens['teamId']
+            path("league") {
+                String teamId = allPathTokens.teamId
                 context.render("league ${teamId}")
             }
 
