@@ -12,7 +12,7 @@ interface TeamStoreService<T> {
 
     Promise<List> fetchAll()
 
-    Promise<List<Player>> fetchPlayers()
+    Promise<List<Player>> fetchPlayerIds(String id)
 
     Promise<T> fetchById(String id)
 

@@ -28,32 +28,32 @@
                                 </thead>
                                 <tbody>
                                 {{#each model}}
-                                        <tr>
-                                            <td class="text-center hidden-sm hidden-xs">
-                                                <label class="option block mn">
-                                                    <input type="checkbox" name="mobileos" value="FR">
-                                                    <span class="checkbox mn"></span>
-                                                </label>
-                                            </td>
-                                            <td class="w100 hidden-sm hidden-xs">
-                                                <img class="img-responsive mw40 ib mr10" title="user"
-                                                     src="{{profileImageUrl}}" style="height:55px; width:100%;">
-                                            </td>
-                                            <td class="">{{name}}</td>
-                                            <td class="hidden-sm hidden-xs">{{teamName}}</td>
-                                            <td class="hidden-sm hidden-xs">{{totalGoals}}</td>
-                                            <td class="hidden-sm hidden-xs">{{assists}}</td>
-                                            <td class=""><a href="/players/{{id}}">View</a></td>
-                                            <td class="hidden-sm hidden-xs">
-                                                <div class="btn-group">
-                                                    <button type="button"
-                                                            class="btn btn-success br2 btn-xs fs12 dropdown-toggle"
-                                                            data-toggle="dropdown" aria-expanded="false"> Active
-                                                        <span class="caret ml5"></span>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td class="text-center hidden-sm hidden-xs">
+                                            <label class="option block mn">
+                                                <input type="checkbox" name="mobileos" value="FR">
+                                                <span class="checkbox mn"></span>
+                                            </label>
+                                        </td>
+                                        <td class="w100 hidden-sm hidden-xs">
+                                            <img class="img-responsive mw40 ib mr10" title="user"
+                                                 src="{{profileImageUrl}}" style="height:55px; width:100%;">
+                                        </td>
+                                        <td class="">{{name}}</td>
+                                        <td class="hidden-sm hidden-xs">{{teamName}}</td>
+                                        <td class="hidden-sm hidden-xs">{{totalGoals}}</td>
+                                        <td class="hidden-sm hidden-xs">{{assists}}</td>
+                                        <td class=""><a href="/players/{{id}}">View</a></td>
+                                        <td class="hidden-sm hidden-xs">
+                                            <div class="btn-group">
+                                                <button type="button"
+                                                        class="btn btn-success br2 btn-xs fs12 dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false"> Active
+                                                    <span class="caret ml5"></span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 {{/each}}
                                 </tbody>
                             </table>

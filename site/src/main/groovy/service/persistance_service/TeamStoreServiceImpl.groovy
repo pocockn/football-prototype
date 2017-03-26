@@ -77,17 +77,22 @@ class TeamStoreServiceImpl implements TeamStoreService<TeamContainer> {
         }
     }
 
-    Promise<List<Player>> fetchPlayers() {
+    @Override
+    Promise<List<Player>> fetchPlayerIds(String id) {
         Blocking.get {
             sql.rows("""
             SELECT jsonb_array_elements(content->'playersContainer'->'players') as players FROM site_content
+            WHERE id = ${id}
               """)
         }.map { row ->
-            row.players.collect {
-                objectMapper.readValue(it.toString(), Player)
+            if (row) {
+                row.players.collect {
+                    def playerObject = objectMapper.readValue(it.toString(), Player)
+                    playerObject
+                }
+
             }
         }
     }
 }
-
 

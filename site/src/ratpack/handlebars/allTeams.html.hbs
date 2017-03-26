@@ -17,7 +17,8 @@
                             <th class="hidden-sm hidden-xs">Image</th>
                             <th class="">Team Name</th>
                             <th class="hidden-sm hidden-xs">Goals</th>
-                            <th class="">Key Player</th>
+                            <th class="hidden-sm hidden-xs">Key Player</th>
+                            <th class="">View</th>
                             <th class="text-right hidden-sm hidden-xs">Status</th>
 
                         </tr>
@@ -37,34 +38,14 @@
                                 </td>
                                 <td class="">{{team.name}}</td>
                                 <td class="hidden-sm hidden-xs">33</td>
-                                <td class="">Connor Pasty</td>
+                                <td class="hidden-sm hidden-xs">Connor Pasty</td>
+                                <td class=""><a href="team/{{team.id}}/dashboard">View</a></td>
                                 <td class="text-right hidden-sm hidden-xs">
                                     <div class="btn-group text-right">
                                         <button type="button" class="btn btn-success br2 btn-xs fs12 dropdown-toggle"
                                                 data-toggle="dropdown" aria-expanded="false"> Active
                                             <span class="caret ml5"></span>
                                         </button>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li>
-                                                <a href="#">Edit</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Delete</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Archive</a>
-                                            </li>
-                                            <li class="divider"></li>
-                                            <li>
-                                                <a href="#">Complete</a>
-                                            </li>
-                                            <li class="active">
-                                                <a href="#">Pending</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Canceled</a>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </td>
                             </tr>

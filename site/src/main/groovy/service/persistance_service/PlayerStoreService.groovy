@@ -12,7 +12,8 @@ interface PlayerStoreService<T> {
 
     Promise<List<Player>> fetchAll()
 
-    Promise<T> fetchById(String id)
+    Promise<Player> fetchById(String id)
 
+    Promise<List<Player>> fetchByIds(List<Player> ids)
 
 }

@@ -77,4 +77,23 @@ class PlayerStoreServiceImpl implements PlayerStoreService<Player> {
             }
         }
     }
+
+    @Override
+    Promise<List<Player>> fetchByIds(List<Player> ids) {
+        if (ids == null) {
+            return null
+        }
+        List<Player> playersForTeam = []
+        ids.each { Player player ->
+            Blocking.get {
+                sql.rows("SELECT * FROM players WHERE id = ?", player.id)
+            }.then { rows ->
+                rows.each { GroovyRowResult result ->
+                    String instanceJson = result.getAt(1)
+                    playersForTeam.add(objectMapper.readValue(instanceJson, Player))
+                }
+            }
+        }
+        Promise.value(playersForTeam)
+    }
 }

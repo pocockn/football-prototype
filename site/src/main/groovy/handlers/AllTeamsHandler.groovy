@@ -16,7 +16,6 @@ class AllTeamsHandler extends InjectionHandler {
             ctx.render handlebarsTemplate("error.html")
         }.then { teams ->
             log.info("Retrieved these teams from the database : ${teams*.id}")
-            log.info("team model is ${teams}")
             ctx.render handlebarsTemplate("allTeams.html", model: teams)
         }
     }

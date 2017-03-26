@@ -20,7 +20,6 @@ class DashboardHandler extends InjectionHandler {
             PlayersContainerHighChartAdapter playersContainerHighChartAdapter = new PlayersContainerHighChartAdapter(players)
             String json = writeObjectToJson(objectMapper, playersContainerHighChartAdapter)
             String jsonOb = formatJsonForHighChartsConsumption(json)
-            log.info("string jsonOB is ${jsonOb}")
             teamContent.findHighestAverageRating(players).then { highestRatedPlayer ->
                 findPropertyStatistics.findLargestPropertyValues(players, "name").then { playerStatsMap ->
                     ctx.render(handlebarsTemplate('dashboard.html',
