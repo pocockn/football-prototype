@@ -16,16 +16,17 @@ class BootstrapNewShireSoldiersChange extends CustomChangeSupport {
     {
     "id": "${ID}",
     "team": {
-        "id": "123",
+        "id": "0000-0000-0000-0001",
         "name": "Shire Soldiers"
     },
     "playersContainer": {
         "players": [
             {
-                "id": "0000-0000-0000-0001"
+                 "id": "0000-0000-0000-0006"
             },
             {
-                "id": "0000-0000-0000-0002"
+                 "id": "0000-0000-0000-0007"
+
             }
         ]
     },
