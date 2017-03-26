@@ -54,15 +54,15 @@
         <customChange class="changesets.RemoveSiteContent"/>
     </changeSet>
 
-    <changeSet id="bootstrap new shires soldiers data with updated keys" author="pocockn">
+    <changeSet id="bootstrap new shires soldiers data with updated keys4" author="pocockn">
         <customChange class="changesets.BootstrapNewShireSoldiersChange"/>
     </changeSet>
 
-    <changeSet id="bootstrap nick from players table" author="pocockn">
+    <changeSet id="bootstrap nick from players table 5" author="pocockn">
         <customChange class="changesets.BootstrapPlayerNickTableData"/>
     </changeSet>
 
-    <changeSet id="bootstrap pasty from players table" author="pocockn">
+    <changeSet id="bootstrap pasty from players table 5" author="pocockn">
         <customChange class="changesets.BootstrapPlayerPastyTableData"/>
     </changeSet>
 
