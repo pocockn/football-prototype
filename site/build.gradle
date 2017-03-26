@@ -1,6 +1,6 @@
 buildscript {
     repositories {
-        maven { url  "https://plugins.gradle.org/m2/" }
+        maven { url "https://plugins.gradle.org/m2/" }
         maven { url "http://oss.jfrog.org/artifactory/repo" }
         jcenter()
         mavenCentral()
@@ -10,6 +10,10 @@ buildscript {
         classpath "com.github.jengelman.gradle.plugins:shadow:1.2.3"
         classpath 'com.moowork.gradle:gradle-node-plugin:1.1.1'
     }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.4.1'
 }
 
 task version << {
@@ -75,7 +79,6 @@ dependencies {
         exclude module: "groovy-all"
     }
 
-
     compile ratpack.dependency("guice"), {
         force = true
     }
@@ -87,3 +90,4 @@ dependencies {
 task stage {
     dependsOn installDist
 }
+
