@@ -6,6 +6,7 @@ import config.HikariConfigModule
 import groovy.json.JsonSlurper
 import handlers.*
 import handlers.team_handlers.TeamPlayersHandler
+import handlers.team_handlers.TeamSinglePlayerHandler
 import league.ImportClient
 import models.Fixtures
 import models.LeagueTable
@@ -60,6 +61,7 @@ ratpack {
         bind FixturesHandler
         bind AllPlayersHandler
         bind TeamPlayersHandler
+        bind TeamSinglePlayerHandler
         bind Player
         bind Fixtures
 
@@ -119,12 +121,9 @@ ratpack {
                 context.render("dashboard ${teamId}")
             }
 
-            path ":teamId/players", new TeamPlayersHandler()
+            path "players", new TeamPlayersHandler()
 
-            path("players/:id") {
-                String teamId = allPathTokens.teamId
-                context.render("players Single ${teamId}")
-            }
+            path "players/:id", new TeamSinglePlayerHandler()
 
             path("fixtures") {
                 String teamId = allPathTokens.teamId

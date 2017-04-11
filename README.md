@@ -5,7 +5,11 @@ Soldiers Prototype
 
 Setup the database using
 
-`sudo su postgres -c psql < src/scripts/createdb.sql `
+`sudo su postgres -c psql < site/src/scripts/createdb.sql `
+
+On a Mac setup the DB with:
+
+`psql --dbname=postgres -f site/src/scripts/createdb.sql `
 
 You can start the basic app with
 

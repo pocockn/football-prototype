@@ -9,17 +9,16 @@ import service.persistance_service.TeamStoreService
 import static ratpack.handlebars.Template.handlebarsTemplate
 
 @Slf4j
-class TeamPlayersHandler extends InjectionHandler {
-    void handle(Context ctx, TeamStoreService teamStoreService, PlayerStoreService playerStoreService) {
+class TeamSinglePlayerHandler extends InjectionHandler {
+    void handle(Context ctx, PlayerStoreService playerStoreService) {
         String id = ctx.allPathTokens['teamId']
-        teamStoreService.fetchPlayerIds(id)
+        String playerId = ctx.pathTokens['id']
+        playerStoreService.fetchById(playerId)
                 .onError { e ->
             log.info("exception finding players ${e}")
             ctx.render handlebarsTemplate("error.html")
-        }.then { playerIds ->
-            playerStoreService.fetchByIds(playerIds).then { players ->
-                ctx.render handlebarsTemplate("allPlayers.html", model: players, teamId: id)
-            }
+        }.then { player ->
+            ctx.render handlebarsTemplate("singlePlayer.html", model: player)
         }
     }
 }

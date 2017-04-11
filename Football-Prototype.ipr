@@ -3,242 +3,821 @@
   <component name="CodeNarc-IDEA">
     <option name="configuration">
       <map>
-        <entry key="location-0" value="CLASSPATH:/all_rules.groovy:The default CodeNarc rules"/>
+        <entry key="location-0" value="CLASSPATH:/all_rules.groovy:The default CodeNarc rules" />
       </map>
     </option>
   </component>
   <component name="CompilerConfiguration">
     <resourceExtensions>
-      <entry name=".+\.(properties|xml|html|dtd|tld)"/>
-      <entry name=".+\.(gif|png|jpeg|jpg)"/>
+      <entry name=".+\.(properties|xml|html|dtd|tld)" />
+      <entry name=".+\.(gif|png|jpeg|jpg)" />
     </resourceExtensions>
     <wildcardResourcePatterns>
-      <entry name="!?*.java"/>
-      <entry name="!?*.groovy"/>
-      <entry name="ratpack.groovy"/>
-      <entry name="GebConfig.groovy"/>
-      <entry name="!?*.class"/>
-      <entry name="!?*.scala"/>
+      <entry name="!?*.java" />
+      <entry name="!?*.groovy" />
+      <entry name="ratpack.groovy" />
+      <entry name="GebConfig.groovy" />
+      <entry name="!?*.class" />
+      <entry name="!?*.scala" />
     </wildcardResourcePatterns>
     <bytecodeTargetLevel target="1.8">
-      <module name="Football-Prototype_main" target="1.8"/>
-      <module name="Football-Prototype_test" target="1.8"/>
-      <module name="react-app_main" target="1.8"/>
-      <module name="react-app_test" target="1.8"/>
-      <module name="site_main" target="1.8"/>
-      <module name="site_test" target="1.8"/>
+      <module name="Football-Prototype_main" target="1.8" />
+      <module name="Football-Prototype_test" target="1.8" />
+      <module name="react-app_main" target="1.8" />
+      <module name="react-app_test" target="1.8" />
+      <module name="site_main" target="1.8" />
+      <module name="site_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
-  <component name="CopyrightManager" default=""/>
+  <component name="CopyrightManager" default="" />
   <component name="DependencyValidationManager">
-    <option name="SKIP_IMPORT_STATEMENTS" value="false"/>
+    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false"/>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED"/>
-        <option name="externalProjectPath" value="$PROJECT_DIR$"/>
-        <option name="gradleHome" value="/usr/lib/gradle/3.1"/>
-        <option name="gradleJvm" value="1.8"/>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="/usr/lib/gradle/3.1" />
+        <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$"/>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/react-app" />
+            <option value="$PROJECT_DIR$/site" />
           </set>
         </option>
-        <option name="useAutoImport" value="true"/>
+        <option name="useAutoImport" value="true" />
       </GradleProjectSettings>
     </option>
   </component>
   <component name="GradleUISettings">
-    <setting name="root"/>
+    <setting name="root" />
   </component>
   <component name="GradleUISettings2">
-    <setting name="root"/>
+    <setting name="root" />
   </component>
-  <component name="IdProvider" IDEtalkID="11DA1DB66DD62DDA1ED602B7079FE97C"/>
+  <component name="IdProvider" IDEtalkID="11DA1DB66DD62DDA1ED602B7079FE97C" />
   <component name="InspectionProjectProfileManager">
     <profile version="1.0">
-      <option name="myName" value="Project Default"/>
+      <option name="myName" value="Project Default" />
     </profile>
-    <version value="1.0"/>
-  </component>
-  <component name="JavaScriptLibraryMappings">
-    <includedPredefinedLibrary name="ECMAScript 6"/>
+    <version value="1.0" />
   </component>
   <component name="JavaScriptSettings">
-    <option name="languageLevel" value="JSX"/>
+    <option name="languageLevel" value="JSX" />
   </component>
   <component name="JavadocGenerationManager">
-    <option name="OUTPUT_DIRECTORY"/>
-    <option name="OPTION_SCOPE" value="protected"/>
-    <option name="OPTION_HIERARCHY" value="true"/>
-    <option name="OPTION_NAVIGATOR" value="true"/>
-    <option name="OPTION_INDEX" value="true"/>
-    <option name="OPTION_SEPARATE_INDEX" value="true"/>
-    <option name="OPTION_DOCUMENT_TAG_USE" value="false"/>
-    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false"/>
-    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false"/>
-    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true"/>
-    <option name="OPTION_DEPRECATED_LIST" value="true"/>
-    <option name="OTHER_OPTIONS" value=""/>
-    <option name="HEAP_SIZE"/>
-    <option name="LOCALE"/>
-    <option name="OPEN_IN_BROWSER" value="true"/>
+    <option name="OUTPUT_DIRECTORY" />
+    <option name="OPTION_SCOPE" value="protected" />
+    <option name="OPTION_HIERARCHY" value="true" />
+    <option name="OPTION_NAVIGATOR" value="true" />
+    <option name="OPTION_INDEX" value="true" />
+    <option name="OPTION_SEPARATE_INDEX" value="true" />
+    <option name="OPTION_DOCUMENT_TAG_USE" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
+    <option name="OPTION_DEPRECATED_LIST" value="true" />
+    <option name="OTHER_OPTIONS" value="" />
+    <option name="HEAP_SIZE" />
+    <option name="LOCALE" />
+    <option name="OPEN_IN_BROWSER" value="true" />
   </component>
   <component name="Palette2">
     <group name="Swing">
       <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1"/>
+        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
       </item>
       <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2"/>
+        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
       </item>
       <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
       </item>
       <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
-        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3"/>
+        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
       </item>
       <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1"/>
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
         <initial-values>
-          <property name="text" value="Button"/>
+          <property name="text" value="Button" />
         </initial-values>
       </item>
       <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0"/>
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
         <initial-values>
-          <property name="text" value="RadioButton"/>
+          <property name="text" value="RadioButton" />
         </initial-values>
       </item>
       <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0"/>
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
         <initial-values>
-          <property name="text" value="CheckBox"/>
+          <property name="text" value="CheckBox" />
         </initial-values>
       </item>
       <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
         <initial-values>
-          <property name="text" value="Label"/>
+          <property name="text" value="Label" />
         </initial-values>
       </item>
       <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
-          <preferred-size width="150" height="-1"/>
+          <preferred-size width="150" height="-1" />
         </default-constraints>
       </item>
       <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
-          <preferred-size width="150" height="-1"/>
+          <preferred-size width="150" height="-1" />
         </default-constraints>
       </item>
       <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
-          <preferred-size width="150" height="-1"/>
+          <preferred-size width="150" height="-1" />
         </default-constraints>
       </item>
       <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
-          <preferred-size width="150" height="50"/>
+          <preferred-size width="150" height="50" />
         </default-constraints>
       </item>
       <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
-          <preferred-size width="150" height="50"/>
+          <preferred-size width="150" height="50" />
         </default-constraints>
       </item>
       <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
-          <preferred-size width="150" height="50"/>
+          <preferred-size width="150" height="50" />
         </default-constraints>
       </item>
       <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
-        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1"/>
+        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
       </item>
       <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
         <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
-          <preferred-size width="150" height="50"/>
+          <preferred-size width="150" height="50" />
         </default-constraints>
       </item>
       <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
         <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
-          <preferred-size width="150" height="50"/>
+          <preferred-size width="150" height="50" />
         </default-constraints>
       </item>
       <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
         <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
-          <preferred-size width="150" height="50"/>
+          <preferred-size width="150" height="50" />
         </default-constraints>
       </item>
       <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
         <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
-          <preferred-size width="200" height="200"/>
+          <preferred-size width="200" height="200" />
         </default-constraints>
       </item>
       <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
         <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
-          <preferred-size width="200" height="200"/>
+          <preferred-size width="200" height="200" />
         </default-constraints>
       </item>
       <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1"/>
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
       </item>
       <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1"/>
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
       </item>
       <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3"/>
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
       </item>
       <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1"/>
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
       </item>
       <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
         <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
-          <preferred-size width="-1" height="20"/>
+          <preferred-size width="-1" height="20" />
         </default-constraints>
       </item>
       <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1"/>
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
       </item>
       <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2"/>
+        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
       </item>
     </group>
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module filepath="$PROJECT_DIR$/.idea/modules/Football-Prototype.iml" fileurl="file://$PROJECT_DIR$/.idea/modules/Football-Prototype.iml"/>
-      <module filepath="$PROJECT_DIR$/.idea/modules/Football-Prototype_main.iml" fileurl="file://$PROJECT_DIR$/.idea/modules/Football-Prototype_main.iml"/>
-      <module filepath="$PROJECT_DIR$/.idea/modules/Football-Prototype_test.iml" fileurl="file://$PROJECT_DIR$/.idea/modules/Football-Prototype_test.iml"/>
-      <module filepath="$PROJECT_DIR$/Football-Prototype.iml" fileurl="file://$PROJECT_DIR$/Football-Prototype.iml"/>
-      <module filepath="$PROJECT_DIR$/site/site.iml" fileurl="file://$PROJECT_DIR$/site/site.iml"/>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Football-Prototype.iml" filepath="$PROJECT_DIR$/.idea/modules/Football-Prototype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/react-app/react-app.iml" filepath="$PROJECT_DIR$/.idea/modules/react-app/react-app.iml" group="react-app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/react-app/react-app_main.iml" filepath="$PROJECT_DIR$/.idea/modules/react-app/react-app_main.iml" group="react-app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/react-app/react-app_test.iml" filepath="$PROJECT_DIR$/.idea/modules/react-app/react-app_test.iml" group="react-app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/site/site.iml" filepath="$PROJECT_DIR$/.idea/modules/site/site.iml" group="site" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/site/site_main.iml" filepath="$PROJECT_DIR$/.idea/modules/site/site_main.iml" group="site" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/site/site_test.iml" filepath="$PROJECT_DIR$/.idea/modules/site/site_test.iml" group="site" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" assert-keyword="true" assert-jdk-15="true">
-    <output url="file://$PROJECT_DIR$/out"/>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="SvnBranchConfigurationManager">
-    <option name="mySupportsUserInfoFilter" value="true"/>
+    <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="Git"/>
+    <mapping directory="" vcs="Git" />
+  </component>
+  <component name="libraryTable">
+    <library name="Gradle: aopalliance:aopalliance:1.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/4a4b6d692e17846a9f3da036438a7ac491d3c814/aopalliance-1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: cglib:cglib:3.2.4">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cglib/cglib/3.2.4/847edb246462b96177b6c18b85e5885f0a2a51f5/cglib-3.2.4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cglib/cglib/3.2.4/a439122d1a45c6eb47385fb47efa2523ccb9ad07/cglib-3.2.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.8.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.8.0/45b426f7796b741035581a176744d91090e2e6fb/jackson-annotations-2.8.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.8.0/29a1a95363d497e856c0a7d682e4f7973e334068/jackson-annotations-2.8.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.fasterxml.jackson.core:jackson-core:2.8.6">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.8.6/2ef7b1cc34de149600f5e75bc2d5bf40de894e60/jackson-core-2.8.6.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.8.6/36af810d532d0b79feb391519efddce81f0afa7/jackson-core-2.8.6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.8.6">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.6/c43de61f74ecc61322ef8f402837ba65b0aa2bf4/jackson-databind-2.8.6.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.6/b4fa0bfb592813e6753f25719501cf6f803a2bd1/jackson-databind-2.8.6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.7.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.7.5/eca40b06949cca9a9c96b637103bd6956e723f6b/jackson-dataformat-yaml-2.7.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.7.5/753891dad001e1443cc3b82ebea7b5335d4f2f0a/jackson-dataformat-yaml-2.7.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-guava:2.7.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-guava/2.7.5/326897df5ee2a147409013d4a2da4ba4877ecb05/jackson-datatype-guava-2.7.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-guava/2.7.5/a3cb063fcec318c7e499f50c8f57d33b4fdb2847/jackson-datatype-guava-2.7.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.7.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.7.5/e35af2c2d0d3e133c0257d55f21438bbd40bfbdb/jackson-datatype-jdk8-2.7.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.7.5/1dec78b1fc19b36db1bc67368879f1e7a24434a6/jackson-datatype-jdk8-2.7.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.7.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.7.5/e8797b15ad6a29e2e9aefcb71033f1eb51714631/jackson-datatype-jsr310-2.7.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.7.5/438c48970d55ed0f9b8a120192c80f48884be160/jackson-datatype-jsr310-2.7.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.github.ben-manes.caffeine:caffeine:2.3.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ben-manes.caffeine/caffeine/2.3.1/d6aec5cbd26313a341ee7c034bd56d604f68bebe/caffeine-2.3.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ben-manes.caffeine/caffeine/2.3.1/99e75ffd134244295ce390264ebbaa2617909550/caffeine-2.3.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.github.groovy-wslite:groovy-wslite:1.1.3">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.groovy-wslite/groovy-wslite/1.1.3/aa57522517996c2539875cdf8f4c7a9debbd4863/groovy-wslite-1.1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.groovy-wslite/groovy-wslite/1.1.3/8997ecf8765f9816e2e376cf20b7f8b81172e2e9/groovy-wslite-1.1.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.github.jknack:handlebars:2.3.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jknack/handlebars/2.3.0/db25e28862f198d3f40e840fe8a41e1acef078d3/handlebars-2.3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jknack/handlebars/2.3.0/92dc09ed310917dda09f18efe369164bbfa237da/handlebars-2.3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.google.guava:guava:19.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/19.0/6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9/guava-19.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/19.0/91a4d115400e904f22b03a78deb355e9ea803cd4/guava-19.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.google.inject.extensions:guice-multibindings:4.1.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject.extensions/guice-multibindings/4.1.0/3b27257997ac51b0f8d19676f1ea170427e86d51/guice-multibindings-4.1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject.extensions/guice-multibindings/4.1.0/240bb696c95598a23b519ffd8a88773551850498/guice-multibindings-4.1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.google.inject:guice:4.1.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.1.0/eeb69005da379a10071aa4948c48d89250febb07/guice-4.1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.1.0/3f43f7c8743238f310246cfb13ba3e2e1aca6655/guice-4.1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.zaxxer:HikariCP:2.3.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP/2.3.5/d628ede98e7f816f81f180eac0724648b0ce7f28/HikariCP-2.3.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP/2.3.5/8f5cfaf63c43e3200411423f0f75bbb1b30cff4c/HikariCP-2.3.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: commons-codec:commons-codec:1.10">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/11fb3d88ae7e3b757d70237064210ceb954a5a04/commons-codec-1.10-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.netty:netty-buffer:4.1.6.Final">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.6.Final/dc1a304ee7c448bfa241f60c41948db6f12b653b/netty-buffer-4.1.6.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.6.Final/eeeb8d6128c5c894ba36f93405a68661d64a6c21/netty-buffer-4.1.6.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.netty:netty-codec-http:4.1.6.Final">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.6.Final/ee6c65cb3f39f212241e9131dc05a837e776fd70/netty-codec-http-4.1.6.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.6.Final/bae646a17d047f10dcca39ae42f5a89f2955b2ac/netty-codec-http-4.1.6.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.netty:netty-codec:4.1.6.Final">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.6.Final/86ce3c559af6759a0b991b9ad2faec20981e18e/netty-codec-4.1.6.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.6.Final/4a4304cdf6157cc396f225585a00b70d6749863a/netty-codec-4.1.6.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.netty:netty-common:4.1.6.Final">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.6.Final/654e4d8e87bc442be5c1d82d0369a3885f7168ea/netty-common-4.1.6.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.6.Final/913bf371729cc4b177e4ddb332a3b73167479254/netty-common-4.1.6.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.netty:netty-handler:4.1.6.Final">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.6.Final/a24e92d67e467a3b97ff63642ab56637990685fd/netty-handler-4.1.6.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.6.Final/2c2a0df8fd362d5760d9ff2fae1188de5af02bb1/netty-handler-4.1.6.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.netty:netty-resolver:4.1.6.Final">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.6.Final/2a1c97445b6aa544cd029faa72abfb3f85e9957e/netty-resolver-4.1.6.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.6.Final/a4ad7edb9311871d9efceb8a5fd362cc8e496029/netty-resolver-4.1.6.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.6.Final">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.6.Final/8c5a8d691d6d97a35a22af45c8e67b8aede1c35d/netty-transport-native-epoll-4.1.6.Final-linux-x86_64.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.6.Final/2659686c8d21335ee75ae837e96937dc18c2e47d/netty-transport-native-epoll-4.1.6.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.netty:netty-transport:4.1.6.Final">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.6.Final/4cba91ad2711c13a063d480f01edf70aa3f9387d/netty-transport-4.1.6.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.6.Final/3096d909759112f07ef15063d3ed31a65d87e537/netty-transport-4.1.6.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.ratpack:ratpack-core:1.4.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-core/1.4.5/a50265679d053f5f63cd843f65679a7fa2f1ccf1/ratpack-core-1.4.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-core/1.4.5/2e16cd8ac1a52892cdf920292dc94ef1cb98b3de/ratpack-core-1.4.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.ratpack:ratpack-groovy-test:1.4.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-groovy-test/1.4.5/95d7072efcb97fed692af27aac664fc29d2e3928/ratpack-groovy-test-1.4.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-groovy-test/1.4.5/bcb422e5391e06b36576cf405317fc8f887685f/ratpack-groovy-test-1.4.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.ratpack:ratpack-groovy:1.4.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-groovy/1.4.5/d73953d3555fe982a578790b2129a9e8f49c4ef4/ratpack-groovy-1.4.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-groovy/1.4.5/4e6541177a0d40bad98a715595c660f26fe54fb3/ratpack-groovy-1.4.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.ratpack:ratpack-guice:1.4.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-guice/1.4.5/16b69386b7d07c35d47cc07f423f4ac0e1d7b797/ratpack-guice-1.4.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-guice/1.4.5/3d111a7ad670bcfee1a278539b03363a9c6d1e2/ratpack-guice-1.4.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.ratpack:ratpack-handlebars:1.4.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-handlebars/1.4.5/94c1ea451f8cac8d36c4f58d6730861c1aae8465/ratpack-handlebars-1.4.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-handlebars/1.4.5/ced81aa3f3cbf192809a3b73b30ed483ebe014b4/ratpack-handlebars-1.4.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.ratpack:ratpack-hikari:1.4.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-hikari/1.4.5/e5b9ce1a11b27d62e06ad49c7ed48c20ce73e32c/ratpack-hikari-1.4.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-hikari/1.4.5/3d3f11701809a1372b3c458364b27626ce47d1a4/ratpack-hikari-1.4.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.ratpack:ratpack-pac4j:1.4.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-pac4j/1.4.5/12f058e82a4e32b57fdb35c3c8cb46b8eebfe02a/ratpack-pac4j-1.4.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-pac4j/1.4.5/269673246ef2a34451e150c5b2723b14c34f6b20/ratpack-pac4j-1.4.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.ratpack:ratpack-remote-test:1.4.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-remote-test/1.4.5/d23b8a9956f1cd282bce8bd47d831eee7c790eb5/ratpack-remote-test-1.4.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-remote-test/1.4.5/72b492ded9a9682ef7f9455fee9b03aed2014b/ratpack-remote-test-1.4.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.ratpack:ratpack-remote:1.4.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-remote/1.4.5/6a52bb910991051960687ba9532e5b3d005aa9d5/ratpack-remote-1.4.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-remote/1.4.5/f97ed7d5af1691b7aa28c38b60cfe65993cc1fb/ratpack-remote-1.4.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.ratpack:ratpack-session:1.4.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-session/1.4.5/1624844d77b73e4d398b86b13bcceb2155f0e958/ratpack-session-1.4.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-session/1.4.5/1cc65e6791554cfdc8c3759e8ba3706ee96d8b3c/ratpack-session-1.4.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.ratpack:ratpack-test:1.4.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-test/1.4.5/3cf240a27a8253c84fb3410abca06229b007c0f8/ratpack-test-1.4.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-test/1.4.5/3102edebb2fe6e115ea82e69003029449fb4a561/ratpack-test-1.4.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.remotecontrol:remote-core:0.7">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.remotecontrol/remote-core/0.7/9dc2d0de6edcac0da0831bc94bf47eac0c792936/remote-core-0.7.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.remotecontrol/remote-core/0.7/f0a2fd732d544590d4ff20838d8c77fcc09632ce/remote-core-0.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.remotecontrol:remote-transport-http:0.7">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.remotecontrol/remote-transport-http/0.7/c11d918101829064a6425978b7ebddb36841bd31/remote-transport-http-0.7.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.remotecontrol/remote-transport-http/0.7/21c976de85a4d6345c16755442ce50457dc66355/remote-transport-http-0.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: javax.inject:javax.inject:1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/a00123f261762a7c5e0ec916a2c7c8298d29c400/javax.inject-1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: javax.servlet:servlet-api:2.4">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/servlet-api/2.4/3fc542fe8bb8164e8d3e840fe7403bc0518053c0/servlet-api-2.4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/servlet-api/2.4/f37965508b58253b45c8accc02cd6c652380545f/servlet-api-2.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: junit:junit:4.12">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.antlr:antlr4-runtime:4.5.1-1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.5.1-1/66144204f9d6d7d3f3f775622c2dd7e9bd511d97/antlr4-runtime-4.5.1-1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.5.1-1/e0057705e96c77719e7d49cb64dc014d023e7a9b/antlr4-runtime-4.5.1-1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.ant:ant-launcher:1.9.6">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-launcher/1.9.6/d75dd4c39ba06401f20e7afffb861d268baec6bc/ant-launcher-1.9.6.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-launcher/1.9.6/717ab721434006f709330a1d4342e844120847af/ant-launcher-1.9.6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.ant:ant:1.9.6">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant/1.9.6/80e2063b01bab3c79c2d84e4ed5e73868394c85a/ant-1.9.6.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant/1.9.6/a09556e6512056c6741b6ffbf4de7a52282fd4ff/ant-1.9.6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.commons:commons-lang3:3.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.1/905075e6c80f206bbe6cf1e809d2caa69f420c76/commons-lang3-3.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.1/8d30b90ae8bda4fbac8363161c8a9b5a99e23baf/commons-lang3-3.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.codehaus.groovy:groovy-all:2.4.8">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-all/2.4.8/b2ddd0b4b2dd7598ccb769cc2eb37ff8d683e7c0/groovy-all-2.4.8.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-all/2.4.8/c0b188118d0bbee615ee601c048b14c7772d7e41/groovy-all-2.4.8-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.hamcrest:hamcrest-core:1.3">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.javassist:javassist:3.19.0-GA">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.19.0-GA/50120f69224dd8684b445a6f3a5b08fe9b5c60f6/javassist-3.19.0-GA.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.19.0-GA/37e6508aeea3eef21df5b7ee3ea3c708618c1b7b/javassist-3.19.0-GA-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.liquibase:liquibase-core:3.5.3">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.liquibase/liquibase-core/3.5.3/f346404c3876c5bd0e07a7e10b7565bdcd35dbab/liquibase-core-3.5.3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.liquibase/liquibase-core/3.5.3/c6aca6942d11688292d5d3de14ab2b7741c7da93/liquibase-core-3.5.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.mozilla:rhino:1.7R4">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mozilla/rhino/1.7R4/e982f2136574b9a423186fbaeaaa98dc3e5a5288/rhino-1.7R4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mozilla/rhino/1.7R4/f0bd5ea08604d7a674606064649292a740f5cf1f/rhino-1.7R4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.objenesis:objenesis:2.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.5.1/272bab9a4e5994757044d1fc43ce480c8cb907a4/objenesis-2.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.5.1/36bc7ecec5fb17144916c7012cc1a91a87c0ba95/objenesis-2.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.ow2.asm:asm:5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/5.1/5ef31c4fe953b1fd00b8a88fa1d6820e8785bb45/asm-5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/5.1/81e81bd6c20b965f88d0462e2559f8759fc6c26d/asm-5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.pac4j:pac4j-core:1.8.8">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.pac4j/pac4j-core/1.8.8/3464c025bbbec875c52e75c2bfd4758324671c1f/pac4j-core-1.8.8.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.pac4j/pac4j-core/1.8.8/3dd86bdc56f2e5eb8743dee632f22313ae7b43ee/pac4j-core-1.8.8-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.pac4j:pac4j-http:1.8.6">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.pac4j/pac4j-http/1.8.6/12af864615bf89be1eb1b197390337b48387d692/pac4j-http-1.8.6.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.pac4j/pac4j-http/1.8.6/24c9f601b50917d2820160c9907b86a5526f0d53/pac4j-http-1.8.6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.pac4j:pac4j-oauth:1.8.6">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.pac4j/pac4j-oauth/1.8.6/2352f0e75f22ebaa772f8ca7e51587f0cacbef7c/pac4j-oauth-1.8.6.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.pac4j/pac4j-oauth/1.8.6/aa67e932e26366217f4a28a1ac8b8635094d96e6/pac4j-oauth-1.8.6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.postgresql:postgresql:9.4.1212">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/9.4.1212/38931d70811d9bfcecf9c06f7222973c038a12de/postgresql-9.4.1212.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/9.4.1212/d007dc0d6b3470582929bae1346c0659a4d448eb/postgresql-9.4.1212-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.reactivestreams:reactive-streams:1.0.0.final">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.0.final/e62537f8218067557606489b2790cd74dda39059/reactive-streams-1.0.0.final.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.0.final/be2d37620962b2c851f2c292d5931b7ee9398d16/reactive-streams-1.0.0.final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.scribe:scribe:1.3.6">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scribe/scribe/1.3.6/b726b1e6f6c77177fe3cf968c92c9211da446b4/scribe-1.3.6.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scribe/scribe/1.3.6/cc6158ac90d09fb5539650668bae97db3eec2267/scribe-1.3.6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.slf4j:jcl-over-slf4j:1.7.21">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.21/331b564a3a42f002a0004b039c1c430da89062cd/jcl-over-slf4j-1.7.21.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.21/c565ca9c1239b38fe4a70e4101086c4e880f6358/jcl-over-slf4j-1.7.21-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.slf4j:slf4j-api:1.7.21">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.21/139535a69a4239db087de9bab0bee568bf8e0b70/slf4j-api-1.7.21.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.21/f285ac123f201fb4b028bac556928d7cf527ef48/slf4j-api-1.7.21-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.slf4j:slf4j-api:1.7.24">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.24/3f6b4bd4f8dbe8d4bea06d107a3826469b85c3e9/slf4j-api-1.7.24.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.24/9f1cecd7c757ad5dde29453d43315228bb0a7c7e/slf4j-api-1.7.24-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.slf4j:slf4j-simple:1.7.24">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.24/d9841ffd9d794ab26446df2c46a2ab2b8d2a183e/slf4j-simple-1.7.24.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.24/cb29d135b14c25e64e76b4f25d263d5c58b65de4/slf4j-simple-1.7.24-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.spockframework:spock-core:1.0-groovy-2.4">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spockframework/spock-core/1.0-groovy-2.4/ceaa8b69f274ed3de24da3e6a6c86f673b426d1a/spock-core-1.0-groovy-2.4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spockframework/spock-core/1.0-groovy-2.4/db9597087c5e4afc2ef795c8ae89e32eddd019a6/spock-core-1.0-groovy-2.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.yaml:snakeyaml:1.17">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.17/7a27ea250c5130b2922b86dea63cbb1cc10a660c/snakeyaml-1.17.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.17/63577e87886c76228db9f8a2c50ea43cde5072eb/snakeyaml-1.17-sources.jar!/" />
+      </SOURCES>
+    </library>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <UIState>
           <splitter-proportions>
-            <SplitterProportionsDataImpl/>
+            <SplitterProportionsDataImpl />
           </splitter-proportions>
-          <settings/>
+          <settings />
         </UIState>
       </state>
       <state key="Copyright.UI">
         <UIState>
           <splitter-proportions>
-            <SplitterProportionsDataImpl/>
+            <SplitterProportionsDataImpl />
           </splitter-proportions>
         </UIState>
       </state>
@@ -248,7 +827,7 @@
             <SplitterProportionsDataImpl>
               <option name="proportions">
                 <list>
-                  <option value="0.2"/>
+                  <option value="0.2" />
                 </list>
               </option>
             </SplitterProportionsDataImpl>
@@ -259,9 +838,9 @@
       <state key="ScopeChooserConfigurable.UI">
         <UIState>
           <splitter-proportions>
-            <SplitterProportionsDataImpl/>
+            <SplitterProportionsDataImpl />
           </splitter-proportions>
-          <settings/>
+          <settings />
         </UIState>
       </state>
     </states>
