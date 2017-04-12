@@ -4,7 +4,9 @@ import api.SinglePlayerApiHandler
 import api.TeamGetHandlerApi
 import config.HikariConfigModule
 import groovy.json.JsonSlurper
+import handlebars.HandlebarsHelperModule
 import handlers.*
+import handlers.team_handlers.TeamFixturesHandler
 import handlers.team_handlers.TeamPlayersHandler
 import handlers.team_handlers.TeamSinglePlayerHandler
 import league.ImportClient
@@ -48,6 +50,7 @@ ratpack {
 
     bindings {
         module MarkupTemplateModule
+        module HandlebarsHelperModule
         module SqlModule
         module HikariModule
         module HikariConfigModule
@@ -125,10 +128,7 @@ ratpack {
 
             path "players/:id", new TeamSinglePlayerHandler()
 
-            path("fixtures") {
-                String teamId = allPathTokens.teamId
-                context.render("Fixtures ${teamId}")
-            }
+            path "fixtures", new TeamFixturesHandler()
 
             path("league") {
                 String teamId = allPathTokens.teamId

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import groovy.sql.GroovyRowResult
 import groovy.sql.Sql
 import groovy.util.logging.Slf4j
+import models.Fixtures
 import models.Player
 import models.TeamContainer
 import persistance.JsonObjectMapper
@@ -67,7 +68,6 @@ class TeamStoreServiceImpl implements TeamStoreService<TeamContainer> {
         if (id == null) {
             return null
         }
-        log.info("id ${id}")
         Blocking.get {
             sql.firstRow("""SELECT * from site_content where id = ?""", id)
         }.map { row ->
@@ -91,6 +91,17 @@ class TeamStoreServiceImpl implements TeamStoreService<TeamContainer> {
                     playerObject
                 }
 
+            }
+        }
+    }
+
+    @Override
+    Promise<Fixtures> fetchFixtures(String id) {
+        Blocking.get {
+            sql.firstRow("select content->'fixtures' from site_content where id = ${id}")
+        }.map { row ->
+            if (row) {
+                objectMapper.readValue(row.getAt(0).toString(), Fixtures)
             }
         }
     }

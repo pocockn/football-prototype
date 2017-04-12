@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e6a27dc-b178-41c4-b082-02948367ce7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/src/main/groovy/handlers/team_handlers/TeamSinglePlayerHandler.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/src/main/groovy/handlebars/HandlebarsHelperModule.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/src/main/groovy/handlebars/helpers/PlayerIdIntoNameHelper.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/src/main/groovy/handlers/team_handlers/TeamFixturesHandler.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Football-Prototype.ipr" afterPath="$PROJECT_DIR$/Football-Prototype.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Football-Prototype.iws" afterPath="$PROJECT_DIR$/Football-Prototype.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/src/main/groovy/handlers/team_handlers/TeamPlayersHandler.groovy" afterPath="$PROJECT_DIR$/site/src/main/groovy/handlers/team_handlers/TeamPlayersHandler.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/src/ratpack/handlebars/allPlayers.html.hbs" afterPath="$PROJECT_DIR$/site/src/ratpack/handlebars/allPlayers.html.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/TeamStoreService.groovy" afterPath="$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/TeamStoreService.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/TeamStoreServiceImpl.groovy" afterPath="$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/TeamStoreServiceImpl.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/src/ratpack/ratpack.groovy" afterPath="$PROJECT_DIR$/site/src/ratpack/ratpack.groovy" />
     </list>
     <ignored path="$PROJECT_DIR$/.shelf/" />
@@ -82,24 +83,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="285">
-                <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ratpack.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ratpack.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site/src/ratpack/ratpack.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="63" column="36" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+            <state relative-caret-position="274">
+              <caret line="130" column="40" lean-forward="false" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -110,31 +98,9 @@
       <file leaf-file-name="TeamSinglePlayerHandler.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site/src/main/groovy/handlers/team_handlers/TeamSinglePlayerHandler.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SinglePlayerHandler.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site/src/main/groovy/handlers/SinglePlayerHandler.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="13" column="87" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="allPlayers.html.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/allPlayers.html.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="45" column="62" lean-forward="false" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
-              <folding>
-                <marker date="1491944776000" expanded="true" signature="1446:3444" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -144,6 +110,97 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeamFixturesHandler.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site/src/main/groovy/handlers/team_handlers/TeamFixturesHandler.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="79" lean-forward="false" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
+              <folding>
+                <element signature="e#32#82#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FixturesHandler.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site/src/main/groovy/handlers/FixturesHandler.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeamStoreService.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/TeamStoreService.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+              <folding>
+                <element signature="e#37#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeamStoreServiceImpl.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/TeamStoreServiceImpl.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="661">
+              <caret line="105" column="9" lean-forward="true" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="9" />
+              <folding>
+                <marker date="1492025442000" expanded="true" signature="828:892" ph="update site_... " />
+                <marker date="1492025442000" expanded="true" signature="1020:1087" ph="INSERT INTO site_content... " />
+                <marker date="1492025442000" expanded="true" signature="1497:1523" ph="SELECT * fro... site_content" />
+                <marker date="1492025442000" expanded="true" signature="1948:1987" ph="SELECT * fro... site_content" />
+                <marker date="1492025442000" expanded="true" signature="2280:2405" ph="SELECT jsonb... site_content" />
+                <marker date="1492025442000" expanded="true" signature="2789:2844" ph="select conte... site_content" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BootstrapNewShireSoldiersChange.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site/src/main/groovy/changesets/BootstrapNewShireSoldiersChange.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="39" column="48" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+              <folding>
+                <marker date="1491502330000" expanded="true" signature="228:295" ph="insert into site_content... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerStoreServiceImpl.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/PlayerStoreServiceImpl.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+              <folding>
+                <marker date="1491502330000" expanded="true" signature="781:815" ph="select * fro... players" />
+                <marker date="1491502330000" expanded="true" signature="941:1006" ph="update playe... " />
+                <marker date="1491502330000" expanded="true" signature="1085:1154" ph="INSERT INTO players... " />
+                <marker date="1491502330000" expanded="true" signature="1373:1405" ph="DELETE FROM " />
+                <marker date="1491502330000" expanded="true" signature="1554:1575" ph="SELECT * fro... players" />
+                <marker date="1491502330000" expanded="true" signature="1984:2018" ph="SELECT * FRO... players" />
+                <marker date="1491502330000" expanded="true" signature="2476:2510" ph="SELECT * FRO... players" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Fixtures.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site/src/main/groovy/models/Fixtures.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -164,6 +221,12 @@
       <find>topbar</find>
       <find>noise</find>
       <find>axios</find>
+      <find>injec</find>
+      <find>inject</find>
+      <find>nject</find>
+      <find>Inject</find>
+      <find>&quot;Inject</find>
+      <find>@Inject</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1361,7 +1424,12 @@
         <option value="$PROJECT_DIR$/site/src/main/groovy/handlers/team_handlers/TeamPlayersHandler.groovy" />
         <option value="$PROJECT_DIR$/site/src/ratpack/handlebars/allPlayers.html.hbs" />
         <option value="$PROJECT_DIR$/site/src/main/groovy/handlers/team_handlers/TeamSinglePlayerHandler.groovy" />
+        <option value="$PROJECT_DIR$/site/src/main/groovy/handlebars/HandlebarsHelperModule.groovy" />
+        <option value="$PROJECT_DIR$/site/src/main/groovy/handlebars/helpers/PlayerIdIntoNameHelper.groovy" />
+        <option value="$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/TeamStoreService.groovy" />
         <option value="$PROJECT_DIR$/site/src/ratpack/ratpack.groovy" />
+        <option value="$PROJECT_DIR$/site/src/main/groovy/handlers/team_handlers/TeamFixturesHandler.groovy" />
+        <option value="$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/TeamStoreServiceImpl.groovy" />
       </list>
     </option>
   </component>
@@ -1386,7 +1454,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1680" />
+    <option name="width" value="840" />
     <option name="height" value="955" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -1414,8 +1482,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1572,8 +1638,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Football-Prototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="football-prototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="changesets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1600,19 +1698,19 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JSON" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/ratpack/handlebars" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="handlers.team_handlers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/react-app/src/components" />
       <recent name="$PROJECT_DIR$/react-app/src" />
       <recent name="$PROJECT_DIR$/src/main/groovy/service" />
       <recent name="$PROJECT_DIR$/src/ratpack/public" />
       <recent name="$PROJECT_DIR$/site" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="handlers.team_handlers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/ratpack/handlebars" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1858,6 +1956,25 @@
     <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
       <method />
     </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
       <option name="BCName" value="" />
       <option name="IOSSimulatorSdkPath" value="" />
@@ -1972,6 +2089,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -2121,7 +2245,8 @@
       <workItem from="1485433837297" duration="6326000" />
       <workItem from="1485521247739" duration="936000" />
       <workItem from="1491942860250" duration="1137000" />
-      <workItem from="1491944027307" duration="1919000" />
+      <workItem from="1491944027307" duration="2497000" />
+      <workItem from="1492003796644" duration="5057000" />
     </task>
     <task id="LOCAL-00001" summary="change project structure to have multiple gradle build files for the react app and ratpack app">
       <created>1485184699478</created>
@@ -2222,7 +2347,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48120000" />
+    <option name="totallyTimeSpent" value="53755000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2234,7 +2359,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="955" extended-state="6" />
+    <frame x="0" y="23" width="840" height="955" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908458" sideWeight="0.49806523" order="6" side_tool="false" content_ui="tabs" />
@@ -2244,13 +2369,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29291844" sideWeight="0.52072966" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27346465" sideWeight="0.49585405" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27346465" sideWeight="0.49585405" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.49806523" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2340672" sideWeight="0.49806523" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2340672" sideWeight="0.49806523" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18253969" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.106516294" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2924731" sideWeight="0.4792703" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2303,42 +2428,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/site/src/ratpack/public/assets/external/theme.css" />
-    <entry file="file://$PROJECT_DIR$/react-app/src/assets/theme.css" />
-    <entry file="file://$PROJECT_DIR$/react-app/src/components/Sidebar.js" />
-    <entry file="file://$PROJECT_DIR$/react-app/src/index.html" />
-    <entry file="file://$PROJECT_DIR$/react-app/src/logo.svg" />
-    <entry file="file://$PROJECT_DIR$/react-app/src/index.css" />
-    <entry file="file://$PROJECT_DIR$/yarn.lock" />
-    <entry file="file://$PROJECT_DIR$/react-app/yarn.lock" />
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-app/package.json" />
-    <entry file="file://$PROJECT_DIR$/react-app/build.gradle" />
-    <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/partials/header.html.hbs" />
-    <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/partials/navigation.html.hbs" />
-    <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/partials/page-header.html.hbs" />
-    <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/partials/sidebar.html.hbs" />
-    <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/partials/topbar.html.hbs" />
-    <entry file="file://$PROJECT_DIR$/react-app/src/components/Team.js" />
-    <entry file="file://$PROJECT_DIR$/react-app/src/index.js" />
-    <entry file="file://$PROJECT_DIR$/react-app/src/App.js" />
-    <entry file="file://$PROJECT_DIR$/react-app/src/components/AppFrame.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/changesets/BootstrapShireSoldiersChange.groovy" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.liquibase/liquibase-core/3.4.2/6636ff4518dc4388ca7edd1d3be20dd089bfd3b8/liquibase-core-3.4.2-sources.jar!/liquibase/resource/ResourceAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/importJsonData.json" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_11.json" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-all/2.4.3/8722c4f1d3657f989d3d24e8373f8cbbb6f44d92/groovy-all-2.4.3-sources.jar!/groovy/json/JsonSlurper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/groovy/models/TeamContainer.groovy" />
@@ -2374,11 +2463,157 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/allPlayers.html.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
+        <state relative-caret-position="675">
           <caret line="45" column="62" lean-forward="false" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject.extensions/guice-multibindings/4.1.0/240bb696c95598a23b519ffd8a88773551850498/guice-multibindings-4.1.0-sources.jar!/com/google/inject/multibindings/Multibinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="235" column="42" lean-forward="false" selection-start-line="235" selection-start-column="42" selection-end-line="235" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.1.0/3f43f7c8743238f310246cfb13ba3e2e1aca6655/guice-4.1.0-sources.jar!/com/google/inject/binder/LinkedBindingBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="34" column="23" lean-forward="false" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/handlebars/HandlebarsHelperModule.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <marker date="1491944776000" expanded="true" signature="1446:3444" ph="..." />
+            <element signature="e#20#59#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/handlers/SinglePlayerHandler.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="87" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/service/player_services/TeamContent.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/service/player_services/TeamContentImpl.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/service/player_services/FindPropetyStatisticsImpl.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/LeagueTableHelpers.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/PlayerStoreService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/singlePlayer.html.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/partials/singleTeamPartials/teamSidebar.html.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-666">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/partials/header.html.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/partials/navigation.html.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-411">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/partials/page-header.html.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-381">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/partials/sidebar.html.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-576">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/ratpack/handlebars/partials/topbar.html.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-471">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/handlebars/helpers/PlayerIdIntoNameHelper.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <element signature="e#28#71#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/handlers/team_handlers/TeamSinglePlayerHandler.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2390,28 +2625,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/handlers/SinglePlayerHandler.groovy">
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/models/Fixtures.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="87" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="87" />
+        <state relative-caret-position="45">
+          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/handlers/team_handlers/TeamSinglePlayerHandler.groovy">
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/changesets/BootstrapNewShireSoldiersChange.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="264">
+          <caret line="39" column="48" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+          <folding>
+            <marker date="1491502330000" expanded="true" signature="228:295" ph="insert into site_content... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/PlayerStoreServiceImpl.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+          <folding>
+            <marker date="1491502330000" expanded="true" signature="781:815" ph="select * fro... players" />
+            <marker date="1491502330000" expanded="true" signature="941:1006" ph="update playe... " />
+            <marker date="1491502330000" expanded="true" signature="1085:1154" ph="INSERT INTO players... " />
+            <marker date="1491502330000" expanded="true" signature="1373:1405" ph="DELETE FROM " />
+            <marker date="1491502330000" expanded="true" signature="1554:1575" ph="SELECT * fro... players" />
+            <marker date="1491502330000" expanded="true" signature="1984:2018" ph="SELECT * FRO... players" />
+            <marker date="1491502330000" expanded="true" signature="2476:2510" ph="SELECT * FRO... players" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/site/src/ratpack/ratpack.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="63" column="36" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+        <state relative-caret-position="274">
+          <caret line="130" column="40" lean-forward="false" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/handlers/FixturesHandler.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/handlers/team_handlers/TeamFixturesHandler.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="79" lean-forward="false" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
+          <folding>
+            <element signature="e#32#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/TeamStoreService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding>
+            <element signature="e#37#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/src/main/groovy/service/persistance_service/TeamStoreServiceImpl.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="105" column="9" lean-forward="true" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="9" />
+          <folding>
+            <marker date="1492025442000" expanded="true" signature="828:892" ph="update site_... " />
+            <marker date="1492025442000" expanded="true" signature="1020:1087" ph="INSERT INTO site_content... " />
+            <marker date="1492025442000" expanded="true" signature="1497:1523" ph="SELECT * fro... site_content" />
+            <marker date="1492025442000" expanded="true" signature="1948:1987" ph="SELECT * fro... site_content" />
+            <marker date="1492025442000" expanded="true" signature="2280:2405" ph="SELECT jsonb... site_content" />
+            <marker date="1492025442000" expanded="true" signature="2789:2844" ph="select conte... site_content" />
           </folding>
         </state>
       </provider>
