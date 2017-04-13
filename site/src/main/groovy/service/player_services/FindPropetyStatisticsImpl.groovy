@@ -4,12 +4,10 @@ import ratpack.exec.Promise
 
 class FindPropetyStatisticsImpl implements FindPropertyStatistics {
 
-    List<String> propertyNames
     Map<String, Map<String, ?>> largestPropertiesAndValues
-    private static List<String> propertiesToAnalyse = ['manOfTheMatches', 'cleanSheets', 'assists']
+    private static List<String> propertyNames = ['manOfTheMatches', 'cleanSheets', 'assists']
 
     FindPropetyStatisticsImpl() {
-        propertyNames = propertiesToAnalyse
         largestPropertiesAndValues = [:]
     }
 

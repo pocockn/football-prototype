@@ -119,10 +119,7 @@ ratpack {
 
         // specific team dashboard
         prefix("team/:teamId") {
-            path('dashboard') {
-                String teamId = allPathTokens.teamId
-                context.render("dashboard ${teamId}")
-            }
+            path 'dashboard', new DashboardHandler()
 
             path "players", new TeamPlayersHandler()
 
