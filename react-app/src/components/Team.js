@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {postDataTest} from "../actions/postData";
 import axios from "axios";
+var AddTeamForm = require('./AddTeamForm');
 
 class Team extends Component {
 
@@ -43,6 +44,7 @@ class Team extends Component {
                     )}
                     <button onClick={this.handlePost}>delete</button>
                 </ul>
+                <AddTeamForm />
 
             </div>
         );

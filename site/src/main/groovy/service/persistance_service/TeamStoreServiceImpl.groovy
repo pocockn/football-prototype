@@ -35,6 +35,7 @@ class TeamStoreServiceImpl implements TeamStoreService<TeamContainer> {
             if (updates == 0) {
                 Blocking.get {
                     sql.execute("INSERT INTO site_content (id, content) VALUES (?, cast(? as jsonb))", team.id, json)
+                    log.info("team added with ID of ${team.id}")
                 }.operation()
             }
         } catch (e) {

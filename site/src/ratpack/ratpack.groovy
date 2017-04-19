@@ -1,7 +1,4 @@
-import api.PlayerFetchUpdateHandler
-import api.PlayerRemoveHandlerApi
-import api.SinglePlayerApiHandler
-import api.TeamGetHandlerApi
+import api.*
 import config.HikariConfigModule
 import groovy.json.JsonSlurper
 import handlebars.HandlebarsHelperModule
@@ -90,6 +87,7 @@ ratpack {
     handlers {
 
         prefix("api") {
+            path "addTeam", new AddTeamHandlerApi()
             path "teams", new TeamGetHandlerApi()
             path "player/:id", new SinglePlayerApiHandler()
             prefix("players") {
