@@ -36,16 +36,23 @@ class Team extends Component {
     render() {
         return (
             <div className="App">
-                <h2>Teams</h2>
-                <p>A list of teams currently on the system, pulled in via ajax from Ratpack</p>
-                <ul>
-                    {this.state.teams.map(singleTeam =>
-                        <li key={singleTeam.id}>{singleTeam.team.name}</li>
-                    )}
-                    <button onClick={this.handlePost}>delete</button>
-                </ul>
-                <AddTeamForm />
-
+                <div class="tray tray-center">
+                    <div className="row">
+                        <div className="col-md-8">
+                            <AddTeamForm />
+                            <div className="panel-heading">
+                                <span className="panel-title">Teams</span>
+                            </div>
+                            <div className="panel-body p20 pb10">
+                                <ul className="list-unstyled">
+                                    {this.state.teams.map(singleTeam =>
+                                        <li key={singleTeam.id}>{singleTeam.team.name}</li>
+                                    )}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
