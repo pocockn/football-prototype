@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9e6a27dc-b178-41c4-b082-02948367ce7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Football-Prototype.iws" afterPath="$PROJECT_DIR$/Football-Prototype.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react-app/src/components/AddTeamForm.js" afterPath="$PROJECT_DIR$/react-app/src/components/AddTeamForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react-app/src/components/Team.js" afterPath="$PROJECT_DIR$/react-app/src/components/Team.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.shelf/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -2257,7 +2255,7 @@
       <workItem from="1492108062875" duration="2698000" />
       <workItem from="1492202256005" duration="1385000" />
       <workItem from="1492608772192" duration="2717000" />
-      <workItem from="1492631482230" duration="2417000" />
+      <workItem from="1492631482230" duration="2550000" />
     </task>
     <task id="LOCAL-00001" summary="change project structure to have multiple gradle build files for the react app and ratpack app">
       <created>1485184699478</created>
@@ -2343,7 +2341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492611838954</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update the admin styles for add team dashboard within react">
+      <created>1492634361950</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1492634361950</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2379,7 +2384,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67799000" />
+    <option name="totallyTimeSpent" value="67932000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2456,7 +2461,8 @@
     <MESSAGE value="refactored league handler to use guice inject, added bindings to ratpack" />
     <MESSAGE value="dashboard for individual team view, refactor dashboard handler to use overall view and team view" />
     <MESSAGE value="Feature to add a new team within react and processed via the Ratpack API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature to add a new team within react and processed via the Ratpack API" />
+    <MESSAGE value="Update the admin styles for add team dashboard within react" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update the admin styles for add team dashboard within react" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
