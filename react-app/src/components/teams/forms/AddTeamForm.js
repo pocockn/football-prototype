@@ -1,5 +1,5 @@
 const uuid = require('uuid/v1');
-import {addTeam} from "../actions/addTeam";
+import {addTeam} from "../../../actions/addTeam";
 import React, {Component} from "react";
 
 class AddTeamForm extends Component {
@@ -34,7 +34,7 @@ class AddTeamForm extends Component {
         return (
             <div className="panel mb25 mt5">
                 <div className="panel-heading">
-                    <span class="panel-title">Add New Team</span>
+                    <span className="panel-title">Add New Team</span>
                 </div>
                 <div className="panel-body p20 pb10">
                     <div className="form-horizontal">

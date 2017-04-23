@@ -13,8 +13,7 @@ class AppFrame extends Component {
                     </div>
                     <form className="navbar-form navbar-left navbar-search alt" role="search">
                         <div className="form-group">
-                            <input type="text" className="form-control" placeholder="Search..."
-                                   value="Search..."/>
+                            <input type="text" className="form-control" placeholder="Search..."/>
                         </div>
                     </form>
                     <ul className="nav navbar-nav navbar-right">

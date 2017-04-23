@@ -1,9 +1,10 @@
 import React, {Component} from "react";
-import {postDataTest} from "../actions/postData";
+import {postDataTest} from "../../actions/postData";
 import axios from "axios";
-var AddTeamForm = require('./AddTeamForm');
+import {Link} from "react-router";
+var AddTeamForm = require('./forms/AddTeamForm');
 
-class Team extends Component {
+class Teams extends Component {
 
     constructor(props) {
         super(props);
@@ -36,7 +37,7 @@ class Team extends Component {
     render() {
         return (
             <div className="App">
-                <div class="tray tray-center">
+                <div className="tray tray-center">
                     <div className="row">
                         <div className="col-md-8">
                             <AddTeamForm />
@@ -46,7 +47,9 @@ class Team extends Component {
                             <div className="panel-body p20 pb10">
                                 <ul className="list-unstyled">
                                     {this.state.teams.map(singleTeam =>
-                                        <li key={singleTeam.id}>{singleTeam.team.name}</li>
+                                        <Link to={"team/" + singleTeam.id} key={singleTeam.id}>
+                                            <li>{singleTeam.team.name}</li>
+                                        </Link>
                                     )}
                                 </ul>
                             </div>
@@ -59,4 +62,4 @@ class Team extends Component {
 
 }
 
-export default Team;
+export default Teams;

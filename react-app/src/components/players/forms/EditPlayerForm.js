@@ -1,4 +1,4 @@
-import {postDataTest} from "../actions/postData";
+import {postDataTest} from "../../../actions/postData";
 import TeamSelectBox from "./TeamSelectBox";
 import React, {Component} from "react";
 import Dropzone from "react-dropzone";

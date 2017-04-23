@@ -34,7 +34,6 @@ class TeamSelectBox extends Component {
             </div>
         );
     }
-
 }
 
 export default TeamSelectBox;
