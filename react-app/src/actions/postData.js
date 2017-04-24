@@ -2,7 +2,7 @@ import "isomorphic-fetch";
 
 export function postDataTest(player) {
     console.log(player);
-    fetch("/api/players/addGetPlayers", {
+    fetch("/api/players/add-player", {
         method: "POST",
         headers: {
             'Accept': 'application/json',

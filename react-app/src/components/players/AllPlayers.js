@@ -15,7 +15,7 @@ class AllPlayers extends Component {
     }
 
     componentDidMount() {
-        axios.get("/api/players/addGetPlayers")
+        axios.get("/api/players/all")
             .then(res => {
                 const players = res.data;
                 this.setState({players});
