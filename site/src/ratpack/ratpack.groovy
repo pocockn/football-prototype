@@ -71,7 +71,7 @@ ratpack {
         bind LeagueTableHelpers
 
         bind UserAccountService
-        bind PlayerFetchUpdateHandler
+        bind PlayerCreateHandler
         bind UserStorageService, UserStorageServiceImplementation
         bindInstance TeamStoreService, new TeamStoreServiceImpl()
         bindInstance FindPropertyStatistics, new FindPropetyStatisticsImpl()
@@ -89,9 +89,15 @@ ratpack {
         prefix("api") {
             path "addTeam", new AddTeamHandlerApi()
             path "teams", new TeamGetHandlerApi()
-            path "player/:id", new SinglePlayerApiHandler()
+            path "team/:id", new SingleTeamApiHandler()
+            prefix("player") {
+                prefix(":id") {
+                    new SinglePlayerApiHandler()
+                }
+            }
             prefix("players") {
-                path "addGetPlayers", new PlayerFetchUpdateHandler()
+                path "all", new api.AllPlayersHandler()
+                path "add-player", new PlayerCreateHandler()
                 path "removePlayer", new PlayerRemoveHandlerApi()
             }
 
