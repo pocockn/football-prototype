@@ -96,7 +96,7 @@ ratpack {
                 }
             }
             prefix("players") {
-                path "all", new api.AllPlayersHandler()
+                path "all", new AllPlayersHandlerApi()
                 path "add-player", new PlayerCreateHandler()
                 path "removePlayer", new PlayerRemoveHandlerApi()
             }
