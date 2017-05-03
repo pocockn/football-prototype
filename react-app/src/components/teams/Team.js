@@ -4,10 +4,6 @@ import axios from "axios";
 
 class Team extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         this.findTeamById(this.props.params.id)
             .then(res => {
