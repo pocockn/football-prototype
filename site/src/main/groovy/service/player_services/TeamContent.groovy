@@ -9,5 +9,6 @@ interface TeamContent {
     Promise<Double> findAverageRating(List<Player> players)
 
     Integer findGoalTotal(List<Integer> goals)
+
 }
 
