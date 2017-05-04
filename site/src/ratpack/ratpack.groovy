@@ -123,6 +123,8 @@ ratpack {
 
         // specific team dashboard
         prefix("team/:teamId") {
+            all new TeamDetectionHandler()
+
             path 'dashboard', new DashboardHandler()
 
             path "players", new TeamPlayersHandler()
