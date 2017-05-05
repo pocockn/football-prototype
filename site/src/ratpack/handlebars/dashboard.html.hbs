@@ -1,6 +1,10 @@
 {{> partials/header.html}}
-{{> partials/navigation.html}}
-{{> partials/sidebar.html}}
+{{> partials/navigation.html teamName=teamName}}
+{{#if single true}}
+    {{>partials/singleTeamPartials/teamSidebar.html teamId}}
+{{else}}
+    {{> partials/sidebar.html}}
+{{/if}}
 {{> partials/topbar.html teamName=teamName}}
 <!-- Begin: Content -->
 <section id="content" class="table-layout animated fadeIn">

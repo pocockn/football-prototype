@@ -33,6 +33,7 @@ import service.persistance_service.TeamStoreService
 import service.persistance_service.TeamStoreServiceImpl
 import service.player_services.FindPropertyStatistics
 import service.player_services.FindPropetyStatisticsImpl
+import service.team.service.TeamContainerService
 import service.user_service.UserAccountService
 import service.user_service.UserStorageService
 import service.user_service.UserStorageServiceImplementation
@@ -59,6 +60,7 @@ ratpack {
         module(TeamModule)
         bind DashboardHandler
         bind FixturesHandler
+        bind TeamContainerService
         bind AllPlayersHandler
         bind TeamPlayersHandler
         bind TeamSinglePlayerHandler

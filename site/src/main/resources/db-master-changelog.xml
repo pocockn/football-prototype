@@ -50,19 +50,19 @@
         <addPrimaryKey columnNames="id" tableName="test"/>
     </changeSet>
 
-    <changeSet id="remove old datas" author="pocockn">
+    <changeSet id="remove old data from site content" author="pocockn">
         <customChange class="changesets.RemoveSiteContent"/>
     </changeSet>
 
-    <changeSet id="bootstrap new shires soldiers data with updated keys4" author="pocockn">
+    <changeSet id="bootstrap new shires soldiers team" author="pocockn">
         <customChange class="changesets.BootstrapNewShireSoldiersChange"/>
     </changeSet>
 
-    <changeSet id="bootstrap nick from players table 5" author="pocockn">
+    <changeSet id="bootstrap nick from shire soldiers" author="pocockn">
         <customChange class="changesets.BootstrapPlayerNickTableData"/>
     </changeSet>
 
-    <changeSet id="bootstrap pasty from players table 5" author="pocockn">
+    <changeSet id="bootstrap pasty from shire soldiers" author="pocockn">
         <customChange class="changesets.BootstrapPlayerPastyTableData"/>
     </changeSet>
 

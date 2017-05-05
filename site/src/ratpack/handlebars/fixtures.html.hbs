@@ -1,6 +1,10 @@
 {{> partials/header.html}}
-{{> partials/navigation.html}}
-{{> partials/sidebar.html}}
+{{> partials/navigation.html teamName=teamName}}
+{{#if single true}}
+    {{>partials/singleTeamPartials/teamSidebar.html teamId}}
+{{else}}
+    {{> partials/sidebar.html}}
+{{/if}}
 {{> partials/topbar.html}}
 <section id="content" class="table-layout animated fadeIn">
     <!-- begin: .tray-center -->
@@ -28,7 +32,7 @@
     // Init plugins for ".calendar-widget"
     // plugins: FullCalendar
 
-    jQuery(document).ready(function() {
+    jQuery(document).ready(function () {
         $('#calendar-widget').fullCalendar({
             editable: true,
             events:
