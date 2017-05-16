@@ -4,7 +4,7 @@ import {hashHistory, IndexRoute, Route, Router} from "react-router";
 import AppFrame from "./components/AppFrame";
 import Teams from "./components/teams/Teams";
 import Team from "./components/teams/Team";
-import Fixtures from "./components/fixtures/Fixtures";
+import ParentFixturesComponent from "./components/fixtures/ParentFixturesComponent";
 import Players from "./components/players/Players";
 import PlayersForm from "./components/players/forms/PlayersForm";
 import EditPlayerForm from "./components/players/forms/EditPlayerForm";
@@ -19,7 +19,7 @@ ReactDOM.render(
         <Route path="/" component={AppFrame}>
             <IndexRoute component={Teams}/>
             <Route path="team/:teamId" component={Team}/>
-            <Route path="fixtures" component={Fixtures}/>
+            <Route path="fixtures" component={ParentFixturesComponent}/>
             <Route path="players" component={Players}/>
                 <Route path="new-player" component={PlayersForm}/>
                 <Route path="edit-player/:id" component={EditPlayerForm}/>

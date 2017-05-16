@@ -20,7 +20,6 @@ class Team extends Component {
     handleSubmit(e) {
         e.preventDefault();
         // Get values via this.ref
-
     }
 
     render() {
