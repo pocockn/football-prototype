@@ -1,13 +1,13 @@
 import "isomorphic-fetch";
 
-export function addTeam(team) {
-    console.log(team);
-    fetch("/api/addTeam", {
+export function postToApi(endpoint, object) {
+    fetch(endpoint, {
         method: "POST",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(team)
+        body: JSON.stringify(object)
+
     }).then(response => console.log(response));
 }

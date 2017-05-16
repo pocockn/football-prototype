@@ -1,5 +1,5 @@
 const uuid = require('uuid/v1');
-import {addTeam} from "../../../actions/addTeam";
+import {postToApi} from "../../../actions/postToApi";
 import React, {Component} from "react";
 
 class AddTeamForm extends Component {
@@ -27,7 +27,7 @@ class AddTeamForm extends Component {
             name: this.state.name,
         };
         name.value = "";
-        addTeam(team);
+        postToApi("/api/addTeam", team);
     }
 
     render() {

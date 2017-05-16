@@ -1,0 +1,19 @@
+GENERAL
+- Add tests within React
+- More tests for Ratpack / Java side of the application.
+- Clean up the design within Groovy side
+- Migrate from SnapCI
+- BUG: deleting certain players doesn't work within React
+
+REACT
+- Generic function to post data to our Ratpack application
+- Edit individual teams within Reach
+- Pass teamID along with updates to the API
+- Add a page to list all the current fixtures
+
+
+GROOVY
+- Look at generic method to parse and validate an object into JSON
+- Speed up the build process
+- Performance tests and improvements
+

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {postDataTest} from "../../actions/postData";
+import {postToApi} from "../../actions/postToApi";
 import axios from "axios";
 import {Link} from "react-router";
 var AddTeamForm = require('./forms/AddTeamForm');
@@ -31,7 +31,7 @@ class Teams extends Component {
         console.log(obj);
         event.preventDefault();
         console.log('The link was clicked.');
-        postDataTest(obj);
+        postToApi("/api/players/add-player", obj);
     }
 
     render() {

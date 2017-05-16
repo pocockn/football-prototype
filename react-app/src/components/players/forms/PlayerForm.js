@@ -1,5 +1,5 @@
 const uuid = require('uuid/v1');
-import {postDataTest} from "../../../actions/postData";
+import {postToApi} from "../../../actions/postToApi";
 import TeamSelectBox from "./TeamSelectBox";
 import React, {Component} from "react";
 import Dropzone from "react-dropzone";
@@ -69,7 +69,7 @@ class PlayerForm extends Component {
             profileImageUrl: this.state.uploadedFileCloudinaryUrl
         };
 
-        postDataTest(player);
+        postToApi("/api/players/add-player", player);
 
     }
 

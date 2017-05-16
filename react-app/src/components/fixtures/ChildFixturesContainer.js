@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {addFixtures} from "../../actions/addFixtures";
+import {postToApi} from "../../actions/postToApi";
 
 class Fixtures extends Component {
 
@@ -22,8 +22,7 @@ class Fixtures extends Component {
             };
             fixtures.matches.push(match);
         });
-        console.log(fixtures);
-        addFixtures(fixtures);
+        postToApi("/api/fixtures/00001/save-fixtures", fixtures);
     }
 
     render() {

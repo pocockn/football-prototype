@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {postPlayerId} from "../../actions/postPlayerId";
+import {postToApi} from "../../actions/postToApi";
 import {Link} from "react-router";
 import axios from "axios";
 
@@ -26,7 +26,7 @@ class AllPlayers extends Component {
     handleDelete(event) {
         console.log(event.target.id);
         event.preventDefault();
-        postPlayerId(event.target.id);
+        postToApi("/api/players/removePlayer", event.target.id);
         window.location.reload();
     }
 
