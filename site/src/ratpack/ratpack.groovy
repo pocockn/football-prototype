@@ -44,6 +44,7 @@ import static ratpack.groovy.Groovy.groovyMarkupTemplate
 import static ratpack.groovy.Groovy.ratpack
 import static ratpack.handlebars.Template.handlebarsTemplate
 
+//TODO speed up the time it takes to load the application
 ratpack {
 
     bindings {
@@ -96,6 +97,9 @@ ratpack {
                 prefix(":id") {
                     new SinglePlayerApiHandler()
                 }
+            }
+            prefix("fixtures/:id") {
+                path "save-fixtures", new UpdateFixtureApiHandler()
             }
             prefix("players") {
                 path "all", new AllPlayersHandlerApi()

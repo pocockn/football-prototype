@@ -1,3 +1,5 @@
+package handlers
+
 import com.fasterxml.jackson.databind.ObjectMapper
 import models.*
 import spock.lang.Ignore
@@ -16,8 +18,8 @@ class HighChartLineJsonCreation extends Specification {
         matches.add(match1)
         matches.add(match)
         Fixtures fixtures = new Fixtures(matches: matches)
-        Player player1 = new Player(name: 'Nick', goals: [0, 2, 3, 5, 6])
-        Player player2 = new Player(name: 'Pasty', goals: [0, 5, 7, 9, 10])
+        Player player1 = new Player(name: 'Nick', seasonGoals: [0, 2, 3, 5, 6])
+        Player player2 = new Player(name: 'Pasty', seasonGoals: [0, 5, 7, 9, 10])
         List<Player> players = []
         players.add(player1)
         players.add(player2)
