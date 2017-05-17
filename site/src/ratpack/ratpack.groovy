@@ -1,4 +1,5 @@
 import api.*
+import api.fixtures.SingleTeamFixturesHandlerApi
 import config.HikariConfigModule
 import groovy.json.JsonSlurper
 import handlebars.HandlebarsHelperModule
@@ -65,6 +66,7 @@ ratpack {
         bind AllPlayersHandler
         bind TeamPlayersHandler
         bind TeamSinglePlayerHandler
+        bind SingleTeamFixturesHandlerApi
         bind Player
         bind Fixtures
 
@@ -99,6 +101,7 @@ ratpack {
                 }
             }
             prefix("fixtures/:id") {
+                path "all", new SingleTeamFixturesHandlerApi()
                 path "save-fixtures", new UpdateFixtureApiHandler()
             }
             prefix("players") {
