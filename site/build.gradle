@@ -12,10 +12,6 @@ buildscript {
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '3.4.1'
-}
-
 task version << {
     println "Gradle version: " + project.getGradle().getGradleVersion()
     println "Groovy version: " + GroovySystem.getVersion()
