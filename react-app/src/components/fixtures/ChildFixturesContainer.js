@@ -3,11 +3,6 @@ import {postToApi} from "../../actions/postToApi";
 
 class Fixtures extends Component {
 
-
-    constructor(props) {
-        super(props);
-    }
-
     onSubmit(e) {
         e.preventDefault();
         var fixtures = {
