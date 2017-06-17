@@ -31,9 +31,10 @@ class ParentFixturesComponent extends Component {
     render() {
         const children = [];
         for (let i = 0; i < this.state.numChildren; i += 1) {
-            children.push(<SingleMatchForm startDate={this.state.startDate[i] || moment()}
-                                           key={uuid()}
-                                           changeDate={this.changeDate.bind(this, i)}
+            children.push(
+                <SingleMatchForm startDate={this.state.startDate[i] || moment()}
+                                 key={uuid()}
+                                 changeDate={this.changeDate.bind(this, i)}
             />)
         }
 

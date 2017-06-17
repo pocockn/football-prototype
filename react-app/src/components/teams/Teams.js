@@ -16,12 +16,16 @@ class Teams extends Component {
     }
 
     componentDidMount() {
+        this.fetchTeams();
+    }
+
+    fetchTeams() {
         axios.get("/api/teams")
-            .then(res => {
-                const teams = res.data;
-                this.setState({teams});
-                console.log(teams);
-            });
+        .then(res => {
+            const teams = res.data;
+            this.setState({teams});
+            console.log(teams);
+        });
     }
 
     handlePost(event) {
