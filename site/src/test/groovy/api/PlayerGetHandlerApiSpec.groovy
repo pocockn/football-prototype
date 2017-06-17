@@ -1,6 +1,6 @@
 package api
 
-import Fixture.FootballApplicationUnderTest
+import fixture.FootballApplicationUnderTest
 import spock.lang.Specification
 
 class PlayerGetHandlerApiSpec extends Specification {

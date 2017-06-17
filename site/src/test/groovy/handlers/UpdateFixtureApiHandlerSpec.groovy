@@ -1,6 +1,6 @@
 package handlers
 
-import Fixture.FootballApplicationUnderTest
+import fixture.FootballApplicationUnderTest
 import groovy.json.JsonBuilder
 import spock.lang.AutoCleanup
 import spock.lang.Specification

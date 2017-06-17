@@ -1,6 +1,6 @@
 package persistance
 
-import Fixture.FootballApplicationUnderTest
+import fixture.FootballApplicationUnderTest
 import groovy.sql.Sql
 import groovy.util.logging.Slf4j
 import io.remotecontrol.client.UnserializableResultStrategy

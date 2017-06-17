@@ -1,4 +1,4 @@
-package Fixture
+package fixture
 
 import groovy.transform.CompileStatic
 import ratpack.groovy.test.GroovyRatpackMainApplicationUnderTest

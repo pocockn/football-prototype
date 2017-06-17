@@ -1,6 +1,6 @@
 package api.fixtures
 
-import Fixture.FootballApplicationUnderTest
+import fixture.FootballApplicationUnderTest
 import spock.lang.Specification
 
 class SingleTeamFixturesHandlerApiSpec extends Specification {
