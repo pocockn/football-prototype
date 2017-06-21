@@ -16,8 +16,16 @@ class TeamContentBuilder {
         )
     }
 
+    void team(@DelegatesTo(value = TeamDetailsBuilder, strategy = DELEGATE_FIRST) Closure teamDetails) {
+        teamContainer.team = TeamDetailsBuilder.build(teamDetails)
+    }
+
     void fixtures(@DelegatesTo(value = FixturesBuilder, strategy = DELEGATE_FIRST) Closure fixtures) {
         teamContainer.fixtures = FixturesBuilder.build(fixtures)
+    }
+
+    void players(@DelegatesTo(value = PlayersBuilder, strategy = DELEGATE_FIRST) Closure players) {
+        teamContainer.playersContainer = PlayersBuilder.build(players)
     }
 
     static TeamContainer build(String id, @DelegatesTo(value = TeamContentBuilder, strategy = DELEGATE_FIRST)
@@ -27,6 +35,5 @@ class TeamContentBuilder {
         builder.teamContainer
 
     }
-
 
 }
