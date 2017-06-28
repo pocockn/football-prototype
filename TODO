@@ -2,18 +2,50 @@ GENERAL
 - Add tests within React
 - More tests for Ratpack / Java side of the application.
 - Clean up the design within Groovy side
-- Migrate from SnapCI
+- Migrate from SnapCI - SPIKE alternatives
+- Improve organisation of classes, add directories etc
 - BUG: deleting certain players doesn't work within React
+- Remove all the unneeded CSS I stole from the template
+
+GRADLE
+- Improve performance of running, does it need to yarn install and build everytime?
+- Fix the non indexed repositories
 
 REACT
-- Generic function to post data to our Ratpack application
-- Edit individual teams within Reach
+- Edit individual teams within React
 - Pass teamID along with updates to the API
 - Add a page to list all the current fixtures
-
+- Fix edit player single screen
+- When adding team, refresh page or model to show new team
+- When adding player, send back to players page
+- Mock the ratpack api to test- spike NOCK
+- Install mocha, testing framework, chai assertion library
+- Research webpack / webpack config / write a blog post on it or something
+- Ability to delete all fixtures once season is over
+- Take react out of Ratpack - URGENT
+- Use finish season method to reset players season stats, will need an end point in RP
 
 GROOVY
 - Look at generic method to parse and validate an object into JSON
-- Speed up the build process
+- Speed up the build process, this will be achieved by splitting up react
 - Performance tests and improvements
+- Fix the test database, so it actually uses it, rather than the actual DB
+- Create some bootstraps to bootstrap default team values
+- Change all tests to use the new DSL - 30%
+- Make the API completely RESTful
+- Look at splitting up handlers into a 'MainHandlers Class' similar to the informa project - DONE but run tests
+- Taking out all the bindings of the Ratpack.groovy class, clean it up
+- Make start and end date in matches use LocalDate rather than string
+
+
+DONE
+- Upgrade to WebPack 2 - DONE
+- Upgrade Yarn dependencies - DONE
+- Upgrade to latest Gradle - DONE
+- Generic function to post data to our RatPack application - DONE
+- Add api end point to fetch all fixtures for a team - DONE
+- Add builder DSL to help create test data - DONE
+
+
+
 

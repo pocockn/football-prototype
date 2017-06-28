@@ -44,7 +44,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/react-app" />
             <option value="$PROJECT_DIR$/site" />
           </set>
         </option>
@@ -86,8 +85,7 @@
     <option name="OPEN_IN_BROWSER" value="true" />
   </component>
   <component name="KotlinCommonCompilerArguments">
-    <option name="languageVersion" value="1.1" />
-    <option name="apiVersion" value="1.1" />
+    <option name="coroutinesWarn" value="false" />
   </component>
   <component name="Palette2">
     <group name="Swing">
@@ -218,9 +216,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Football-Prototype.iml" filepath="$PROJECT_DIR$/.idea/modules/Football-Prototype.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/react-app/react-app.iml" filepath="$PROJECT_DIR$/.idea/modules/react-app/react-app.iml" group="react-app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/react-app/react-app_main.iml" filepath="$PROJECT_DIR$/.idea/modules/react-app/react-app_main.iml" group="react-app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/react-app/react-app_test.iml" filepath="$PROJECT_DIR$/.idea/modules/react-app/react-app_test.iml" group="react-app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/site/site.iml" filepath="$PROJECT_DIR$/.idea/modules/site/site.iml" group="site" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/site/site_main.iml" filepath="$PROJECT_DIR$/.idea/modules/site/site_main.iml" group="site" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/site/site_test.iml" filepath="$PROJECT_DIR$/.idea/modules/site/site_test.iml" group="site" />

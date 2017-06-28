@@ -79,8 +79,6 @@ dependencies {
         force = true
     }
 
-    compile project(':react-app')
-
 }
 
 task stage {

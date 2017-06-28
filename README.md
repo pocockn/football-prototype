@@ -17,6 +17,10 @@ You can start the basic app with
 
 A react backend is a WIP
 
+Rough admin area can be found here -
+
+https://damp-bastion-92191.herokuapp.com/admin
+
 The app can be found here :
 
 https://damp-bastion-92191.herokuapp.com/
