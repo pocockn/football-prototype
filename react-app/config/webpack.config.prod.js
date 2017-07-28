@@ -7,6 +7,9 @@ var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 var url = require('url');
 var paths = require('./paths');
 var getClientEnvironment = require('./env');
+const path = require('path');
+const glob = require('glob');
+const PurifyCSSPlugin = require('purifycss-webpack');
 
 
 function ensureSlash(path, needsSlash) {
@@ -233,6 +236,10 @@ module.exports = {
         }),
         // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
         new ExtractTextPlugin('assets/static/css/[name].css'),
+
+        new PurifyCSSPlugin({
+            paths: glob.sync(path.join(__dirname, 'app/*.html')),
+        }),
         // Generate a manifest file which contains a mapping of all asset filenames
         // to their corresponding output file so that tools can pick it up without
         // having to parse `index.html`.
