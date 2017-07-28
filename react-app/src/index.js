@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {hashHistory, IndexRoute, Route, Router} from "react-router";
+import {browserHistory, IndexRoute, Route, Router} from "react-router";
 import AppFrame from "./components/AppFrame";
 import Teams from "./components/teams/Teams";
 import Team from "./components/teams/Team";
@@ -10,13 +10,14 @@ import PlayersForm from "./components/players/forms/PlayersForm";
 import EditPlayerForm from "./components/players/forms/EditPlayerForm";
 import FixturesList from "./components/fixtures/FixturesList";
 import "./assets/theme.css";
+
 global.jQuery = require('jquery');
 global.Tether = require('tether');
 require('bootstrap');
 
 
 ReactDOM.render(
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
         <Route path="/" component={AppFrame}>
             <IndexRoute component={Teams}/>
             <Route path="team/:teamId" component={Team}/>

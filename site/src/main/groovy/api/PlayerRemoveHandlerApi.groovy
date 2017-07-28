@@ -13,10 +13,12 @@ class PlayerRemoveHandlerApi extends InjectionHandler {
             it.post {
                 context.parse(Jackson.fromJson(Object)).then { singlePlayer ->
                     String playerId = singlePlayer
-                    playerStoreService.delete(playerId).then {
-                        log.info("Deleted player: ${it}")
+                    playerStoreService.delete(playerId).onError {
+                        context.response.status(500).send()
+                    }.then {
+                        log.info("Deleted player: ${playerId}")
+                        context.response.status(201).send()
                     }
-                    context.response.status(201).send()
                 }
             }
         }
