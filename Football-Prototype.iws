@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b1d4504-ff73-4618-a172-1c1cdd2c23a2" name="Revert: updated yarn dependancies to remove vulnerabilities" comment="Extract out handlers into their own Groovy action chain, start of taking React out of Ratpack">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="" />
+    <list default="true" id="5b1d4504-ff73-4618-a172-1c1cdd2c23a2" name="Revert: updated yarn dependancies to remove vulnerabilities" comment="Use BrowserHistory instead of HashHistory, changed delete handler to send a response once the promise has been resolved.">
       <change type="DELETED" beforePath="$PROJECT_DIR$/Football-Prototype.ipr" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Football-Prototype.iws" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cf0faf01-0eea-47cc-81a2-45f7508604f6.backup" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO" afterPath="$PROJECT_DIR$/TODO" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react-app/config/webpack.config.dev.js" afterPath="$PROJECT_DIR$/react-app/config/webpack.config.dev.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react-app/config/webpack.config.prod.js" afterPath="$PROJECT_DIR$/react-app/config/webpack.config.prod.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react-app/package.json" afterPath="$PROJECT_DIR$/react-app/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react-app/src/index.js" afterPath="$PROJECT_DIR$/react-app/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react-app/yarn.lock" afterPath="$PROJECT_DIR$/react-app/yarn.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/src/main/groovy/api/PlayerRemoveHandlerApi.groovy" afterPath="$PROJECT_DIR$/site/src/main/groovy/api/PlayerRemoveHandlerApi.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/src/ratpack/public/assets/external/theme.css" afterPath="$PROJECT_DIR$/site/src/ratpack/public/assets/external/theme.css" />
     </list>
     <list id="9e6a27dc-b178-41c4-b082-02948367ce7c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.shelf/" />
@@ -86,16 +82,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PlayerRemoveHandlerApi.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site/src/main/groovy/api/PlayerRemoveHandlerApi.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="18" column="60" lean-forward="false" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AppFrame.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-app/src/components/AppFrame.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -111,11 +97,9 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-app/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,7 +117,7 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-app/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="1170">
               <caret line="78" column="27" lean-forward="false" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
               <folding />
             </state>
@@ -143,7 +127,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-app/node_modules/purifycss-webpack/dist/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="540">
               <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
@@ -165,18 +149,38 @@
       <file leaf-file-name="webpack.config.dev.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-app/config/webpack.config.dev.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="41" />
+            <state relative-caret-position="381">
+              <caret line="212" column="11" lean-forward="false" selection-start-line="212" selection-start-column="11" selection-end-line="212" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webpack.config.prod.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="theme.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/site/src/ratpack/public/assets/external/theme.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322470">
+              <caret line="21498" column="1" lean-forward="false" selection-start-line="21498" selection-start-column="1" selection-end-line="21498" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.config.prod.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-app/config/webpack.config.prod.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="240" column="44" lean-forward="false" selection-start-line="240" selection-start-column="44" selection-end-line="240" selection-end-column="44" />
+            <state relative-caret-position="231">
+              <caret line="240" column="7" lean-forward="true" selection-start-line="240" selection-start-column="7" selection-end-line="242" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TODO" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TODO">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="10" column="90" lean-forward="false" selection-start-line="10" selection-start-column="90" selection-end-line="10" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -194,7 +198,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>navi</find>
       <find>navig</find>
       <find>naviga</find>
       <find>navigat</find>
@@ -224,6 +227,7 @@
       <find>g</find>
       <find>gradle</find>
       <find>postcss</find>
+      <find>col-xs-12</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/site/src/ratpack/handlebars/partials</dir>
@@ -986,7 +990,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/react-app/src/components/teams/Team.js" />
         <option value="$PROJECT_DIR$/react-app/src/components/fixtures/SingleMatch.js" />
         <option value="$PROJECT_DIR$/react-app/src/components/fixtures/Fixtures.js" />
         <option value="$PROJECT_DIR$/react-app/src/components/fixtures/forms/SingleMatchFormInput.js" />
@@ -1026,7 +1029,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/site/src/main/groovy/MainRatpackHandlers.groovy" />
         <option value="$PROJECT_DIR$/site/src/ratpack/ratpack.groovy" />
-        <option value="$PROJECT_DIR$/TODO" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/site/build.gradle" />
         <option value="$PROJECT_DIR$/site/src/test/groovy/StringCalculatorSpec.groovy" />
@@ -1035,8 +1037,10 @@
         <option value="$PROJECT_DIR$/react-app/src/index.js" />
         <option value="$PROJECT_DIR$/react-app/package.json" />
         <option value="$PROJECT_DIR$/react-app/config/webpack.parts.js" />
-        <option value="$PROJECT_DIR$/react-app/config/webpack.config.dev.js" />
+        <option value="$PROJECT_DIR$/TODO" />
         <option value="$PROJECT_DIR$/react-app/config/webpack.config.prod.js" />
+        <option value="$PROJECT_DIR$/react-app/config/webpack.config.dev.js" />
+        <option value="$PROJECT_DIR$/site/src/ratpack/public/assets/external/theme.css" />
       </list>
     </option>
   </component>
@@ -1072,7 +1076,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="842" />
+    <option name="x" value="4" />
     <option name="y" value="23" />
     <option name="width" value="838" />
     <option name="height" value="1027" />
@@ -1101,9 +1105,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1114,19 +1119,52 @@
             <path>
               <item name="Football-Prototype" type="b2602c69:ProjectViewProjectNode" />
               <item name="football-prototype" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="react-app" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="Football-Prototype" type="b2602c69:ProjectViewProjectNode" />
               <item name="football-prototype" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="react-app" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Football-Prototype" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football-prototype" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="site" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ratpack" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Football-Prototype" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football-prototype" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="site" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ratpack" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Football-Prototype" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football-prototype" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="site" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ratpack" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Football-Prototype" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football-prototype" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="site" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ratpack" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="external" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1784,7 +1822,8 @@
       <workItem from="1498657794147" duration="183000" />
       <workItem from="1500550176347" duration="2612000" />
       <workItem from="1501192460168" duration="1326000" />
-      <workItem from="1501245988041" duration="2115000" />
+      <workItem from="1501245988041" duration="3719000" />
+      <workItem from="1501701224962" duration="1466000" />
     </task>
     <task id="LOCAL-00001" summary="change project structure to have multiple gradle build files for the react app and ratpack app">
       <created>1485184699478</created>
@@ -2038,7 +2077,28 @@
       <option name="project" value="LOCAL" />
       <updated>1498657844803</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Remove yaml file and back up not being used">
+      <created>1501252146229</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1501252146229</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Add PurifyCSSPlugin to webpack config, this will strip unused CSS from the react app when it's built">
+      <created>1501252196095</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1501252196095</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Use BrowserHistory instead of HashHistory, changed delete handler to send a response once the promise has been resolved.">
+      <created>1501252246552</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1501252246553</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2074,7 +2134,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159442000" />
+    <option name="totallyTimeSpent" value="162512000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2086,7 +2146,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="842" y="23" width="838" height="1027" extended-state="0" />
+    <frame x="4" y="23" width="838" height="1027" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.49806523" order="6" side_tool="false" content_ui="tabs" />
@@ -2100,7 +2160,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31223175" sideWeight="0.47924298" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08919598" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.036432162" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2166,9 +2226,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update the admin styles for add team dashboard within react" />
-    <MESSAGE value="Revert: updated yarn dependancies to remove vulnerabilities" />
-    <MESSAGE value="refactor react project structure for better organisation" />
     <MESSAGE value="single team api end point handler, improved logging within team api handler" />
     <MESSAGE value="Refactor Ratpack API structure, change end point names to better reflect their use." />
     <MESSAGE value="Foundation for editing a single teams data within react" />
@@ -2191,7 +2248,10 @@
     <MESSAGE value="👾  Change bootstrapping of test data to use builders, to check new DSL works correctly" />
     <MESSAGE value="👾  Static method for team DSL, add remaining builders to the main team builder for use within tests" />
     <MESSAGE value="Extract out handlers into their own Groovy action chain, start of taking React out of Ratpack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extract out handlers into their own Groovy action chain, start of taking React out of Ratpack" />
+    <MESSAGE value="Remove yaml file and back up not being used" />
+    <MESSAGE value="Add PurifyCSSPlugin to webpack config, this will strip unused CSS from the react app when it's built" />
+    <MESSAGE value="Use BrowserHistory instead of HashHistory, changed delete handler to send a response once the promise has been resolved." />
+    <option name="LAST_COMMIT_MESSAGE" value="Use BrowserHistory instead of HashHistory, changed delete handler to send a response once the promise has been resolved." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
@@ -2257,13 +2317,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/site/src/test/groovy/fixture/builder/TeamDetailsBuilder.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site/src/main/groovy/models/Player.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -2334,13 +2387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="65" column="30" lean-forward="true" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TODO">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="35" column="111" lean-forward="false" selection-start-line="35" selection-start-column="111" selection-end-line="35" selection-end-column="111" />
         </state>
       </provider>
     </entry>
@@ -2425,15 +2471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding>
-            <marker date="1491502330000" expanded="true" signature="781:815" ph="select * fro... players" />
-            <marker date="1491502330000" expanded="true" signature="941:1006" ph="update playe... " />
-            <marker date="1491502330000" expanded="true" signature="1085:1154" ph="INSERT INTO players... " />
-            <marker date="1491502330000" expanded="true" signature="1373:1405" ph="DELETE FROM " />
-            <marker date="1491502330000" expanded="true" signature="1554:1575" ph="SELECT * fro... players" />
-            <marker date="1491502330000" expanded="true" signature="1984:2018" ph="SELECT * FRO... players" />
-            <marker date="1491502330000" expanded="true" signature="2476:2510" ph="SELECT * FRO... players" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2495,9 +2532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2505,7 +2539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2513,7 +2546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="30" column="52" lean-forward="false" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2535,7 +2567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="10" column="54" lean-forward="false" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2559,11 +2590,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/react-app/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        <state relative-caret-position="105">
+          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-app/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="78" column="27" lean-forward="false" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-app/node_modules/purifycss-webpack/dist/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-app/config/webpack.parts.js" />
+    <entry file="file://$PROJECT_DIR$/react-app/config/env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TODO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="90" lean-forward="false" selection-start-line="10" selection-start-column="90" selection-end-line="10" selection-end-column="90" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2575,52 +2639,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-app/package.json">
+    <entry file="file://$PROJECT_DIR$/react-app/config/webpack.config.prod.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="78" column="27" lean-forward="false" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
+        <state relative-caret-position="231">
+          <caret line="240" column="7" lean-forward="true" selection-start-line="240" selection-start-column="7" selection-end-line="242" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-app/node_modules/purifycss-webpack/dist/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-app/config/webpack.parts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-app/config/env.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/react-app/config/webpack.config.dev.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="41" />
+        <state relative-caret-position="381">
+          <caret line="212" column="11" lean-forward="false" selection-start-line="212" selection-start-column="11" selection-end-line="212" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-app/config/webpack.config.prod.js">
+    <entry file="file://$PROJECT_DIR$/site/src/ratpack/public/assets/external/theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="240" column="44" lean-forward="false" selection-start-line="240" selection-start-column="44" selection-end-line="240" selection-end-column="44" />
+        <state relative-caret-position="322470">
+          <caret line="21498" column="1" lean-forward="false" selection-start-line="21498" selection-start-column="1" selection-end-line="21498" selection-end-column="1" />
           <folding />
         </state>
       </provider>

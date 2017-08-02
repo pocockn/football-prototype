@@ -8,7 +8,7 @@ GENERAL
 - Remove all the unneeded CSS I stole from the template
 
 GRADLE
-- Improve performance of running, does it need to yarn install and build everytime?
+- Improve performance of running, does it need to yarn install and build everytime? - DONE
 - Fix the non indexed repositories
 
 REACT
@@ -22,7 +22,7 @@ REACT
 - Install mocha, testing framework, chai assertion library
 - Research webpack / webpack config / write a blog post on it or something
 - Ability to delete all fixtures once season is over
-- Take react out of Ratpack - URGENT
+- Take react out of Ratpack - DONE
 - Use finish season method to reset players season stats, will need an end point in RP
 
 GROOVY

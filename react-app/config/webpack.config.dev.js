@@ -7,8 +7,9 @@ var WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeMod
 var getClientEnvironment = require('./env');
 var paths = require('./paths');
 
+const path = require('path');
 const glob = require('glob');
-const parts = require('./webpack.parts');
+const PurifyCSSPlugin = require('purifycss-webpack');
 
 
 // Webpack uses `publicPath` to determine where the app is being served from.
@@ -207,8 +208,8 @@ module.exports = {
         // See https://github.com/facebookincubator/create-react-app/issues/186
         new WatchMissingNodeModulesPlugin(paths.appNodeModules),
 
-        parts.purifyCSS({
-            paths: glob.sync(`${PATHS.app}/**/*.js`, {nodir: true}),
+        new PurifyCSSPlugin({
+            paths: glob.sync(path.join(__dirname, 'app/*.html')),
         }),
     ],
     // Some libraries import Node modules but don't use them in the browser.
