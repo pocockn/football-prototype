@@ -216,9 +216,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Football-Prototype.iml" filepath="$PROJECT_DIR$/.idea/modules/Football-Prototype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Football-Prototype.iml" filepath="$PROJECT_DIR$/.idea/modules/Football-Prototype.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/site/site.iml" filepath="$PROJECT_DIR$/.idea/modules/site/site.iml" group="site" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/site/site.iml" filepath="$PROJECT_DIR$/.idea/modules/site/site.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/site/site_main.iml" filepath="$PROJECT_DIR$/.idea/modules/site/site_main.iml" group="site" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/site/site_main.iml" filepath="$PROJECT_DIR$/.idea/modules/site/site_main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/site/site_test.iml" filepath="$PROJECT_DIR$/.idea/modules/site/site_test.iml" group="site" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/site/site_test.iml" filepath="$PROJECT_DIR$/.idea/modules/site/site_test.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
@@ -645,6 +649,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-all/2.4.8/c0b188118d0bbee615ee601c048b14c7772d7e41/groovy-all-2.4.8-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: org.codehaus.groovy:groovy-all:2.4.9">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-all/2.4.9/3334e99a8baae12d6e014d444149e337ceb99a00/groovy-all-2.4.9.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-all/2.4.9/35c41a130264a801b171d8ad74b27f62b34bb6fa/groovy-all-2.4.9-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: org.hamcrest:hamcrest-core:1.3">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar!/" />
@@ -789,13 +802,13 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.24/cb29d135b14c25e64e76b4f25d263d5c58b65de4/slf4j-simple-1.7.24-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: org.spockframework:spock-core:1.0-groovy-2.4">
+    <library name="Gradle: org.spockframework:spock-core:1.1-groovy-2.4">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spockframework/spock-core/1.0-groovy-2.4/ceaa8b69f274ed3de24da3e6a6c86f673b426d1a/spock-core-1.0-groovy-2.4.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spockframework/spock-core/1.1-groovy-2.4/1c42014d4a18995d5d4aa10a4e060e88f60fdf78/spock-core-1.1-groovy-2.4.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spockframework/spock-core/1.0-groovy-2.4/db9597087c5e4afc2ef795c8ae89e32eddd019a6/spock-core-1.0-groovy-2.4-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spockframework/spock-core/1.1-groovy-2.4/2b08ca54637337988a8da795c6dc3f66d2810ebb/spock-core-1.1-groovy-2.4-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: org.yaml:snakeyaml:1.17">

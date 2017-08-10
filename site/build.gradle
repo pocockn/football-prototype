@@ -45,7 +45,7 @@ dependencies {
 
     compile "org.codehaus.groovy:groovy-all:2.4.8"
 
-    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+    testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
 
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.6'
