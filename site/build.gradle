@@ -6,13 +6,13 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "io.ratpack:ratpack-gradle:1.4.5"
+        classpath "io.ratpack:ratpack-gradle:1.4.6"
         classpath "com.github.jengelman.gradle.plugins:shadow:1.2.3"
         classpath 'com.moowork.gradle:gradle-node-plugin:1.1.1'
     }
 }
 
-task version << {
+task version {
     println "Gradle version: " + project.getGradle().getGradleVersion()
     println "Groovy version: " + GroovySystem.getVersion()
 }
@@ -66,6 +66,9 @@ dependencies {
     compile ratpack.dependency('pac4j')
     compile "org.pac4j:pac4j-http:1.8.6"
     compile "org.pac4j:pac4j-oauth:1.8.6"
+
+    // https://mvnrepository.com/artifact/javax.validation/validation-api
+    compile group: 'javax.validation', name: 'validation-api', version: '2.0.0.Final'
 
     // Dependencies for mock object types and mock concrete types in spock.
     testCompile 'cglib:cglib:3.2.4'

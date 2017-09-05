@@ -35,6 +35,8 @@ import service.user_service.UserAccountService
 import service.user_service.UserStorageService
 import service.user_service.UserStorageServiceImplementation
 
+import javax.validation.Validation
+import javax.validation.Validator
 import java.util.logging.Logger
 
 import static ratpack.groovy.Groovy.ratpack
@@ -75,6 +77,9 @@ ratpack {
         bindInstance TeamStoreService, new TeamStoreServiceImpl()
         bindInstance FindPropertyStatistics, new FindPropetyStatisticsImpl()
         bindInstance PlayerStoreService, new PlayerStoreServiceImpl()
+
+        bindInstance(Validator, Validation.buildDefaultValidatorFactory().validator)
+
         bindInstance new Service() {
             void onStart(StartEvent e) throws Exception {
                 Logger logger = Logger.getLogger("")

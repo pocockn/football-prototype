@@ -2,7 +2,6 @@ package Support
 
 import spock.lang.PendingFeature
 import spock.lang.Specification
-import support.ParseAndValidateJson
 
 class ParseAndValidateJsonSpec extends Specification {
 
