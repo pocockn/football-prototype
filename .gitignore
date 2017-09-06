@@ -17,6 +17,7 @@ build
 *.log.gz
 react-app/gradleBuild
 react-app/node_modules
-
-
->>>>>>> feature/react
+.shelf/
+site/out/
+Football-Prototype.ipr
+Football-Prototype.iws
