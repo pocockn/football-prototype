@@ -26,7 +26,7 @@ REACT
 - Use finish season method to reset players season stats, will need an end point in RP
 
 GROOVY
-- Look at generic method to parse and validate an object into JSON
+- Look at generic method to parse and validate an object into JSON - WIP
 - Speed up the build process, this will be achieved by splitting up react
 - Performance tests and improvements
 - Fix the test database, so it actually uses it, rather than the actual DB
