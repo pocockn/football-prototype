@@ -12,11 +12,6 @@ buildscript {
     }
 }
 
-task version {
-    println "Gradle version: " + project.getGradle().getGradleVersion()
-    println "Groovy version: " + GroovySystem.getVersion()
-}
-
 apply plugin: "io.ratpack.ratpack-groovy"
 apply plugin: "com.github.johnrengelman.shadow"
 apply plugin: "idea"
@@ -43,7 +38,7 @@ dependencies {
     // See here for a non blocking appender http://logging.apache.org/log4j/2.x/manual/async.html
     runtime 'org.slf4j:slf4j-simple:1.7.24'
 
-    compile "org.codehaus.groovy:groovy-all:2.4.8"
+    compile 'org.codehaus.groovy:groovy-all:2.4.5'
 
     testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
 
@@ -67,8 +62,10 @@ dependencies {
     compile "org.pac4j:pac4j-http:1.8.6"
     compile "org.pac4j:pac4j-oauth:1.8.6"
 
-    // https://mvnrepository.com/artifact/javax.validation/validation-api
-    compile group: 'javax.validation', name: 'validation-api', version: '2.0.0.Final'
+    compile "org.glassfish:javax.el:3.0.0" // provided for hibernate-validator
+    compile "javax.el:javax.el-api:3.0.0" // provided for hibernate-validator
+    compile "org.hibernate:hibernate-validator:5.2.1.Final"
+
 
     // Dependencies for mock object types and mock concrete types in spock.
     testCompile 'cglib:cglib:3.2.4'
