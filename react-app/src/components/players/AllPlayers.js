@@ -42,7 +42,7 @@ class AllPlayers extends Component {
                             <div className="panel-body p20 pb10">
                                 <ul>
                                     {this.state.players.map(singlePlayer =>
-                                        <div><Link to={"edit-player/" + singlePlayer.id}>
+                                        <div><Link to={"/edit-player/" + singlePlayer.id}>
                                             <li key={singlePlayer.id}>{singlePlayer.name}</li>
                                         </Link>
                                             <a style={{cursor: 'pointer'}} id={singlePlayer.id}

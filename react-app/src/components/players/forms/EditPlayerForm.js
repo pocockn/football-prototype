@@ -141,7 +141,7 @@ class EditPlayerForm extends Component {
                     <div className="col-md-8">
                         <div className="panel mb25 mt5">
                             <div className="panel-heading">
-                                <span className="panel-title">Add New Player</span>
+                                <span className="panel-title">Edit {this.state.name}</span>
                             </div>
                             <div className="panel-body p20 pb10">
                                 <div className="form-horizontal">

@@ -22,10 +22,8 @@ class MainRatpackHandlers extends GroovyChainAction {
             path "addTeam", new AddTeamHandlerApi()
             path "teams", new TeamGetHandlerApi()
             path "team/:id", new SingleTeamApiHandler()
-            prefix("player") {
-                prefix(":id") {
-                    new SinglePlayerApiHandler()
-                }
+            prefix("player/:id") {
+                all new SinglePlayerApiHandler()
             }
             prefix("fixtures/:id") {
                 path "all", new SingleTeamFixturesHandlerApi()

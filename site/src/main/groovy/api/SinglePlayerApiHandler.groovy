@@ -10,10 +10,15 @@ import static ratpack.jackson.Jackson.json
 @Slf4j
 class SinglePlayerApiHandler extends InjectionHandler {
     void handle(Context ctx, PlayerStoreService playerStoreService) {
-        def id = ctx.pathTokens["id"]
-        log.info("Player id fetched : ${id}")
-        playerStoreService.fetchById(id).then { player ->
-            ctx.render json(player)
+        ctx.byMethod {
+            it.get {
+                def id = ctx.pathTokens["id"]
+                log.info("Player id fetched : ${id}")
+                playerStoreService.fetchById(id).then { player ->
+                    ctx.render json(player)
+                }
+            }
         }
+
     }
 }
