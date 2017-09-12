@@ -1,5 +1,7 @@
 package Support
 
+import org.hibernate.validator.constraints.Email
+import org.hibernate.validator.constraints.NotEmpty
 import spock.lang.Specification
 import spock.lang.Unroll
 import validation.ValidationService
@@ -32,13 +34,13 @@ class ValidationServiceSpec extends Specification {
 }
 
 class TestObject {
-
+    @NotEmpty
     String playerName
 
-
+    @Email
     String email
 
-
+    @NotEmpty
     String rating
 }
 
