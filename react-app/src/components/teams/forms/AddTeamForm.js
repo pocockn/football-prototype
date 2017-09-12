@@ -27,7 +27,7 @@ class AddTeamForm extends Component {
             name: this.state.name,
         };
         name.value = "";
-        postToApi("/api/addTeam", team);
+        postToApi("/api/addTeam", team, '/');
     }
 
     render() {

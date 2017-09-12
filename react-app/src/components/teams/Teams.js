@@ -35,7 +35,7 @@ class Teams extends Component {
         console.log(obj);
         event.preventDefault();
         console.log('The link was clicked.');
-        postToApi("/api/players/add-player", obj);
+        postToApi("/api/players/add-player", obj, '/');
     }
 
     render() {

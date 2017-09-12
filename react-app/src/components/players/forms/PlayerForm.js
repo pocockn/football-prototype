@@ -69,7 +69,7 @@ class PlayerForm extends Component {
             profileImageUrl: this.state.uploadedFileCloudinaryUrl
         };
 
-        postToApi("/api/players/add-player", player);
+        postToApi("/api/players/add-player", player, '/players');
 
     }
 

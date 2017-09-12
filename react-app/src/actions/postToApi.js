@@ -1,7 +1,7 @@
 import "isomorphic-fetch";
 import {browserHistory} from "react-router";
 
-export function postToApi(endpoint, object) {
+export function postToApi(endpoint, object, redirectPath) {
     fetch(endpoint, {
         method: "POST",
         headers: {
@@ -11,6 +11,7 @@ export function postToApi(endpoint, object) {
         body: JSON.stringify(object)
 
     }).then(
-        browserHistory.push('/players')
+        browserHistory.push(redirectPath),
+        window.location.reload()
     );
 }

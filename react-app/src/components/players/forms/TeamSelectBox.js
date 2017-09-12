@@ -26,9 +26,9 @@ class TeamSelectBox extends Component {
                 <label for="inputSelect" className="control-label">Select Team</label>
                 <div className="bs-component">
                     <select value={this.props.state.teamId} onChange={this.props.onChange} className="form-control">
-                    {this.state.teams.map(singleTeam =>
-                        <option value={singleTeam.id}>{singleTeam.team.name} </option>
-                    )}
+                        {this.state.teams.map(singleTeam =>
+                            <option value={singleTeam.id}>{singleTeam.team.name} </option>
+                        )}
                     </select>
                 </div>
             </div>
