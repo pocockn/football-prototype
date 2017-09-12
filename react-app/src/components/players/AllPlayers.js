@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {postToApi} from "../../actions/postToApi";
+import {deleteResource} from "../../actions/deleteResource";
 import {Link} from "react-router";
 import axios from "axios";
 
@@ -26,7 +26,7 @@ class AllPlayers extends Component {
     handleDelete(event) {
         console.log(event.target.id);
         event.preventDefault();
-        postToApi("/api/players/removePlayer", event.target.id);
+        deleteResource("/api/players/removePlayer", event.target.id);
         window.location.reload();
     }
 
@@ -45,7 +45,8 @@ class AllPlayers extends Component {
                                         <div><Link to={"edit-player/" + singlePlayer.id}>
                                             <li key={singlePlayer.id}>{singlePlayer.name}</li>
                                         </Link>
-                                            <a id={singlePlayer.id} onClick={this.handleDelete.bind(this)}>delete</a>
+                                            <a style={{cursor: 'pointer'}} id={singlePlayer.id}
+                                               onClick={this.handleDelete.bind(this)}>delete</a>
                                         </div>
                                     )}
                                 </ul>

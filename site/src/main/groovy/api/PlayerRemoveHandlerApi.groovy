@@ -10,7 +10,7 @@ import service.persistance_service.PlayerStoreService
 class PlayerRemoveHandlerApi extends InjectionHandler {
     void handle(Context context, PlayerStoreService playerStoreService) {
         context.byMethod {
-            it.post {
+            it.delete {
                 context.parse(Jackson.fromJson(Object)).then { singlePlayer ->
                     String playerId = singlePlayer
                     playerStoreService.delete(playerId).onError {
