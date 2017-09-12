@@ -1,4 +1,5 @@
 import "isomorphic-fetch";
+import {browserHistory} from "react-router";
 
 export function postToApi(endpoint, object) {
     fetch(endpoint, {
@@ -9,5 +10,7 @@ export function postToApi(endpoint, object) {
         },
         body: JSON.stringify(object)
 
-    }).then(response => console.log(response));
+    }).then(
+        browserHistory.push('/players')
+    );
 }
